@@ -13,31 +13,16 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class Object_1 extends PApplet {
+public class Object_5 extends PApplet {
 
-//Nama : Muhammad Aufa Asmawy
-//NIN  : 20523235
 
- public void setup() {
-  /* size commented out by preprocessor */;
-  background(0xFFFFFFFF);
+ public void setup(){
+background(0xFF000000);
 }
 
- public void draw() {
-  stroke(0xFF0050A4);
-  fill(0xFF0050A4);
-  rect(0, 0, 200, 400);
-  
-  stroke(0xFFEF4135);
-  fill(0xFFEF4135);
-  rect(400, 0, 200, 400);
-}
-
-
-  public void settings() { size(600, 400); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "Object_1" };
+    String[] appletArgs = new String[] { "Object_5" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
