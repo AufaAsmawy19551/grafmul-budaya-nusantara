@@ -1,13 +1,13 @@
 //Nama : Muhammad Aufa Asmawy
 //NIN  : 20523235
 
-void setup(){
+void setup() {
   size(600, 400);
   background(#ffffff);
   background();
 }
 
-void draw(){
+void draw() {
   stroke(#0050a4);
   fill(#0050a4);
   rect(0, 0, 200, 400);
