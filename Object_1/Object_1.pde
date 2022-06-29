@@ -4,7 +4,6 @@
 void setup() {
   size(600, 400);
   background(#ffffff);
-  background();
 }
 
 void draw() {
