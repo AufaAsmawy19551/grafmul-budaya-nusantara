@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class grafmul_budaya_nusantara extends PApplet {
+public class Object_1 extends PApplet {
 
 //Nama : Muhammad Aufa Asmawy
 //NIN  : 20523235
@@ -37,7 +37,7 @@ public class grafmul_budaya_nusantara extends PApplet {
   public void settings() { size(600, 400); }
 
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "grafmul_budaya_nusantara" };
+    String[] appletArgs = new String[] { "Object_1" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
