@@ -1,12 +1,29 @@
-package Main;
+// package Main;
 
-import Person.*
+// import Main.Person;
 
-public class Main {
+// public class Main {
 
-  public static void main (String[] args) {
-    Person person = new Person();
-    person.drawBody();
-  }
+//   public static void main (String[] args) {
+//     size(600, 400);
+//     background(255, 255, 0);
+//     // Person person = new Person();
+//     // person.drawBody();
+//   }
+
+// }
+
+
+void setup() {
+  size(600, 400);
+    background(255, 255, 0);
+}
+
+void draw(){
 
 }
+
+void draw() {
+  
+}
+
