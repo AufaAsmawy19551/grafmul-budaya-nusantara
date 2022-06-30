@@ -1,12 +1,14 @@
-package Main;
 
-import Person.*
 
-public class Main {
 
-  public static void main (String[] args) {
-    Person person = new Person();
-    person.drawBody();
-  }
-
+void setup() {
+  size(600, 400);
+    background(255, 255, 0);
 }
+
+void draw(){
+Person person = new Person();
+person.drawBody();
+}
+
+

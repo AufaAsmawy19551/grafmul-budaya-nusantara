@@ -4,8 +4,6 @@ import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
 
-import .Person.;
-
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.io.File;
@@ -18,13 +16,13 @@ import java.io.IOException;
 package Main;
 
 
+void setup() {
+  size(600, 400);
+    background(255, 255, 0);
+}
 
-public class Main {
-
-  public static void main (String[] args) {
-    Person person = new Person();
-    person.drawBody();
-  }
-
+void draw(){
+Person person = new Person();
+person.drawBody();
 }
 
