@@ -1,11 +1,14 @@
+package Person;
+
 public class Person  {
 
-  public Person (arguments) {
+  public Person () {
     
   }
 
   public void drawBody() {
-    
+    size(600, 400);
+    background(255, 255, 0);
   }
 
   public void drawHair() {
