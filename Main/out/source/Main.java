@@ -13,73 +13,16 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
-public class Main extends PApplet {
-
-// package Main;
-
-// import Main.Person;
-
-// public class Main {
-
-//   public static void main (String[] args) {
-//     size(600, 400);
-//     background(255, 255, 0);
-//     // Person person = new Person();
-//     // person.drawBody();
-//   }
-
-// }
+package Main;
 
 
- public void setup() {
-  /* size commented out by preprocessor */;
+void setup() {
+  size(600, 400);
     background(255, 255, 0);
 }
 
- public void draw(){
-
+void draw(){
+Person person = new Person();
+person.drawBody();
 }
 
- public void draw() {
-  
-}
-
-// package Person;
-
-// public class Person  {
-
-//   public Person () {
-    
-//   }
-
-//   public void drawBody() {
-//     size(600, 400);
-//     background(255, 255, 0);
-//   }
-
-//   public void drawHair() {
-    
-//   }
-
-//   public void drawEye() {
-    
-//   }
-
-//   public void drawMouth() {
-    
-//   }
-
-// }
-
-
-  public void settings() { size(600, 400); }
-
-  static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "Main" };
-    if (passedArgs != null) {
-      PApplet.main(concat(appletArgs, passedArgs));
-    } else {
-      PApplet.main(appletArgs);
-    }
-  }
-}

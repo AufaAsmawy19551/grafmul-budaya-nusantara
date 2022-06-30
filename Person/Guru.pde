@@ -1,11 +1,11 @@
 package Person;
 
-public class Person  {
-  
-  public Person() {
+public class Guru extends Person {
+
+  public Guru () {
     
   }
-  
+
   public void drawBody() {
     rect(0, 0, 300, 300);
   }
@@ -21,5 +21,5 @@ public class Person  {
   public void drawMouth() {
     
   }
-  
+
 }
