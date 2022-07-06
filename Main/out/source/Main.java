@@ -16,7 +16,8 @@ import java.io.IOException;
 public class Main extends PApplet {
 
 Properti properti = new Properti();
-int x = 0;
+int kecepatanAwan1 = 0;
+int kecepatanAwan2 = 0;
 
  public void setup() {
   /* size commented out by preprocessor */;
@@ -48,9 +49,11 @@ int x = 0;
   // rumahGadang.draw(-900, 500, 0, 0.7);
   
   background(0xFF85C1E9);
-  properti.awan(x, 0, 1, 0xFFFFFFFF);
+  properti.awan(kecepatanAwan1, 0, 1, 0xFFFFFFFF);
+  properti.awan(kecepatanAwan2, 500, 1, 0xFFFFFFFF);
   
-  x += 1;
+  kecepatanAwan1 += 1;
+  kecepatanAwan2 += 3;
   
 }
 public class Person  {

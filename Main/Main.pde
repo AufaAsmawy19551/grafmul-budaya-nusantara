@@ -1,5 +1,6 @@
 Properti properti = new Properti();
-int x = 0;
+int kecepatanAwan1 = 0;
+int kecepatanAwan2 = 0;
 
 void setup() {
   size(1920, 1080);
@@ -31,8 +32,10 @@ void draw() {
   // rumahGadang.draw(-900, 500, 0, 0.7);
   
   background(#85C1E9);
-  properti.awan(x, 0, 1, #ffffff);
+  properti.awan(kecepatanAwan1, 0, 1, #ffffff);
+  properti.awan(kecepatanAwan2, 500, 1, #ffffff);
   
-  x += 1;
+  kecepatanAwan1 += 1;
+  kecepatanAwan2 += 3;
   
 }
