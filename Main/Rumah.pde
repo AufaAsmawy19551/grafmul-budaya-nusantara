@@ -18,6 +18,8 @@ public class RumahAceh extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -137,6 +139,8 @@ public class RumahAceh extends Rumah {
     anakTangga(710);
     anakTangga(730);
     anakTangga(750);
+    
+    popMatrix();
   }
   
   void kaki(int x, int y) {
@@ -163,6 +167,7 @@ public class RumahGadang extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
     
     translate(x, y);
     scale(s);
@@ -277,6 +282,7 @@ public class RumahGadang extends Rumah {
     quadraticVertex(785, 360, 760, 260);
     endShape();
     
+    popMatrix();
   }
 }
 
@@ -287,6 +293,8 @@ public class RumahJateng extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -364,6 +372,7 @@ public class RumahJateng extends Rumah {
     rect(730, 530, 40, 8, 30);
     rect(1150, 530, 40, 8, 30);
     
+    popMatrix();
   }
 }
 
@@ -374,6 +383,8 @@ public class RumahPapua extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -552,6 +563,8 @@ public class RumahPapua extends Rumah {
     ellipse(1100, 820, 70, 30);
     ellipse(1070, 820, 30, 50);
     ellipse(1042, 840, 70, 30);
+    
+    popMatrix();
   }
   
   void kayu(float xawal,float yawal, float lebar, float tinggi) {
@@ -566,6 +579,7 @@ public class RumahSulsel extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
     
     translate(x, y);
     scale(s);
@@ -733,5 +747,6 @@ public class RumahSulsel extends Rumah {
     fill(#FF0B0B);
     ellipse(855, 668, 10,15);
     
+    popMatrix();
   }
 }

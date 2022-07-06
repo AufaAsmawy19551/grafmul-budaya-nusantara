@@ -1,6 +1,8 @@
 public class Properti {
   
   public void awan(float x, float y, float s, int warna) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -13,9 +15,13 @@ public class Properti {
     ellipse(145, 110, 70, 80);
     ellipse(115, 150, 80, 65);
     ellipse(165, 150, 80, 65);
+    
+    popMatrix();
   }
   
   public void matahari(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -23,9 +29,13 @@ public class Properti {
     fill(#eecc57);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
+    
+    popMatrix();
   }
   
   public void bulan(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -33,9 +43,13 @@ public class Properti {
     fill(#e3e1d8);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
+    
+    popMatrix();
   }
   
   public void pohon(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -48,9 +62,13 @@ public class Properti {
     ellipse(240, 130, 110, 110);
     ellipse(140, 190, 90, 80);
     ellipse(210, 190, 90, 80);
+    
+    popMatrix();
   }
   
   public void bintang(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -62,9 +80,13 @@ public class Properti {
     triangle(110, 150, 110, 160, 120, 150);
     triangle(98, 157, 108, 157, 95, 168);
     triangle(102, 157, 112, 157, 115, 168);
+    
+    popMatrix();
   }
   
   public void lampu(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -75,5 +97,7 @@ public class Properti {
     rect(85, 65, 60, 15, 10);
     fill(#d1d1d1);
     rect(95, 280, 40, 15, 100);
+    
+    popMatrix();
   }
 }

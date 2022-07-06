@@ -16,13 +16,18 @@ import java.io.IOException;
 public class Main extends PApplet {
 
 Properti properti = new Properti();
+Rumah rumahAceh = new RumahAceh();
+Rumah rumahJateng = new RumahJateng();
+
 int kecepatanAwan1 = 0;
 int kecepatanAwan2 = 0;
+float s = 1.00f;
+
 
  public void setup() {
   /* size commented out by preprocessor */;
   surface.setTitle("Bismillah Menang Expo");
-  surface.setResizable(true);
+  // surface.setResizable(true);
   surface.setLocation(0, 0);
 }
 
@@ -33,28 +38,78 @@ int kecepatanAwan2 = 0;
   // Murid murid = new Murid();
   // murid.drawBody();
   
-  // Rumah rumahSulsel = new RumahSulsel();
-  // rumahSulsel.draw(-100, 0, 0, 0.3);
-  
-  // Rumah rumahPapua = new RumahPapua();
-  // rumahPapua.draw(1000, 300, 0, 1);
-  
-  // Rumah rumahJateng = new RumahJateng();
-  // rumahJateng.draw(800, 150, 0, 1.2);
-  
   // Rumah rumahAceh = new RumahAceh();
   // rumahAceh.draw(800, 150, 0, 1.2);
   
   // Rumah rumahGadang = new RumahGadang();
   // rumahGadang.draw(-900, 500, 0, 0.7);
   
+  // Rumah rumahJateng = new RumahJateng();
+  // rumahJateng.draw(800, 150, 0, 1.2);
+  
+  // Rumah rumahPapua = new RumahPapua();
+  // rumahPapua.draw(1000, 300, 0, 1);
+  
+  // Rumah rumahSulsel = new RumahSulsel();
+  // rumahSulsel.draw(-100, 0, 0, 0.3);
+  
+  // sceneRumahAceh();
+  sceneJateng();
+  // test();
+  
+  // rect(0, 0, 400, 400);
+  
+  
+  
+}
+
+ public void sceneRumahAceh() {
   background(0xFF85C1E9);
+  rumahAceh.draw(100, 150, 0, 1.1f);
+  
+  pushMatrix();
   properti.awan(kecepatanAwan1, 0, 1, 0xFFFFFFFF);
   properti.awan(kecepatanAwan2, 500, 1, 0xFFFFFFFF);
+  kecepatanAwan1 += 1;
+  kecepatanAwan2 += 3;
+  properti.lampu(0, 0, 1);
+  popMatrix();
+
+  
+}
+
+ public void sceneJateng() {
+  background(0xFF85C1E9);
+  fill(255);
+  rect(0, 0, 200, 200);
+  rumahJateng.draw(0, 50, 0, 0.5f);
+  fill(255, 0, 0);
+  rect(0, 0, 200, 200);
+
+  pushMatrix();
+  properti.awan(kecepatanAwan1, 0, 1, 0xFFFFFFFF);
+  properti.awan(kecepatanAwan2, 100, 1, 0xFFFFFFFF);
+  popMatrix();
+  
+  properti.lampu(400, 350, 1);
   
   kecepatanAwan1 += 1;
   kecepatanAwan2 += 3;
+}
+
+ public void test() {
+  translate(width / 2, height / 2);
+  background(0xFFF9E79F);
+  fill(125, 60, 152);
+
+  pushMatrix();
+  scale(s);
+  rect(-200, -100, 400, 200);
+  popMatrix();
   
+  if (s >= 0.01f) {
+    s -= 0.01f;
+  }
 }
 public class Person  {
   
@@ -108,9 +163,11 @@ public class Guru extends Person {
 public class Properti {
   
   public void awan(float x, float y, float s, int warna) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(warna);
     ellipse(70, 140, 80, 50);
@@ -120,32 +177,44 @@ public class Properti {
     ellipse(145, 110, 70, 80);
     ellipse(115, 150, 80, 65);
     ellipse(165, 150, 80, 65);
+    
+    popMatrix();
   }
   
   public void matahari(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
-
+    
     stroke(0xFFEEA457);
     fill(0xFFEECC57);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
+    
+    popMatrix();
   }
   
   public void bulan(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
-
+    
     stroke(0xFFADAA9E);
     fill(0xFFE3E1D8);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
+    
+    popMatrix();
   }
   
   public void pohon(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(0xFFC48335);
     rect(150, 180, 50, 250);
@@ -155,12 +224,16 @@ public class Properti {
     ellipse(240, 130, 110, 110);
     ellipse(140, 190, 90, 80);
     ellipse(210, 190, 90, 80);
+    
+    popMatrix();
   }
   
   public void bintang(float x, float y, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(0xFFD8B643);
     rect(100, 150, 10, 10);
@@ -169,6 +242,25 @@ public class Properti {
     triangle(110, 150, 110, 160, 120, 150);
     triangle(98, 157, 108, 157, 95, 168);
     triangle(102, 157, 112, 157, 115, 168);
+    
+    popMatrix();
+  }
+  
+  public void lampu(float x, float y, float s) {
+    pushMatrix();
+    
+    translate(x, y);
+    scale(s);
+    
+    fill(0xFFD1D1D1); //255
+    ellipse(115, 28, 80, 80);
+    fill(0xFF2E221B);
+    rect(100, 80, 30, 200);
+    rect(85, 65, 60, 15, 10);
+    fill(0xFFD1D1D1);
+    rect(95, 280, 40, 15, 100);
+    
+    popMatrix();
   }
 }
 public class Rumah {
@@ -460,6 +552,8 @@ public class RumahJateng extends Rumah {
   }
   
   public void draw(float x, float y, float z, float s) {
+    pushMatrix();
+    
     translate(x, y);
     scale(s);
     
@@ -537,6 +631,7 @@ public class RumahJateng extends Rumah {
     rect(730, 530, 40, 8, 30);
     rect(1150, 530, 40, 8, 30);
     
+    popMatrix();
   }
 }
 
@@ -910,7 +1005,7 @@ public class RumahSulsel extends Rumah {
 }
 
 
-  public void settings() { size(1920, 1080); }
+  public void settings() { size(1280, 720); }
 
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Main" };
