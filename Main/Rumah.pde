@@ -39,7 +39,6 @@ public class RumahSulsel extends Rumah {
   public void draw(float x, float y, float z, float s) {
     
     translate(x, y);
-    
     scale(s);
     
     // atap
