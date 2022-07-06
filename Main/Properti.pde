@@ -3,7 +3,7 @@ public class Properti {
   public void awan(float x, float y, float s, int warna) {
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(warna);
     ellipse(70, 140, 80, 50);
@@ -18,7 +18,7 @@ public class Properti {
   public void matahari(float x, float y, float s) {
     translate(x, y);
     scale(s);
-
+    
     stroke(#eea457);
     fill(#eecc57);
     strokeWeight(5);
@@ -28,7 +28,7 @@ public class Properti {
   public void bulan(float x, float y, float s) {
     translate(x, y);
     scale(s);
-
+    
     stroke(#adaa9e);
     fill(#e3e1d8);
     strokeWeight(5);
@@ -38,7 +38,7 @@ public class Properti {
   public void pohon(float x, float y, float s) {
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(#C48335);
     rect(150, 180, 50, 250);
@@ -53,7 +53,7 @@ public class Properti {
   public void bintang(float x, float y, float s) {
     translate(x, y);
     scale(s);
-
+    
     noStroke();
     fill(#d8b643);
     rect(100, 150, 10, 10);
@@ -62,5 +62,18 @@ public class Properti {
     triangle(110, 150, 110, 160, 120, 150);
     triangle(98, 157, 108, 157, 95, 168);
     triangle(102, 157, 112, 157, 115, 168);
+  }
+  
+  public void lampu(float x, float y, float s) {
+    translate(x, y);
+    scale(s);
+    
+    fill(#d1d1d1); //255
+    ellipse(115, 28, 80, 80);
+    fill(#2e221b);
+    rect(100, 80, 30, 200);
+    rect(85, 65, 60, 15, 10);
+    fill(#d1d1d1);
+    rect(95, 280, 40, 15, 100);
   }
 }

@@ -34,6 +34,7 @@ void draw() {
   background(#85C1E9);
   properti.awan(kecepatanAwan1, 0, 1, #ffffff);
   properti.awan(kecepatanAwan2, 500, 1, #ffffff);
+  properti.lampu(0, 0, 1)
   
   kecepatanAwan1 += 1;
   kecepatanAwan2 += 3;
