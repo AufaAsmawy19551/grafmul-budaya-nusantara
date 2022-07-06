@@ -1,32 +1,44 @@
 public class Properti {
   
-  public void awan(int warna) {
+  public void awan(float x, float y, float s, int warna) {
+    translate(x, y);
+    scale(s);
+
     noStroke();
     fill(warna);
-    ellipse(170, 140, 80, 50);
-    ellipse(205, 120, 80, 60);
-    ellipse(320, 140, 80, 50);
-    ellipse(285, 120, 80, 60);
-    ellipse(245, 110, 70, 80);
-    ellipse(215, 150, 80, 65);
-    ellipse(265, 150, 80, 65);
+    ellipse(70, 140, 80, 50);
+    ellipse(105, 120, 80, 60);
+    ellipse(220, 140, 80, 50);
+    ellipse(185, 120, 80, 60);
+    ellipse(145, 110, 70, 80);
+    ellipse(115, 150, 80, 65);
+    ellipse(165, 150, 80, 65);
   }
   
-  public void matahari() {
+  public void matahari(float x, float y, float s) {
+    translate(x, y);
+    scale(s);
+
     stroke(#eea457);
     fill(#eecc57);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
   }
   
-  public void bulan() {
+  public void bulan(float x, float y, float s) {
+    translate(x, y);
+    scale(s);
+
     stroke(#adaa9e);
     fill(#e3e1d8);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
   }
   
-  public void pohon() {
+  public void pohon(float x, float y, float s) {
+    translate(x, y);
+    scale(s);
+
     noStroke();
     fill(#C48335);
     rect(150, 180, 50, 250);
@@ -38,13 +50,17 @@ public class Properti {
     ellipse(210, 190, 90, 80);
   }
   
-  public void bintang() {
+  public void bintang(float x, float y, float s) {
+    translate(x, y);
+    scale(s);
+
+    noStroke();
     fill(#d8b643);
-    rect(500, 150, 10, 10);
-    triangle(500, 150, 510, 150, 505, 140);
-    triangle(500, 150, 500, 160, 490, 150);
-    triangle(510, 150, 510, 160, 520, 150);
-    triangle(498, 157, 508, 157, 495, 168);
-    triangle(502, 157, 512, 157, 515, 168);
+    rect(100, 150, 10, 10);
+    triangle(100, 150, 110, 150, 105, 140);
+    triangle(100, 150, 100, 160, 90, 150);
+    triangle(110, 150, 110, 160, 120, 150);
+    triangle(98, 157, 108, 157, 95, 168);
+    triangle(102, 157, 112, 157, 115, 168);
   }
 }

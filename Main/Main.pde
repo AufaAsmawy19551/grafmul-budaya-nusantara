@@ -30,6 +30,6 @@ void draw() {
   // rumahGadang.draw(-900, 500, 0, 0.7);
 
   Properti properti = new Properti();
-  properti.pohon();
+  properti.awan(0, 0, 1, #ffffff);
 
 }
