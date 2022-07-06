@@ -44,7 +44,7 @@ public class Main extends PApplet {
   rumahAceh.draw(800, 150, 0, 1.2f);
 
   Rumah rumahGadang = new RumahGadang();
-  rumahGadang.draw(-100, 500, 0, 1);
+  rumahGadang.draw(-900, 500, 0, 0.7f);
 }
 public class Person  {
   
