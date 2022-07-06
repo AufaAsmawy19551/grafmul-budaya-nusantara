@@ -25,4 +25,7 @@ void draw() {
 
   Rumah rumahAceh = new RumahAceh();
   rumahAceh.draw(800, 150, 0, 1.2);
+
+  Rumah rumahGadang = new RumahGadang();
+  rumahGadang.draw(-100, 500, 0, 1);
 }
