@@ -1,6 +1,6 @@
 
 void setup() {
-  background(#FFFFFF);
+  background(#85C1E9 );
   size(1920, 1080);
   surface.setTitle("Bismillah Menang Expo");
   surface.setResizable(true);
@@ -28,4 +28,8 @@ void draw() {
 
   // Rumah rumahGadang = new RumahGadang();
   // rumahGadang.draw(-900, 500, 0, 0.7);
+
+  Properti properti = new Properti();
+  properti.pohon();
+
 }

@@ -17,7 +17,7 @@ public class Main extends PApplet {
 
 
  public void setup() {
-  background(0xFFFFFFFF);
+  background(0xFF85C1E9 );
   /* size commented out by preprocessor */;
   surface.setTitle("Bismillah Menang Expo");
   surface.setResizable(true);
@@ -45,6 +45,10 @@ public class Main extends PApplet {
 
   // Rumah rumahGadang = new RumahGadang();
   // rumahGadang.draw(-900, 500, 0, 0.7);
+
+  Properti properti = new Properti();
+  properti.pohon();
+
 }
 public class Person  {
   
@@ -95,6 +99,56 @@ public class Guru extends Person {
 
 }
 
+public class Properti {
+  
+  public void awan(int warna) {
+    noStroke();
+    fill(warna);
+    ellipse(170, 140, 80, 50);
+    ellipse(205, 120, 80, 60);
+    ellipse(320, 140, 80, 50);
+    ellipse(285, 120, 80, 60);
+    ellipse(245, 110, 70, 80);
+    ellipse(215, 150, 80, 65);
+    ellipse(265, 150, 80, 65);
+  }
+  
+  public void matahari() {
+    stroke(0xFFEEA457);
+    fill(0xFFEECC57);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+  }
+  
+  public void bulan() {
+    stroke(0xFFADAA9E);
+    fill(0xFFE3E1D8);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+  }
+  
+  public void pohon() {
+    noStroke();
+    fill(0xFFC48335);
+    rect(150, 180, 50, 250);
+    fill(123, 185, 70);
+    ellipse(100, 140, 100, 100);
+    ellipse(160, 110, 110, 120);
+    ellipse(240, 130, 110, 110);
+    ellipse(140, 190, 90, 80);
+    ellipse(210, 190, 90, 80);
+  }
+  
+  public void bintang() {
+    fill(0xFFD8B643);
+    rect(500, 150, 10, 10);
+    triangle(500, 150, 510, 150, 505, 140);
+    triangle(500, 150, 500, 160, 490, 150);
+    triangle(510, 150, 510, 160, 520, 150);
+    triangle(498, 157, 508, 157, 495, 168);
+    triangle(502, 157, 512, 157, 515, 168);
+  }
+}
 public class Rumah {
   
   public Rumah() {
