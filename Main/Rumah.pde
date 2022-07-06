@@ -36,7 +36,7 @@ public class RumahSulsel extends Rumah {
     
   }
 
-  public void draw(int x, int y, int z, float s){
+  public void run(int x, int y, int z, float s){
     pushMatrix();
 
       translate(x, y, z);

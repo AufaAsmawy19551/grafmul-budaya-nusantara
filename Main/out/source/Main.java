@@ -31,7 +31,7 @@ public class Main extends PApplet {
   // murid.drawBody();
 
   RumahSulsel rumahSulsel = new RumahSulsel();
-  rumahSulsel.draw(1000, 0, 0, 0.3f);
+  rumahSulsel.run(700, 0, 0, 0.3f);
 }
 public class Person  {
   
@@ -120,11 +120,12 @@ public class RumahSulsel extends Rumah {
     
   }
 
-  public void draw(int x, int y, int z, float s){
+  public void run(int x, int y, int z, float s){
     pushMatrix();
 
+      translate(x, y, z);
       scale(s);
-
+      
          // atap
       beginShape();
       noStroke();

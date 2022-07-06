@@ -14,5 +14,5 @@ void draw(){
   // murid.drawBody();
 
   RumahSulsel rumahSulsel = new RumahSulsel();
-  rumahSulsel.draw(400, 0, 0, 0.3);
+  rumahSulsel.run(700, 0, 0, 0.3);
 }
