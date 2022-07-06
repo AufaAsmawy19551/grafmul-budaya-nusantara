@@ -43,7 +43,7 @@ public class Main extends PApplet {
   Rumah rumahAceh = new RumahAceh();
   rumahAceh.draw(800, 150, 0, 1.2f);
 
-  Rumah rumahGadang = new rumahGadang();
+  Rumah rumahGadang = new RumahGadang();
   rumahGadang.draw(-100, 500, 0, 1);
 }
 public class Person  {
