@@ -39,8 +39,8 @@ public class RumahSulsel extends Rumah {
   public void draw(int x, int y, int z, float s){
     pushMatrix();
 
-      translate(x, y, z);
-      scale(s);
+      translate(500, 400, z);
+      scale(1.0, -1.0);
       
          // atap
       beginShape();
