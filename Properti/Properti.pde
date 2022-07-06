@@ -8,6 +8,7 @@ void draw() {
   matahariBulan("m");
   pohon();
   bintang();
+  lampu();
 }
 
 void awan(int warna) {
@@ -57,15 +58,11 @@ void bintang(){
 }
 
 void lampu(){
-  //stroke(45, 70, 42);
-  //strokeWeight(8);
-  //line(340, 780, 340, 540);
-  //line(280, 540, 400, 540);
-  //noStroke();
-  //fill(245, 204, 71);
-  //ellipse(300, 560, 30, 30);
-  //ellipse(380, 560, 30, 30);
-  rect();
-  rect();
-  
+  fill(#d1d1d1); //255
+  ellipse(515, 728, 80, 80);
+  fill(#2e221b);
+  rect(500, 780, 30, 200);
+  rect(485, 765, 60, 15, 10);
+  fill(#d1d1d1);
+  rect(495, 980, 40, 15, 100);
 }
