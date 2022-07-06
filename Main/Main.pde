@@ -2,8 +2,9 @@
 void setup() {
   background(#FFFFFF);
   size(1920, 1080);
-  // size(1920, 1080);
-  // background(255, 255, 0);
+  surface.setTitle("Jalan-Jalan");
+  surface.setResizable(true);
+  surface.setLocation(0, 0);
 }
 
 void draw() {
@@ -13,6 +14,11 @@ void draw() {
   // Murid murid = new Murid();
   // murid.drawBody();
   
-  RumahSulsel rumahSulsel = new RumahSulsel();
-  rumahSulsel.draw(700, 0, 0, 0.3);
+  Rumah rumahSulsel = new RumahSulsel();
+  rumahSulsel.draw(-100, 0, 0, 0.3);
+
+  Rumah rumahPapua = new RumahPapua();
+  rumahPapua.draw(1000, 0, 0, 1);
+
+
 }

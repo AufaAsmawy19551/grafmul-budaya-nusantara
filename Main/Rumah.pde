@@ -4,6 +4,11 @@ public class Rumah {
     
   }
   
+  public void draw(float x, float y, float z, float s) {
+    translate(x, y);
+    scale(s);
+    
+  }
 }
 
 public class RumahAceh extends Rumah {
@@ -12,6 +17,11 @@ public class RumahAceh extends Rumah {
     
   }
   
+  public void draw(float x, float y, float z, float s) {
+    translate(x, y);
+    scale(s);
+    
+  }
 }
 
 public class RumahJateng extends Rumah {
@@ -20,6 +30,85 @@ public class RumahJateng extends Rumah {
     
   }
   
+  public void draw(float x, float y, float z, float s) {
+    translate(x, y);
+    scale(s);
+
+    //atap
+  noStroke();
+  fill(#824751);
+  rect(860, 200, 200, 100);
+  triangle(860, 200, 860, 300, 820, 300);
+  triangle(1060, 200, 1060, 300, 1100, 300);
+  rect(820, 300, 280, 100);
+  triangle(820, 300, 820, 400, 550, 400);
+  triangle(1100, 300, 1100, 400, 1370, 400);
+  fill(#4b1506);
+  rect(550, 400, 820, 20);
+  
+  //badan
+  fill(#b47129);
+  rect(600, 420, 720, 200);
+  fill(#664130);
+  rect(600, 620, 720, 50);
+  fill(#e4b47f);
+  rect(900, 450, 120, 160, 50, 50, 0, 0);
+  
+  //tangga
+  fill(#dfb79a);
+  rect(890, 620, 140, 10);
+  rect(880, 640, 160, 10);
+  rect(860, 660, 200, 10);
+  rect(840, 680, 240, 10);
+  fill(#362f35);
+  rect(890, 630, 140, 10);
+  rect(880, 650, 160, 10);
+  rect(860, 670, 200, 10);
+  rect(840, 690, 240, 10);
+  
+  //hiasan
+  fill(#80523b);
+    //kiri
+  rect(620, 510, 240, 20);
+  rect(630, 450, 40, 45, 70, 70, 0, 0);
+  rect(690, 450, 40, 45, 70, 70, 0, 0);
+  rect(750, 450, 40, 45, 70, 70, 0, 0);
+  rect(810, 450, 40, 45, 70, 70, 0, 0);
+    //kanan
+  rect(1060, 510, 240, 20);
+  rect(1070, 450, 40, 45, 70, 70, 0, 0);
+  rect(1130, 450, 40, 45, 70, 70, 0, 0);
+  rect(1190, 450, 40, 45, 70, 70, 0, 0);
+  rect(1250, 450, 40, 45, 70, 70, 0, 0);
+    //bawah
+  pushMatrix();
+  noFill();
+  stroke(#80523b);
+  strokeWeight(5);
+  rect(630, 550, 40, 45, 70, 70, 0, 0);
+  rect(690, 550, 40, 45, 70, 70, 0, 0);
+  rect(750, 550, 40, 45, 70, 70, 0, 0);
+  rect(810, 550, 40, 45, 70, 70, 0, 0);
+  rect(1070, 550, 40, 45, 70, 70, 0, 0);
+  rect(1130, 550, 40, 45, 70, 70, 0, 0);
+  rect(1190, 550, 40, 45, 70, 70, 0, 0);
+  rect(1250, 550, 40, 45, 70, 70, 0, 0);
+  popMatrix();
+  
+  //tiang
+  noStroke();
+  fill(#da8644);
+  rect(735, 420, 30, 280);
+  rect(1155, 420, 30, 280);
+  fill(#feeebe);
+  rect(730, 690, 40, 15);
+  rect(1150, 690, 40, 15);
+  rect(730, 660, 40, 8, 30);
+  rect(1150, 660, 40, 8, 30);
+  rect(730, 530, 40, 8, 30);
+  rect(1150, 530, 40, 8, 30);
+    
+  }
 }
 
 public class RumahPapua extends Rumah {
@@ -28,6 +117,190 @@ public class RumahPapua extends Rumah {
     
   }
   
+  public void draw(float x, float y, float z, float s) {
+    translate(x, y);
+    scale(s);
+    
+    // badan objek
+    noStroke();
+    fill(255,255,0);
+    rect(627, 564, 590, 247, 0, 0, 130, 130);
+    fill(255,255,255);
+    
+    beginShape();
+    fill(#ffffff);
+    vertex(663,788);
+    quadraticVertex(922, 930, 1180, 788);
+    endShape();
+    
+    //badan objek, kayu-kayu
+    //kiri
+    fill(#895C24);
+    kayu(627, 564, 15, 190);
+    fill(#C48335);
+    kayu(642, 564, 20, 200);
+    fill(#89673D);
+    kayu(662, 564, 25, 220);
+    fill(#C48335);
+    kayu(687, 564, 30, 240);
+    fill(#D6A467);
+    kayu(717, 564, 35, 250);
+    fill(#895C24);
+    kayu(752, 564, 40, 265);
+    fill(#D6A467);
+    kayu(792, 564, 45, 280);
+    
+    //kanan
+    fill(#895C24);
+    kayu(1202, 564, 15, 190);
+    fill(#C48335);
+    kayu(1182, 564, 20, 200);
+    fill(#89673D);
+    kayu(1157, 564, 25, 220);
+    fill(#C48335);
+    kayu(1127, 564, 30, 240);
+    fill(#D6A467);
+    kayu(1092, 564, 35, 250);
+    fill(#895C24);
+    kayu(1052, 564, 40, 265);
+    fill(#D6A467);
+    kayu(1007, 564, 45, 280);
+    
+    //pfloatu
+    fill(#272524);
+    kayu(837, 564, 170, 290);
+    
+    //tali 1
+    beginShape();
+    noFill();
+    stroke(#492200);
+    strokeWeight(15);
+    vertex(633, 617.5);
+    quadraticVertex(733, 680, 833, 625);
+    endShape();
+    //tali 2
+    beginShape();
+    noFill();
+    stroke(#492200);
+    strokeWeight(15);
+    vertex(633, 700);
+    quadraticVertex(733, 763, 833, 710);
+    endShape();
+    
+    //tali 3
+    beginShape();
+    noFill();
+    stroke(#492200);
+    strokeWeight(15);
+    vertex(1010, 617.5);
+    quadraticVertex(1112, 680, 1210, 625);
+    endShape();
+    //tali 4
+    beginShape();
+    noFill();
+    stroke(#492200);
+    strokeWeight(15);
+    vertex(1010, 700);
+    quadraticVertex(1112, 763, 1210, 710);
+    endShape();
+    
+    fill(#89673D);
+    noStroke();
+    //triangle(498, 540, 930, 204, 1321, 566);
+    beginShape();
+    fill(#B5752D);
+    noStroke();
+    vertex(490,600);
+    quadraticVertex(680, 200, 922, 190);
+    quadraticVertex(1112, 200, 1354, 600);
+    quadraticVertex(922, 680, 490, 600);
+    endShape();
+    
+    //tali atap
+    beginShape();
+    noFill();
+    stroke(#D6A467);
+    strokeWeight(10);
+    vertex(700,300);
+    quadraticVertex(725, 340, 750, 300);
+    quadraticVertex(775, 340, 800, 300);
+    quadraticVertex(825, 340, 850, 300);
+    quadraticVertex(875, 340, 900, 300);
+    quadraticVertex(925, 340, 950, 300);
+    quadraticVertex(975, 340, 1000, 300);
+    quadraticVertex(1025, 340, 1050, 300);
+    quadraticVertex(1075, 340, 1100, 300);
+    quadraticVertex(1125, 340, 1120, 300);
+    endShape();
+    
+    beginShape();
+    noFill();
+    stroke(#D6A467);
+    strokeWeight(10);
+    vertex(610,400);
+    quadraticVertex(635, 440, 660, 400);
+    quadraticVertex(685, 440, 710, 400);
+    quadraticVertex(735, 440, 760, 400);
+    quadraticVertex(785, 440, 810, 400);
+    quadraticVertex(835, 440, 860, 400);
+    quadraticVertex(885, 440, 910, 400);
+    quadraticVertex(935, 440, 960, 400);
+    quadraticVertex(985, 440, 1010, 400);
+    quadraticVertex(1035, 440, 1060, 400);
+    quadraticVertex(1085, 440, 1110, 400);
+    quadraticVertex(1135, 440, 1160, 400);
+    quadraticVertex(1185, 440, 1210, 400);
+    endShape();
+    
+    beginShape();
+    noFill();
+    stroke(#D6A467);
+    strokeWeight(10);
+    vertex(550,500);
+    quadraticVertex(575, 540, 600, 500);
+    quadraticVertex(625, 540, 650, 500);
+    quadraticVertex(675, 540, 700, 500);
+    quadraticVertex(725, 540, 750, 500);
+    quadraticVertex(775, 540, 800, 500);
+    quadraticVertex(825, 540, 850, 500);
+    quadraticVertex(875, 540, 900, 500);
+    quadraticVertex(925, 540, 950, 500);
+    quadraticVertex(975, 540, 1000, 500);
+    quadraticVertex(1025, 540, 1050, 500);
+    quadraticVertex(1075, 540, 1100, 500);
+    quadraticVertex(1125, 540, 1150, 500);
+    quadraticVertex(1175, 540, 1200, 500);
+    quadraticVertex(1225, 540, 1250, 500);
+    quadraticVertex(1275, 540, 1285, 500);
+    endShape();
+    
+    //batu
+    fill(#DFDCDA);
+    stroke(#C7C3C0);
+    strokeWeight(2);
+    //kiri
+    ellipse(627, 754, 50, 30);
+    ellipse(642, 764, 40, 20);
+    ellipse(662, 784, 30, 50);
+    ellipse(687, 804, 50, 40);
+    ellipse(717, 810, 70, 30);
+    ellipse(752, 825, 30, 50);
+    ellipse(792, 840, 70, 30);
+    ellipse(821, 845, 30, 20);
+    
+    //kanan
+    ellipse(1210, 760, 50, 30);
+    ellipse(1190, 775, 40, 30);
+    ellipse(1160, 790, 30, 50);
+    ellipse(1130, 810, 50, 40);
+    ellipse(1100, 820, 70, 30);
+    ellipse(1070, 820, 30, 50);
+    ellipse(1042, 840, 70, 30);
+  }
+  
+  void kayu(float xawal,float yawal, float lebar, float tinggi) {
+    rect(xawal, yawal, lebar, tinggi);
+  }
 }
 
 public class RumahSulsel extends Rumah {
@@ -138,7 +411,7 @@ public class RumahSulsel extends Rumah {
     vertex(792.76, 440);
     endShape();
     
-    // END ATAP
+    // ENDATAP
     
     
     
@@ -173,7 +446,7 @@ public class RumahSulsel extends Rumah {
     vertex(1284, 744);
     vertex(1228, 740);
     endShape();
-    // END JENDELA
+    // ENDJENDELA
     
     
     beginShape();
@@ -197,7 +470,7 @@ public class RumahSulsel extends Rumah {
     rect(1090, 780, 40, 165, 0, 0, 30, 30);
     rect(1242, 790, 40, 160, 0, 0, 30, 30);
     
-    // PINTU
+    // PfloatU
     fill(#603601);
     noStroke();
     rect(783, 602, 85, 140);
@@ -205,5 +478,4 @@ public class RumahSulsel extends Rumah {
     ellipse(855, 668, 10,15);
     
   }
-  
 }
