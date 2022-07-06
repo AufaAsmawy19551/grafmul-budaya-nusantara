@@ -18,7 +18,11 @@ void draw() {
   rumahSulsel.draw(-100, 0, 0, 0.3);
 
   Rumah rumahPapua = new RumahPapua();
-  rumahPapua.draw(1000, 0, 0, 1);
+  rumahPapua.draw(1000, 300, 0, 1);
 
+  Rumah rumahJateng = new RumahJateng();
+  rumahJateng.draw(800, 150, 0, 1.2);
 
+  Rumah rumahAceh = new RumahAceh();
+  rumahAceh.draw(800, 150, 0, 1.2);
 }
