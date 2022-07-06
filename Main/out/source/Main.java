@@ -15,9 +15,10 @@ import java.io.IOException;
 
 public class Main extends PApplet {
 
+Properti properti = new Properti();
+int x = 0;
 
  public void setup() {
-  background(0xFF85C1E9 );
   /* size commented out by preprocessor */;
   surface.setTitle("Bismillah Menang Expo");
   surface.setResizable(true);
@@ -33,22 +34,24 @@ public class Main extends PApplet {
   
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
-
+  
   // Rumah rumahPapua = new RumahPapua();
   // rumahPapua.draw(1000, 300, 0, 1);
-
+  
   // Rumah rumahJateng = new RumahJateng();
   // rumahJateng.draw(800, 150, 0, 1.2);
-
+  
   // Rumah rumahAceh = new RumahAceh();
   // rumahAceh.draw(800, 150, 0, 1.2);
-
+  
   // Rumah rumahGadang = new RumahGadang();
   // rumahGadang.draw(-900, 500, 0, 0.7);
-
-  Properti properti = new Properti();
-  properti.awan(0, 0, 1, 0xFFFFFFFF);
-
+  
+  background(0xFF85C1E9);
+  properti.awan(x, 0, 1, 0xFFFFFFFF);
+  
+  x += 1;
+  
 }
 public class Person  {
   
