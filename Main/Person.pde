@@ -14,9 +14,9 @@ public class Person  {
     drawEye();
     drawMouth();
     drawHair();
-    drawClothes()
-      
-      popMatrix();
+    drawClothes();
+    
+    popMatrix();
   }
   
   public void drawBody(int warna) {

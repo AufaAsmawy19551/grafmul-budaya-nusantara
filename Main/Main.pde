@@ -1,18 +1,20 @@
-Properti properti = new Properti();
-Person orang = new Person();
-Rumah rumahAceh = new RumahAceh();
-Rumah rumahJateng = new RumahJateng();
+// Properti properti = new Properti();
+// Person orang = new Person();
+// Rumah rumahAceh = new RumahAceh();
+// Rumah rumahJateng = new RumahJateng();
+SceneRumahAceh sceneRumahAceh = new SceneRumahAceh();
+SceneRumahJateng sceneRumahJateng = new SceneRumahJateng();
 
-int kecepatanAwan1 = 0;
-int kecepatanAwan2 = 0;
-float s = 1.00;
+// int kecepatanAwan1 = 0;
+// int kecepatanAwan2 = 0;
+// float s = 1.00;
 
-int frameCount = 0;
+// int frameCount = 0;
 
 
 void setup() {
   size(1280, 720);
-  surface.setTitle("Bismillah Menang Expo");
+  surface.setTitle("test");
   // surface.setResizable(true);
   surface.setLocation(0, 0);
 }
@@ -39,7 +41,7 @@ void draw() {
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
 
-  orang.draw(0, 0, 3, #EB984E);
+  // orang.draw(0, 0, 3, #EB984E);
   
   // if (frameCount <= 500) {
   //   sceneRumahAceh();
@@ -49,57 +51,69 @@ void draw() {
   //   test();
   // }
   // frameCount += 1;
+
+  sceneRumahAceh.run();
+  // sceneRumahJateng.run();
+  
+  // sceneRumahAceh.run();
+  // sceneRumahJateng.run();
+  
+  // sceneRumahAceh.run();
+  // sceneRumahJateng.run();
+  
+  // sceneRumahAceh.run();
+  // sceneRumahJateng.run();
 }
 
-void sceneRumahAceh() {
-  background(#85C1E9);
-  fill(255);
-  rect(0, 0, 200, 200);
-  rumahAceh.draw(100, 50, 0, 0.5);
-  fill(255, 0, 0);
-  rect(0, 0, 200, 200);
+// void sceneRumahAceh() {
+//   background(#85C1E9);
+//   fill(255);
+//   rect(0, 0, 200, 200);
+//   rumahAceh.draw(100, 50, 0, 0.5);
+//   fill(255, 0, 0);
+//   rect(0, 0, 200, 200);
   
-  pushMatrix();
-  properti.awan(kecepatanAwan1, 0, 1, #ffffff);
-  properti.awan(kecepatanAwan2, 100, 1, #ffffff);
-  popMatrix();
+//   pushMatrix();
+//   properti.awan(kecepatanAwan1, 0, 1, #ffffff);
+//   properti.awan(kecepatanAwan2, 100, 1, #ffffff);
+//   popMatrix();
   
-  properti.lampu(400, 350, 1);
+//   properti.lampu(400, 350, 1);
   
-  kecepatanAwan1 += 1;
-  kecepatanAwan2 += 3;
-}
+//   kecepatanAwan1 += 1;
+//   kecepatanAwan2 += 3;
+// }
 
-void sceneJateng() {
-  background(#85C1E9);
-  fill(255);
-  rect(0, 0, 200, 200);
-  rumahJateng.draw(0, 50, 0, 0.5);
-  fill(255, 0, 0);
-  rect(0, 0, 200, 200);
+// void sceneJateng() {
+//   background(#85C1E9);
+//   fill(255);
+//   rect(0, 0, 200, 200);
+//   rumahJateng.draw(0, 50, 0, 0.5);
+//   fill(255, 0, 0);
+//   rect(0, 0, 200, 200);
   
-  pushMatrix();
-  properti.awan(kecepatanAwan1, 0, 1, #ffffff);
-  properti.awan(kecepatanAwan2, 100, 1, #ffffff);
-  popMatrix();
+//   pushMatrix();
+//   properti.awan(kecepatanAwan1, 0, 1, #ffffff);
+//   properti.awan(kecepatanAwan2, 100, 1, #ffffff);
+//   popMatrix();
   
-  properti.lampu(400, 350, 1);
+//   properti.lampu(400, 350, 1);
   
-  kecepatanAwan1 += 1;
-  kecepatanAwan2 += 3;
-}
+//   kecepatanAwan1 += 1;
+//   kecepatanAwan2 += 3;
+// }
 
-void test() {
-  translate(width / 2, height / 2);
-  background(#f9e79f);
-  fill(125, 60, 152);
+// void test() {
+//   translate(width / 2, height / 2);
+//   background(#f9e79f);
+//   fill(125, 60, 152);
   
-  pushMatrix();
-  scale(s);
-  rect( -200, -100, 400, 200);
-  popMatrix();
+//   pushMatrix();
+//   scale(s);
+//   rect( -200, -100, 400, 200);
+//   popMatrix();
   
-  if (s >= 0.01) {
-    s -= 0.01;
-  }
-}
+//   if (s >= 0.01) {
+//     s -= 0.01;
+//   }
+// }
