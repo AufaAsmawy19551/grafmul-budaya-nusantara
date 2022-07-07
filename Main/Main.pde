@@ -1,4 +1,5 @@
 Properti properti = new Properti();
+Person orang = new Person();
 Rumah rumahAceh = new RumahAceh();
 Rumah rumahJateng = new RumahJateng();
 
@@ -37,15 +38,17 @@ void draw() {
   
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
+
+  orang.draw(0, 0, 1, #EB984E);
   
-  if (frameCount <= 500) {
-    sceneRumahAceh();
-  } else if (frameCount <= 1000){
-    sceneJateng();
-  }else {
-    test();
-  }
-  frameCount += 1;
+  // if (frameCount <= 500) {
+  //   sceneRumahAceh();
+  // } else if (frameCount <= 1000){
+  //   sceneJateng();
+  // }else {
+  //   test();
+  // }
+  // frameCount += 1;
 }
 
 void sceneRumahAceh() {
