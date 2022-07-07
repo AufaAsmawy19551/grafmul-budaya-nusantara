@@ -68,6 +68,7 @@ void draw() {
 
 void sceneRumahAceh() {
   background(#85C1E9);
+  properti.tanah(0, 0, 0.7);
   fill(255);
   rect(0, 0, 200, 200);
   rumahAceh.draw(100, 50, 0, 0.5);

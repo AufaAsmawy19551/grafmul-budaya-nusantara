@@ -100,19 +100,4 @@ public class Properti {
     
     popMatrix();
   }
-  
-  public void tanah(float x, float y, float s){
-    pushMatrix();
-    
-    translate(x, y);
-    scale(s);
-    
-    noStroke();
-    fill(#f1c27c);
-    rect(0, 780, 1920, 250);
-    fill(#f9dbbe);
-    rect(0, 730, 1920, 50);
-    
-    popMatrix();
-  }
 }
