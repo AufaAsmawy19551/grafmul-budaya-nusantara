@@ -1,44 +1,79 @@
 void setup() {
-  background (#FFFFFF);
+  background (#ffffff);
   size(1920, 1080);
 }
 
 void draw(){
 
-    noStroke();
-    
+    noStroke();   
     // badan depan
     beginShape();
         fill(196, 33, 33);
         vertex(620, 540);
         vertex(1395, 540);
-        vertex(1395, 720);
-        vertex(620, 720);
+        vertex(1395, 750);
+        vertex(620, 750);
     endShape();
+    beginShape();
+        noStroke();
+        fill(110, 66, 41);
+        vertex(620, 750);
+        quadraticVertex(,700, 750)
+        // kakiiiiiiiii
+
+
+        vertex(1395, 750);
+    endShape();
+
+    //,...kiri
+    noStroke();
+    fill(71, 36, 15);
+    rect(700, 560, 10, 190, 30);
+    rect(790, 560, 10, 190, 30);
+    rect(875, 560, 10, 190, 30);
+
+    // kanan
+    rect(1135, 560, 10, 190, 30);
+    rect(1220, 560, 10, 190, 30);
+    rect(1305, 560, 10, 190, 30);
+
+
     // badan samping kiri
     beginShape();
         fill(163, 26, 26);
         vertex(435, 490);
         vertex(620, 490);
-        vertex(620, 720);
-        vertex(435, 690);
+        vertex(620, 730);
+        vertex(435, 700);
     endShape();
+    noStroke();
+    fill(71, 36, 15);
+    rect(505, 520, 10, 190, 30);
+    rect(590, 535, 10, 190, 30);
     // badan samping kanan
     beginShape();
         fill(163, 26, 26);
         vertex(1395, 490);
         vertex(1580, 490);
-        vertex(1580, 690);
-        vertex(1395, 720);
+        vertex(1580, 700);
+        vertex(1395, 730);
     endShape();
+    noStroke();
+    fill(71, 36, 15);
+    rect(1415, 535, 10, 190, 30);
+    rect(1495, 522, 10, 190, 30);
 
     // jendela kiri
     fill(43, 35, 35);
+    rect(454, 584, 35 ,55);
+    rect(528, 588, 35 ,55);
     rect(645, 620, 35 ,55);
     rect(730, 625, 35 ,55);
     rect(818, 632, 35 ,55);
     rect(905, 636, 35 ,55);
     // jendela kanan
+    rect(1520, 586, 35 ,55);
+    rect(1446, 589, 35 ,55);
     rect(1078, 636, 35 ,55);
     rect(1165, 632, 35 ,55);
     rect(1250, 625, 35 ,55);
@@ -116,12 +151,57 @@ void draw(){
         quadraticVertex(785, 360, 760, 260);
     endShape();
 
+    // tiang pintu
+    noStroke();
+    fill(71, 36, 15);
+    rect(950, 580, 15, 200, 50);
+    rect(1050, 580, 15, 200, 50);
+    // Pintu
+    beginShape();
+        noStroke();
+        fill(71, 36, 15);
+        vertex(980, 630);
+        vertex(1035, 630);
+        vertex(1035, 730);
+        vertex(980, 730);
+    endShape();
+    // atap segitiga depan
+    beginShape();
+        stroke(#ffffff);
+        strokeWeight(5);
+        fill(77, 70, 70);
+        vertex(1005, 287);
+        quadraticVertex(1005, 500, 1139, 618);
+        vertex(1052, 595);
+        vertex(1052, 645);
+        quadraticVertex(1005, 585, 962, 645);
+        vertex(962, 595);
+        vertex(877, 618);
+        quadraticVertex(1005, 500, 1005, 287);
+    endShape();
 
-
-    // fill(87, 52, 3);
-    // rect(620, 540, 10, 180, 150);
-
-
+    beginShape();
+        stroke(110, 66, 41);
+        fill(110, 66, 41);
+        vertex(1052, 595);
+        vertex(1052, 645);
+        quadraticVertex(1005, 585, 962, 645);
+        vertex(962, 595);
+        vertex(962, 561);
+        vertex(1005, 509);
+        vertex(1052, 561);
+        vertex(1052, 595);
+    endShape();
+    //tangga
+    fill(#dfb79a);
+    rect(980, 730, 55, 10);
+    rect(975, 740, 65, 10);
+    rect(970, 750, 75, 10);
+    rect(965, 760, 85, 10);
+    rect(960, 770, 95, 10);
+    rect(955, 780, 105, 10);
+    rect(950, 790, 115, 10);
+    rect(945, 800, 125, 10);
 
 
 
