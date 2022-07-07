@@ -109,9 +109,9 @@ public class Properti {
     
     noStroke();
     fill(#f1c27c);
-    rect(0, 780, 1920, 250);
+    rect(0, 830, 1920, 200);
     fill(#f9dbbe);
-    rect(0, 730, 1920, 50);
+    rect(0, 780, 1920, 50);
     
     popMatrix();
   }
