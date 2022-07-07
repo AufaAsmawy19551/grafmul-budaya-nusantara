@@ -39,7 +39,7 @@ void draw() {
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
 
-  orang.draw(0, 0, 1, #EB984E);
+  orang.draw(0, 0, 3, #EB984E);
   
   // if (frameCount <= 500) {
   //   sceneRumahAceh();

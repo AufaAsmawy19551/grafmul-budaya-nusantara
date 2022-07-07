@@ -56,7 +56,7 @@ int frameCount = 0;
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
 
-  orang.draw(0, 0, 1, 0xFFEB984E);
+  orang.draw(0, 0, 3, 0xFFEB984E);
   
   // if (frameCount <= 500) {
   //   sceneRumahAceh();

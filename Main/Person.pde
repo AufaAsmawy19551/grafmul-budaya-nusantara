@@ -9,12 +9,14 @@ public class Person  {
     
     translate(x, y);
     scale(s);
-
+    
     drawBody(warna);
     drawEye();
     drawMouth();
-  
-    popMatrix();
+    drawHair();
+    drawClothes()
+      
+      popMatrix();
   }
   
   public void drawBody(int warna) {
@@ -37,7 +39,7 @@ public class Person  {
     fill(#ffffff);
     circle(70, 50, 20);
     circle(90, 50, 20);
-
+    
     fill(#000000);
     circle(70, 50, 3);
     circle(90, 50, 3);
@@ -46,11 +48,14 @@ public class Person  {
   public void drawMouth() {
     strokeWeight(5);
     noFill();
-
+    
     beginShape();
     vertex(65, 70);
     quadraticVertex(80, 85, 95, 70);
     endShape();
+  }
+  
+  public void drawClothes() {
   }
   
 }
