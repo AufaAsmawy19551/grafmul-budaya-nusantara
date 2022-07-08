@@ -13,7 +13,7 @@ int frameCount = 0;
 
 
 void setup() {
-  size(1280, 720);
+  size(1366, 768);
   surface.setTitle("test");
   // surface.setResizable(true);
   surface.setLocation(0, 0);
