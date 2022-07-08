@@ -109,7 +109,7 @@ public class Properti {
     
     noStroke();
     fill(#f1c27c);
-    rect(0, 830, 1920, 200);
+    rect(0, 830, 1920, 250);
     fill(#f9dbbe);
     rect(0, 780, 1920, 50);
     
