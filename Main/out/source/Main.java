@@ -1245,7 +1245,7 @@ public class SceneRumahJateng {
 }
 
 
-  public void settings() { size(1280, 720); }
+  public void settings() { size(1366, 768); }
 
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Main" };
