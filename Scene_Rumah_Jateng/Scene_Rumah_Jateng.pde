@@ -3,7 +3,7 @@
 int xM = 30;
 int yM = 10;
 
-Rumah rumah = new RumahAceh();
+Rumah rumah = new RumahJateng();
 Properti p = new Properti();
 
 void setup(){
@@ -12,11 +12,11 @@ void setup(){
 
 void draw(){
   background(#a5e1ea);
-  rumah.draw(160, 60, 0, 0.6);
+  p.tanah(0, -20, 0.7);
+  rumah.draw(160, 130, 0, 0.6);
   p.matahari(xM, yM, 0.7);
   p.awan(70, 20, 0.7, 240);
   p.awan(-70, 40, 0.7, 240);
-  p.tanah(0, -20, 0.7);
   p.pohon(0, 300, 0.6);
   p.pohon(120, 385, 0.4);
   p.semak(270, 450, 0.5);

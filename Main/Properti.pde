@@ -115,4 +115,20 @@ public class Properti {
     
     popMatrix();
   }
+
+  public void semak(float x, float y, float s){
+    pushMatrix();
+    
+    translate(x, y);
+    scale(s);
+    
+    noStroke();
+    fill(100, 185, 70);
+    ellipse(160, 110, 120, 120);
+    ellipse(100, 140, 110, 100);
+    rect(110, 140, 140, 50);
+    ellipse(240, 130, 120, 120);
+    
+    popMatrix();
+  }
 }
