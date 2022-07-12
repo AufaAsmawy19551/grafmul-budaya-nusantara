@@ -4,8 +4,6 @@ import processing.data.*;
 import processing.event.*;
 import processing.opengl.*;
 
-import com.hamoid.*;
-
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.io.File;
@@ -17,8 +15,8 @@ import java.io.IOException;
 
 public class Main extends PApplet {
 
-
-VideoExport videoExport;
+// import com.hamoid.*;
+// VideoExport videoExport;
 
 Person guru = new Guru(0, 0, 3, 0xFFEB984E);
 Person murid1 = new Murid1(300, 0, 3, 0xFFEB984E);
@@ -43,8 +41,8 @@ int frameCount = 0;
   frameRate(30);
   surface.setTitle("test");
   surface.setLocation(0, 0);
-  videoExport = new VideoExport(this);
-  videoExport.startMovie();
+  // videoExport = new VideoExport(this);
+  // videoExport.startMovie();
 }
 
  public void draw() {
@@ -86,7 +84,7 @@ int frameCount = 0;
   // sceneRumahJateng.run();
 
   frameCount += 1;
-  videoExport.saveFrame();
+  // videoExport.saveFrame();
 }
 
  public void testOrang(){
