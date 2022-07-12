@@ -1,17 +1,35 @@
 public class Person  {
+ 
+  float[] posisi = new float[2];
+  float s;
+  int warna;
+  float[] mata = new float[2];
+  int frameCount = 0;
   
-  public Person() {
-    
+  public Person()
+  {
+
+  }
+
+  public Person(float x, float y, float s, int warna) 
+  {
+    this.posisi[0] = x;
+    this.posisi[1] = y;
+    this.s = s;
+    this.warna = warna;
+    this.mata[0] = 0;
+    this.mata[1] = 0;
   }
   
-  public void draw(float x, float y, float s, int warna) {
+  public void draw() 
+  {
     pushMatrix();
     
-    translate(x, y);
-    scale(s);
+    translate(this.posisi[0], posisi[1]);
+    scale(this.s);
     
-    drawBody(warna);
-    drawEye();
+    drawBody(this.warna);
+    drawEye(this.mata[0], this.mata[1]);
     drawMouth();
     drawHair();
     drawClothes();
@@ -19,7 +37,8 @@ public class Person  {
     popMatrix();
   }
   
-  public void drawBody(int warna) {
+  public void drawBody(int warna) 
+  {
     beginShape();
     fill(warna);
     strokeWeight(1);
@@ -30,22 +49,20 @@ public class Person  {
     endShape();
   }
   
-  public void drawHair() {
-    
-  }
-  
-  public void drawEye() {
+  public void drawEye(float a, float b) 
+  {
     strokeWeight(1);
     fill(#ffffff);
     circle(70, 50, 20);
     circle(90, 50, 20);
     
     fill(#000000);
-    circle(70, 50, 3);
-    circle(90, 50, 3);
+    circle(a + 70, b + 50, 3);
+    circle(a + 90, b + 50, 3);
   }
   
-  public void drawMouth() {
+  public void drawMouth() 
+  {
     strokeWeight(5);
     noFill();
     
@@ -54,23 +71,92 @@ public class Person  {
     quadraticVertex(80, 85, 95, 70);
     endShape();
   }
-  
-  public void drawClothes() {
+
+  public void lihat(String arah, int startFrame, int endFrame)  
+  {
+    if (startFrame > frameCount && endFrame < numberOfFrame) {
+      if (arah == "atas") {
+        this.mata[0] = 0;
+        this.mata[1] = -5;
+      }else if (arah == "kanan atas") {
+        this.mata[0] = 5;
+        this.mata[1] = -5;
+      }else if (arah == "kanan") {
+        this.mata[0] = 5;
+        this.mata[1] = 0;
+      }else if (arah == "kanan bawah") {
+        this.mata[0] = 5;
+        this.mata[1] = 5;
+      }else if (arah == "bawah") {
+        this.mata[0] = 0;
+        this.mata[1] = 5;
+      }else if (arah == "kiri bawah") {
+        this.mata[0] = -5;
+        this.mata[1] = 5;
+      }else if (arah == "kiri") {
+        this.mata[0] = -5;
+        this.mata[1] = 0;
+      }else if (arah == "kiri atas") {
+        this.mata[0] = -5;
+        this.mata[1] = -5;
+      }
+
+      frameCount += 1;
+    }else if(frameCount == numberOfFrame){
+        this.mata[0] = 0;
+        this.mata[1] = 0;
+
+        frameCount += 1;
+    }
   }
-  
-}
-public class Murid extends Person {
-  
-  public Murid() {
+
+  public void drawHair() 
+  {
     
   }
   
-  public void drawBody() {
-    fill(255, 0, 0);
-    rect(0, 0, 100, 100);
+  public void drawClothes() 
+  {
+
   }
-  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Murid1 extends Person {
+  
+  public Murid1() {
+    
+  }
+
+  public void drawClothes() {
+
+  }
+}
+
+public class Murid2 extends Person {
+  
+  public Murid2() {
+    
+  }
+
+  public void drawClothes() {
+
+  }
+}
+
 
 public class Guru extends Person {
   
