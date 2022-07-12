@@ -121,7 +121,6 @@ public class Properti {
     
     translate(x, y);
     scale(s);
-    
     noStroke();
     fill(100, 185, 70);
     ellipse(160, 110, 120, 120);
