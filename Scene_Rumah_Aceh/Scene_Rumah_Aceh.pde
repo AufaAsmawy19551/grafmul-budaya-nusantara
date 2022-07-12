@@ -33,4 +33,6 @@ void draw(){
   strokeJoin(ROUND);
   triangle(50, 41, 60, 41, 55, 37);
   triangle(50, 57, 60, 57, 55, 65);
+  
+  xM++;
 }
