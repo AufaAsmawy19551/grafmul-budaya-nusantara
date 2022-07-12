@@ -1,5 +1,9 @@
+Person guru = new Guru(0, 0, 1.5, #EB984E);
+Person murid1 = new Murid1(300, 0, 1.5, #EB984E);
+Person murid2 = new Murid2(600, 0, 1.5, #EB984E);
+
 Properti properti = new Properti();
-Person orang = new Person(0, 0, 3, #EB984E);
+
 Rumah rumahAceh = new RumahAceh();
 Rumah rumahJateng = new RumahJateng();
 // SceneRumahAceh sceneRumahAceh = new SceneRumahAceh();
@@ -14,6 +18,7 @@ int frameCount = 0;
 
 void setup() {
   size(1366, 768);
+  frameRate(30);
   surface.setTitle("test");
   // surface.setResizable(true);
   surface.setLocation(0, 0);
@@ -41,8 +46,7 @@ void draw() {
   // Rumah rumahSulsel = new RumahSulsel();
   // rumahSulsel.draw(-100, 0, 0, 0.3);
 
-  orang.draw();
-  orang.lihat("kanan atas", 100);
+  testOrang();
   
   // if (frameCount <= 500) {
   //   sceneRumahAceh();
@@ -56,16 +60,45 @@ void draw() {
   // sceneRumahAceh.run();
   // sceneRumahJateng.run();
 
+  frameCount += 1;
+}
+
+void testOrang(){
+  pushMatrix();
+
+  background(#85C1E9);
+
+  guru.draw();
+  guru.lookingAt("kanan atas", 50, 150, frameCount);
+  guru.speak(100, 200, frameCount);
+  guru.goTo(200, 200, 50, 70, frameCount);
+  guru.goTo(200, 400, 70, 150, frameCount);
+
+  murid1.draw();
+  murid1.lookingAt("kanan atas", 50, 150, frameCount);
+  murid1.speak(100, 200, frameCount);
+  murid1.goTo(500, 200, 50, 100, frameCount);
+  murid1.goTo(500, 400, 105, 200, frameCount);
+
+  murid2.draw();
+  murid2.lookingAt("kanan atas", 50, 150, frameCount);
+  murid2.speak(100, 200, frameCount);
+  murid2.goTo(800, 200, 50, 100, frameCount);
+  murid2.goTo(800, 400, 105, 200, frameCount);
+
+  popMatrix();
+
 }
 
 void sceneRumahAceh() {
   background(#85C1E9);
+
+  
+  
   properti.tanah(0, 0, 0.7);
-  fill(255);
-  rect(0, 0, 200, 200);
+
   rumahAceh.draw(100, 50, 0, 0.5);
-  fill(255, 0, 0);
-  rect(0, 0, 200, 200);
+  
   
   pushMatrix();
   properti.awan(kecepatanAwan1, 0, 1, #ffffff);
@@ -73,6 +106,8 @@ void sceneRumahAceh() {
   popMatrix();
   
   properti.lampu(400, 350, 1);
+
+  
   
   kecepatanAwan1 += 1;
   kecepatanAwan2 += 3;
