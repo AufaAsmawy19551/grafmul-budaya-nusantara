@@ -20,7 +20,6 @@ void setup() {
   size(1366, 768);
   frameRate(30);
   surface.setTitle("test");
-  // surface.setResizable(true);
   surface.setLocation(0, 0);
 }
 
