@@ -1,6 +1,9 @@
-Person guru = new Guru(0, 0, 1.5, #EB984E);
-Person murid1 = new Murid1(300, 0, 1.5, #EB984E);
-Person murid2 = new Murid2(600, 0, 1.5, #EB984E);
+// import com.hamoid.*;
+// VideoExport videoExport;
+
+Person guru = new Guru(0, 0, 3, #EB984E);
+Person murid1 = new Murid1(300, 0, 3, #EB984E);
+Person murid2 = new Murid2(600, 0, 3, #EB984E);
 
 Properti properti = new Properti();
 
@@ -21,6 +24,8 @@ void setup() {
   frameRate(30);
   surface.setTitle("test");
   surface.setLocation(0, 0);
+  // videoExport = new VideoExport(this);
+  // videoExport.startMovie();
 }
 
 void draw() {
@@ -46,6 +51,8 @@ void draw() {
   // rumahSulsel.draw(-100, 0, 0, 0.3);
 
   testOrang();
+  // murid1.draw();
+  // guru.draw();
   
   // if (frameCount <= 500) {
   //   sceneRumahAceh();
@@ -60,6 +67,7 @@ void draw() {
   // sceneRumahJateng.run();
 
   frameCount += 1;
+  // videoExport.saveFrame();
 }
 
 void testOrang(){
@@ -70,20 +78,20 @@ void testOrang(){
   guru.draw();
   guru.lookingAt("kanan atas", 50, 150, frameCount);
   guru.speak(100, 200, frameCount);
-  guru.goTo(200, 200, 50, 70, frameCount);
-  guru.goTo(200, 400, 70, 150, frameCount);
+  guru.goTo(200, 200, 50, 100, frameCount);
+  guru.goTo(200, 400, 100, 200, frameCount);
 
   murid1.draw();
   murid1.lookingAt("kanan atas", 50, 150, frameCount);
   murid1.speak(100, 200, frameCount);
   murid1.goTo(500, 200, 50, 100, frameCount);
-  murid1.goTo(500, 400, 105, 200, frameCount);
+  murid1.goTo(500, 400, 100, 200, frameCount);
 
   murid2.draw();
   murid2.lookingAt("kanan atas", 50, 150, frameCount);
   murid2.speak(100, 200, frameCount);
   murid2.goTo(800, 200, 50, 100, frameCount);
-  murid2.goTo(800, 400, 105, 200, frameCount);
+  murid2.goTo(800, 400, 100, 200, frameCount);
 
   popMatrix();
 
