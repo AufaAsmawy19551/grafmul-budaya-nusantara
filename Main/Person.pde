@@ -43,6 +43,7 @@ public class Person extends Object {
     
     beginShape();
     fill(warna);
+    stroke(#000000);
     strokeWeight(1);
     vertex(40, 60);
     quadraticVertex(80, 0, 120, 60);
@@ -58,6 +59,7 @@ public class Person extends Object {
     pushMatrix();
     
     strokeWeight(1);
+    stroke(#000000);
     fill(#ffffff);
     circle(70, 50, 20);
     circle(90, 50, 20);
@@ -76,6 +78,7 @@ public class Person extends Object {
       
       beginShape();
       strokeWeight(3);
+      stroke(#000000);
       vertex(70, 65);
       quadraticVertex(80, 75, 90, 65);
       endShape();
@@ -92,6 +95,7 @@ public class Person extends Object {
       
       beginShape();
       strokeWeight(3);
+      stroke(#000000);
       noFill();
       vertex(70, 65);
       quadraticVertex(80, 75, 90, 65);
@@ -110,8 +114,10 @@ public class Person extends Object {
       }
     } else if (startFrame == frameCount) {
       file.play();
-    }else if (endFrame == frameCount) {
+    } else if (endFrame == frameCount) {
       this.openMouth = false;
+      file.stop();
+
     }
   }
   
@@ -178,6 +184,7 @@ public class Murid extends Person {
     //celana merah
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#E74C3C);
     vertex(40, 60);
     quadraticVertex(80, 100, 120, 60);
@@ -188,6 +195,7 @@ public class Murid extends Person {
     //baju putih
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#ffffff);
     vertex(40, 60);
     quadraticVertex(80, 90, 120, 60);
@@ -199,6 +207,7 @@ public class Murid extends Person {
     //kerah putih
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#ffffff);
     vertex(40, 60);
     vertex(70, 80);
@@ -211,6 +220,7 @@ public class Murid extends Person {
     //dasi merah
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#E74C3C);
     vertex(80, 75);
     vertex(78, 77);
@@ -226,6 +236,7 @@ public class Murid extends Person {
     //saku putih
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#ffffff);
     vertex(95, 82);
     vertex(108, 82);
@@ -281,6 +292,7 @@ public class Guru extends Person {
     //celana
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#C99539);
     vertex(40, 60);
     quadraticVertex(60, 90, 80, 95);
@@ -292,6 +304,7 @@ public class Guru extends Person {
     //baju
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#f0E68C);
     vertex(40, 60);
     quadraticVertex(60, 90, 80, 95);
@@ -304,6 +317,7 @@ public class Guru extends Person {
     //saku
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#f0E68C);
     vertex(95, 82);
     vertex(108, 82);
@@ -316,6 +330,7 @@ public class Guru extends Person {
     // kerudung
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(#ffffff);
     vertex(40, 60);
     quadraticVertex(50, 90, 80, 97);
@@ -326,6 +341,7 @@ public class Guru extends Person {
     //warna kulit
     beginShape();
     strokeWeight(1);
+    stroke(#000000);
     fill(this.warna);
     vertex(62, 47);
     quadraticVertex(47, 70, 80, 75);
