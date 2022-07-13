@@ -1133,14 +1133,14 @@ public class PropertiAwan extends Object {
     super(x, y, s);
   }
 
-  public void draw() {
+  public void draw(int warna) {
     pushMatrix();
     
     translate(this.position[0], this.position[1]);
     scale(this.s);
     
     noStroke();
-    fill(0xFFFFFFFF);
+    fill(warna);
     ellipse(70, 140, 80, 50);
     ellipse(105, 120, 80, 60);
     ellipse(220, 140, 80, 50);
