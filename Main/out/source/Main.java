@@ -58,39 +58,24 @@ int sceneCount = 0;
 
  public void draw()
 {
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahJateng.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  // }
-
   switch(sceneCount) {
     case 0 :
       sceneRumahAceh.run();
       break;
     case 1 :
-      sceneRumahJateng.run();
+      sceneRumahGadang.run();
       break;
     case 2 :
-      sceneRumahPapua.run();
+      sceneRumahJateng.run();
       break;
     case 3 :
+      sceneRumahPapua.run();
+      break;
+    case 4 :
       sceneRumahSulsel.run();
       break;
   }
-  
+
   frameCount += 1;
   // videoExport.saveFrame();
 }
@@ -1901,9 +1886,6 @@ public class Scene {
       guru.setPosition(-400, 450);
       murid1.setPosition(-850, 500);
       murid2.setPosition(-1050, 500);
-      // guru = new Guru( -400, 450, 2.5, #FFD9B3);
-      // murid1 = new Murid1( -850, 500, 2, #E6B88A);
-      // murid2 = new Murid2( -1050, 500, 2, #EB984E);
     }
   }
 }
@@ -1933,7 +1915,7 @@ public class SceneRumahAceh extends Scene {
     murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 500);
 
-    murid2.lookingAt(0, 400, frameCount, "kanan");
+    murid2.lookingAt(1, 400, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 150, 500);
     murid2.lookingAt(500, 900, frameCount, "kanan");
     murid2.goTo(500, 900, frameCount, 1350, 500);
@@ -1958,14 +1940,17 @@ public class SceneRumahGadang extends Scene {
     
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
+    guru.lookingAt(500, 900, frameCount, "kanan");
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 500);
 
-    murid2.lookingAt(0, 400, frameCount, "kanan");
+    murid2.lookingAt(1, 400, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.lookingAt(500, 900, frameCount, "kanan");
     murid2.goTo(500, 900, frameCount, 1350, 500);
 
     end(900);
@@ -1996,7 +1981,7 @@ public class SceneRumahJateng extends Scene {
     murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 500);
 
-    murid2.lookingAt(0, 400, frameCount, "kanan");
+    murid2.lookingAt(1, 400, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 150, 500);
     murid2.lookingAt(500, 900, frameCount, "kanan");
     murid2.goTo(500, 900, frameCount, 1350, 500);
@@ -2022,14 +2007,17 @@ public class SceneRumahPapua extends Scene{
     
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
+    guru.lookingAt(500, 900, frameCount, "kanan");
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 500);
 
-    murid2.lookingAt(0, 400, frameCount, "kanan");
+    murid2.lookingAt(1, 400, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.lookingAt(500, 900, frameCount, "kanan");
     murid2.goTo(500, 900, frameCount, 1350, 500);
 
     end(900);
@@ -2052,14 +2040,17 @@ public class SceneRumahSulsel extends Scene {
     
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
+    guru.lookingAt(500, 900, frameCount, "kanan");
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 500);
 
-    murid2.lookingAt(0, 400, frameCount, "kanan");
+    murid2.lookingAt(1, 400, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.lookingAt(500, 900, frameCount, "kanan");
     murid2.goTo(500, 900, frameCount, 1350, 500);
 
     end(900);
