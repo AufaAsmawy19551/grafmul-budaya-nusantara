@@ -3,8 +3,8 @@
 int xM = 30;
 int yM = 10;
 
-Rumah rumah = new RumahSulsel();
-Properti p = new Properti();
+Rumah rumahSulsel = new RumahSulsel();
+Properti properti = new Properti();
 
 void setup(){
   size(1366, 768);
@@ -12,24 +12,24 @@ void setup(){
 
 void draw(){
   background(#a5e1ea);
-  p.tanah(0, -95, 0.8);
-  rumah.draw(90, 300, 0, 0.3);
-  rumah.draw(170, 210, 0, 0.4);
-  rumah.draw(240, 30, 0, 0.6);
-  p.matahari(xM, yM, 0.7);
-  p.awan(70, 20, 0.7, 240);
-  p.awan(-70, 40, 0.7, 240);
-  p.awan(800, 30, 0.7, 240);
-  p.awan(950, 0, 0.7, 240);
-  p.pohon(-120, 210, 0.8);
-  p.pohon(10, 300, 0.6);
-  p.pohon(110, 385, 0.4);
-  p.semak(1100, 540, 0.5);
-  p.semak(1020, 555, 0.4);
-  p.semak(1180, 400, 0.7);
-  p.semak(1120, 465, 0.4);
-  //p.lampu(350, 450, 0.7);
-  //p.lampu(1120, 450, 0.7);
+  properti.tanah(0, -95, 0.8);
+  rumahSulsel.draw(90, 300, 0, 0.3);
+  rumahSulsel.draw(170, 210, 0, 0.4);
+  rumahSulsel.draw(240, 30, 0, 0.6);
+  properti.matahari(xM, yM, 0.7);
+  properti.awan(70, 20, 0.7, 240);
+  properti.awan(-70, 40, 0.7, 240);
+  properti.awan(800, 30, 0.7, 240);
+  properti.awan(950, 0, 0.7, 240);
+  properti.pohon(-120, 210, 0.8);
+  properti.pohon(10, 300, 0.6);
+  properti.pohon(110, 385, 0.4);
+  properti.semak(1100, 540, 0.5);
+  properti.semak(1020, 555, 0.4);
+  properti.semak(1180, 400, 0.7);
+  properti.semak(1120, 465, 0.4);
+  //properti.lampu(350, 450, 0.7);
+  //properti.lampu(1120, 450, 0.7);
   
   //pesawat
   fill(#94b9c4);
