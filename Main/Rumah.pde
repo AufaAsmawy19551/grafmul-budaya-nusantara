@@ -185,7 +185,6 @@ public class RumahGadang extends Rumah {
     noStroke();
     fill(110, 66, 41);
     vertex(620, 750);
-    quadraticVertex(,700, 750)
       // kakiiiiiiiii
       
       

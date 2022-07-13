@@ -2,9 +2,9 @@ import processing.sound.*;
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(0, 500, 2, #EB984E);
-Person murid1 = new Murid1(0, 500, 2, #EB984E);
-Person murid2 = new Murid2(600, 0, 2, #EB984E);
+Person guru = new Guru(1000, 450, 2, #EB984E);
+Person murid1 = new Murid1(200, 450, 2, #EB984E);
+Person murid2 = new Murid2(0, 450, 2, #EB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -32,7 +32,7 @@ void setup() {
 
 void draw()
 {
-  sceneRumahAceh();
+  sceneRumahPapua();
   
   frameCount += 1;
   // videoExport.saveFrame();
@@ -45,6 +45,63 @@ void sceneRumahAceh()
   popMatrix();  
   
   murid1.draw();
+
+  murid1.speak(50, 100, frameCount, file1);
+  murid1.speak(150, 200, frameCount, file2);
+  murid1.goTo(900, 500, 50, 300, frameCount);
+}
+
+void sceneRumahGadang() 
+{
+  pushMatrix();
+  background.rumahGadang();
+  popMatrix();  
+  
+  murid1.draw();
+
+  murid1.speak(50, 100, frameCount, file1);
+  murid1.speak(150, 200, frameCount, file2);
+  murid1.goTo(900, 500, 50, 300, frameCount);
+}
+
+void sceneRumahJateng() 
+{
+  pushMatrix();
+  background.rumahJateng();
+  popMatrix();  
+  
+  guru.draw();
+  murid1.draw();
+  murid2.draw();
+
+  murid1.speak(50, 100, frameCount, file1);
+  murid1.speak(150, 200, frameCount, file2);
+  murid1.goTo(900, 500, 50, 300, frameCount);
+}
+
+void sceneRumahPapua() 
+{
+  pushMatrix();
+  background.rumahPapua();
+  popMatrix();  
+  
+  guru.draw();
+  murid1.draw();
+  murid2.draw();
+
+  murid1.speak(50, 100, frameCount, file1);
+  murid1.speak(150, 200, frameCount, file2);
+  murid1.goTo(800, 450, 50, 300, frameCount);
+}
+
+void sceneRumahSulsel() 
+{
+  pushMatrix();
+  background.rumahSulsel();
+  popMatrix();  
+  
+  murid1.draw();
+
   murid1.speak(50, 100, frameCount, file1);
   murid1.speak(150, 200, frameCount, file2);
   murid1.goTo(900, 500, 50, 300, frameCount);
