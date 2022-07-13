@@ -19,14 +19,14 @@ public class SceneRumahJateng extends Scene {
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 150, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1350, 511);
 
     end(900);
   }
