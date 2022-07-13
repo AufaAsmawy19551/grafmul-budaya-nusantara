@@ -1,10 +1,8 @@
 public class Person extends Object {
-  
-  float s;
+
   int warna;
   float[] eye = new float[2];
   boolean openMouth;
-  
   
   public Person()
   {
@@ -13,8 +11,7 @@ public class Person extends Object {
   
   public Person(float x, float y, float s, int warna) 
   {
-    super(x, y);
-    this.s = s;
+    super(x, y, s);
     this.warna = warna;
     this.eye[0] = 0;
     this.eye[1] = 0;

@@ -530,6 +530,7 @@ public class Background {
 public class Object {
   
   float[] position = new float[2];
+  float s;
   float dx;
   float dy;
   
@@ -538,10 +539,11 @@ public class Object {
     
   }
   
-  public Object(float x, float y) 
+  public Object(float x, float y, float s) 
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -550,6 +552,15 @@ public class Object {
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
+  }
+
+  public void setPosition(float x, float y, float s)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -584,12 +595,10 @@ public class Object {
   }
 }
 public class Person extends Object {
-  
-  float s;
+
   int warna;
   float[] eye = new float[2];
   boolean openMouth;
-  
   
   public Person()
   {
@@ -598,8 +607,7 @@ public class Person extends Object {
   
   public Person(float x, float y, float s, int warna) 
   {
-    super(x, y);
-    this.s = s;
+    super(x, y, s);
     this.warna = warna;
     this.eye[0] = 0;
     this.eye[1] = 0;
@@ -1119,10 +1127,96 @@ public class Properti {
     popMatrix();
   }
 }
+public class PropertiAwan extends Object {
 
+  public PropertiAwan (float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFFFFFFFF);
+    ellipse(70, 140, 80, 50);
+    ellipse(105, 120, 80, 60);
+    ellipse(220, 140, 80, 50);
+    ellipse(185, 120, 80, 60);
+    ellipse(145, 110, 70, 80);
+    ellipse(115, 150, 80, 65);
+    ellipse(165, 150, 80, 65);
+    
+    popMatrix();
+  }
+}
+public class PropertiBulan extends Object {
+  
+  public PropertiBulan(float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFADAA9E);
+    fill(0xFFE3E1D8);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiMatahari extends Object {
+  
+  public PropertiMatahari(float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFEEA457);
+    fill(0xFFEECC57);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiPesawat extends Object {
+  
+  public PropertiPesawat(float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw(){
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFF94B9C4);
+    ellipse(50, 50, 80, 15);
+    fill(0xFF86A6BE);
+    stroke(0xFF86A6BE);
+    strokeWeight(8);
+    strokeJoin(ROUND);
+    triangle(50, 41, 60, 41, 55, 37);
+    triangle(50, 57, 60, 57, 55, 65);
+    
+    popMatrix();
+  }
+}
 public class Rumah {
   
   public Rumah() {
