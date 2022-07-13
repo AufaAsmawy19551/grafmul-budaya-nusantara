@@ -23,7 +23,7 @@ SoundFile file2;
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(-1050, 511, 1.5f, 0xFFEB984E);
+Person murid2 = new Murid2(-1000, 511, 1.5f, 0xFFEB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -2075,7 +2075,7 @@ public class Scene {
       
       guru.setPosition(-400, 450);
       murid1.setPosition(-850, 510);
-      murid2.setPosition(-1050, 510);
+      murid2.setPosition(-1000, 510);
     }
   }
 }
@@ -2106,9 +2106,9 @@ public class SceneRumahAceh extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
     
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
     
     end(900);
   }
@@ -2139,9 +2139,9 @@ public class SceneRumahGadang extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2172,9 +2172,9 @@ public class SceneRumahJateng extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2206,9 +2206,9 @@ public class SceneRumahPapua extends Scene{
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2239,9 +2239,9 @@ public class SceneRumahSulsel extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }

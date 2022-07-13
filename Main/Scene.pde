@@ -17,7 +17,7 @@ public class Scene {
       
       guru.setPosition(-400, 450);
       murid1.setPosition(-850, 510);
-      murid2.setPosition(-1050, 510);
+      murid2.setPosition(-1000, 510);
     }
   }
 }
