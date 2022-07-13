@@ -2,8 +2,8 @@ import processing.sound.*;
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(1000, 500, 2, #EB984E);
-Person murid1 = new Murid1(200, 500, 2, #EB984E);
+Person guru = new Guru(1000, 500, 2, #FFD9B3);
+Person murid1 = new Murid1(200, 500, 2, #E6B88A);
 Person murid2 = new Murid2(0, 500, 2, #EB984E);
 
 Properti properti = new Properti();

@@ -17,8 +17,8 @@ public class Scene {
       this.played = true;
       frameCount = 0;
       sceneCount += 1;
-      guru = new Guru(1000, 500, 2, #EB984E);
-      murid1 = new Murid1(200, 500, 2, #EB984E);
+      guru = new Guru(1000, 500, 2, #FFD9B3);
+      murid1 = new Murid1(200, 500, 2, #E6B88A);
       murid2 = new Murid2(0, 500, 2, #EB984E);
     }
   }
