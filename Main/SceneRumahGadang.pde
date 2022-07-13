@@ -8,16 +8,26 @@ public class SceneRumahGadang extends Scene {
     pushMatrix();
     background.rumahGadang();
     popMatrix();  
-    
+
     guru.draw();
-    murid1.draw();
     murid2.draw();
+    murid1.draw();
     
-    murid1.speak(50, 100, frameCount, file1);
-    murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt(50, 300, frameCount, "kanan");
-    murid1.goTo(50, 300, frameCount, 800, 500);
-    
-    end(300);  
+    guru.lookingAt(1, 400, frameCount, "kanan");
+    guru.goTo(1, 400, frameCount, 800, 450);
+    guru.lookingAt(500, 900, frameCount, "kanan");
+    guru.goTo(500, 900, frameCount, 2000, 450);
+
+    murid1.lookingAt(1, 400, frameCount, "kanan");
+    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.lookingAt(500, 900, frameCount, "kanan");
+    murid1.goTo(500, 900, frameCount, 1550, 500);
+
+    murid2.lookingAt(1, 400, frameCount, "kanan");
+    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.lookingAt(500, 900, frameCount, "kanan");
+    murid2.goTo(500, 900, frameCount, 1350, 500);
+
+    end(900);
   }
 }

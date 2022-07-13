@@ -21,6 +21,8 @@ public class Object {
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
   }
   
   public void goTo(int startFrame, int endFrame, int frameCount, float x, float y) {

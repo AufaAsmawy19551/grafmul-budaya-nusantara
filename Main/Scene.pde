@@ -1,7 +1,7 @@
 public class Scene {
   
   public Scene() {
-
+    
   }
   
   public void run()
@@ -14,9 +14,10 @@ public class Scene {
     if (frameCount > frameEnd) {
       frameCount = 0;
       sceneCount += 1;
-      guru = new Guru(1000, 450, 2.5, #FFD9B3);
-      murid1 = new Murid1(200, 500, 2, #E6B88A);
-      murid2 = new Murid2(0, 500, 2, #EB984E);
+      
+      guru.setPosition(-400, 450);
+      murid1.setPosition(-850, 500);
+      murid2.setPosition(-1050, 500);
     }
   }
 }
