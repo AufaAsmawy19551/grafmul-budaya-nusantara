@@ -17,16 +17,6 @@ void draw(){
   rumah.draw(170, 210, 0, 0.4);
   rumah.draw(240, 30, 0, 0.6);
   p.matahari(xM, yM, 0.7);
-  //p.bintang(100, -50, 1);
-  //p.bintang(100, -50, 0.6);
-  //p.bintang(150, -50, 0.5);
-  //p.bintang(1000, -20, 1);
-  //p.bintang(900, -20, 0.8);
-  //p.bintang(1000, -20, 0.5);
-  //p.bintang(1100, -20, 0.6);
-  //p.bintang(1130, -25, 0.5);
-  //p.bintang(1200, -20, 0.7);
-  //p.bintang(1280, -20, 0.6);
   p.awan(70, 20, 0.7, 240);
   p.awan(-70, 40, 0.7, 240);
   p.awan(800, 30, 0.7, 240);
@@ -50,4 +40,36 @@ void draw(){
   strokeJoin(ROUND);
   triangle(50, 41, 60, 41, 55, 37);
   triangle(50, 57, 60, 57, 55, 65);
+  
+  //jalan
+  noStroke();
+  fill(#ebedec);
+  triangle(315, 580, 365, 580, 260, 630);
+  triangle(315, 580, 210, 630, 260, 630);
+  triangle(480, 585, 540, 585, 440, 630);
+  triangle(480, 585, 385, 630, 440, 630);
+  triangle(695, 590, 795, 590, 685, 630);
+  triangle(695, 590, 595, 630, 685, 630);
+  
+    //batu
+    fill(#DFDCDA);
+    stroke(#C7C3C0);
+    strokeWeight(2);
+    ellipse(290, 580, 30, 15);
+    //ellipse(282, 590, 40, 20);
+    //ellipse(662, 784, 30, 50);
+    //ellipse(687, 804, 50, 40);
+    //ellipse(717, 810, 70, 30);
+    //ellipse(752, 825, 30, 50);
+    //ellipse(792, 840, 70, 30);
+    //ellipse(821, 845, 30, 20);
+    
+    //ellipse(627, 754, 50, 30);
+    //ellipse(642, 764, 40, 20);
+    //ellipse(662, 784, 30, 50);
+    //ellipse(687, 804, 50, 40);
+    //ellipse(717, 810, 70, 30);
+    //ellipse(752, 825, 30, 50);
+    //ellipse(792, 840, 70, 30);
+    //ellipse(821, 845, 30, 20);
 }
