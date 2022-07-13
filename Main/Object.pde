@@ -1,6 +1,7 @@
 public class Object {
   
   float[] position = new float[2];
+  float s;
   float dx;
   float dy;
   
@@ -9,10 +10,11 @@ public class Object {
     
   }
   
-  public Object(float x, float y) 
+  public Object(float x, float y, float s) 
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -21,6 +23,15 @@ public class Object {
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
+  }
+
+  public void setPosition(float x, float y, float s)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }

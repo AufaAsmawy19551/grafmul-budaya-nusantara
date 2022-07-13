@@ -24,9 +24,9 @@ public class SceneRumahSulsel extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }

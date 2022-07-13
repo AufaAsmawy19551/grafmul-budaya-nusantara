@@ -23,7 +23,7 @@ SoundFile file2;
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(-1050, 511, 1.5f, 0xFFEB984E);
+Person murid2 = new Murid2(-1000, 511, 1.5f, 0xFFEB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -275,7 +275,7 @@ public class Background {
     pushMatrix();
     background(0xFF022847);
     properti.tanah(0, -95, 0.8f);
-    rumahGadang.draw( - 80, 180, 0, 0.5f);
+    rumahGadang.draw( -80, 180, 0, 0.5f);
     rumahGadang.draw(350, 180, 0, 0.6f);
     properti.bulan(xM, yM, 0.7f);
     properti.bintang(100, -50, 1);
@@ -289,8 +289,8 @@ public class Background {
     properti.bintang(1200, -20, 0.7f);
     properti.bintang(1280, -20, 0.6f);
     properti.awan(70, 20, 0.7f, 200);
-    properti.awan( - 70, 40, 0.7f, 200);
-    properti.pohon( - 120, 210, 0.8f);
+    properti.awan( -70, 40, 0.7f, 200);
+    properti.pohon( -120, 210, 0.8f);
     properti.pohon(10, 300, 0.6f);
     properti.pohon(110, 385, 0.4f);
     properti.semak(100, 500, 0.5f);
@@ -451,38 +451,50 @@ public class Background {
   {
     pushMatrix();
     background(0xFFA5E1EA);
+    
+    //gunung
+    fill(0xFF597E7F);
+    stroke(0xFF597E7F);
+    strokeWeight(50);
+    strokeJoin(ROUND);
+    triangle(1150, 200, 600, 700, 1500, 700);
+    
+    noStroke();
     properti.tanah(0, -95, 0.8f);
     rumahSulsel.draw(90, 300, 0, 0.3f);
     rumahSulsel.draw(170, 210, 0, 0.4f);
     rumahSulsel.draw(240, 30, 0, 0.6f);
     properti.matahari(xM, yM, 0.7f);
     properti.awan(70, 20, 0.7f, 240);
-    properti.awan( -70, 40, 0.7f, 240);
+    properti.awan( - 70, 40, 0.7f, 240);
     properti.awan(800, 30, 0.7f, 240);
     properti.awan(950, 0, 0.7f, 240);
-    properti.pohon( -120, 210, 0.8f);
+    properti.pohon( - 120, 210, 0.8f);
     properti.pohon(10, 300, 0.6f);
     properti.pohon(110, 385, 0.4f);
     properti.semak(1100, 540, 0.5f);
     properti.semak(1020, 555, 0.4f);
-    properti.semak(1180, 400, 0.7f);
-    properti.semak(1120, 465, 0.4f);
+    properti.semak(1180, 470, 0.7f);
+    //properti.semak(1300, 555, 0.4);
     //properti.lampu(350, 450, 0.7);
     //properti.lampu(1120, 450, 0.7);
     
     //pesawat
-    fill(0xFF94B9C4);
-    ellipse(50, 50, 80, 15);
-    fill(0xFF86A6BE);
-    stroke(0xFF86A6BE);
-    strokeWeight(8);
-    strokeJoin(ROUND);
-    triangle(50, 41, 60, 41, 55, 37);
-    triangle(50, 57, 60, 57, 55, 65);
+    properti.pesawat(0, 0, 1);
+    properti.bendera(0, 0, 1, "Tongkonan Sulawesi Selatan");
+    //fill(#94b9c4);
+    //ellipse(50, 50, 80, 15);
+    //fill(#86a6be);
+    //stroke(#86a6be);
+    //strokeWeight(8);
+    //strokeJoin(ROUND);
+    //triangle(50, 41, 60, 41, 55, 37);
+    //triangle(50, 57, 60, 57, 55, 65);
     
     //jalan
     noStroke();
     fill(0xFFEBEDEC);
+    //fill(#e77c32);
     triangle(315, 580, 365, 580, 260, 630);
     triangle(315, 580, 210, 630, 260, 630);
     triangle(480, 585, 540, 585, 440, 630);
@@ -494,23 +506,23 @@ public class Background {
     fill(0xFFDFDCDA);
     stroke(0xFFC7C3C0);
     strokeWeight(2);
-    ellipse(290, 580, 30, 15);
-    //ellipse(282, 590, 40, 20);
-    //ellipse(662, 784, 30, 50);
-    //ellipse(687, 804, 50, 40);
-    //ellipse(717, 810, 70, 30);
-    //ellipse(752, 825, 30, 50);
-    //ellipse(792, 840, 70, 30);
-    //ellipse(821, 845, 30, 20);
+    ellipse(290, 580, 20, 15);
+    ellipse(265, 592, 20, 15);
+    ellipse(248, 600, 20, 15);
+    ellipse(220, 614, 20, 15);
+    ellipse(375, 588, 20, 15);
+    ellipse(350, 600, 20, 15);
+    ellipse(333, 608, 20, 15);
+    ellipse(305, 621, 20, 15);
     
-    //ellipse(627, 754, 50, 30);
-    //ellipse(642, 764, 40, 20);
-    //ellipse(662, 784, 30, 50);
-    //ellipse(687, 804, 50, 40);
-    //ellipse(717, 810, 70, 30);
-    //ellipse(752, 825, 30, 50);
-    //ellipse(792, 840, 70, 30);
-    //ellipse(821, 845, 30, 20);
+    ellipse(665, 590, 20, 15);
+    ellipse(640, 598, 20, 15);
+    ellipse(616, 606, 20, 15);
+    ellipse(595, 616, 20, 15);
+    ellipse(805, 600, 20, 15);
+    ellipse(780, 608, 20, 15);
+    ellipse(756, 616, 20, 15);
+    ellipse(735, 626, 20, 15);
     popMatrix();
   }
 }
@@ -518,6 +530,7 @@ public class Background {
 public class Object {
   
   float[] position = new float[2];
+  float s;
   float dx;
   float dy;
   
@@ -526,10 +539,11 @@ public class Object {
     
   }
   
-  public Object(float x, float y) 
+  public Object(float x, float y, float s) 
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -538,6 +552,15 @@ public class Object {
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
+  }
+
+  public void setPosition(float x, float y, float s)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -572,12 +595,10 @@ public class Object {
   }
 }
 public class Person extends Object {
-  
-  float s;
+
   int warna;
   float[] eye = new float[2];
   boolean openMouth;
-  
   
   public Person()
   {
@@ -586,8 +607,7 @@ public class Person extends Object {
   
   public Person(float x, float y, float s, int warna) 
   {
-    super(x, y);
-    this.s = s;
+    super(x, y, s);
     this.warna = warna;
     this.eye[0] = 0;
     this.eye[1] = 0;
@@ -1063,6 +1083,136 @@ public class Properti {
     ellipse(100, 140, 110, 100);
     rect(110, 140, 140, 50);
     ellipse(240, 130, 120, 120);
+    
+    popMatrix();
+  }
+
+  public void pesawat(float x, float y, float s){
+    pushMatrix();
+    
+    translate(x, y);
+    scale(s);
+    
+    noStroke();
+    fill(0xFF94B9C4);
+    ellipse(50, 50, 80, 15);
+    fill(0xFF86A6BE);
+    stroke(0xFF86A6BE);
+    strokeWeight(8);
+    strokeJoin(ROUND);
+    triangle(50, 41, 60, 41, 55, 37);
+    triangle(50, 57, 60, 57, 55, 65);
+    
+    popMatrix();
+  }
+  
+  public void bendera(float x, float y, float s, String daerah){
+    pushMatrix();
+    
+    translate(x, y);
+    scale(s);
+    
+    strokeWeight(2);
+    line(90, 50, 200, 60);
+    rect(150, 40, 400, 30);
+    triangle(150, 40, 150, 50, 145, 40);
+    triangle(150, 60, 150, 70, 145, 70);
+    triangle(550, 40, 550, 50, 555, 40);
+    triangle(550, 60, 550, 70, 555, 70);
+    
+    fill(255);
+    textSize(17);
+    text("Rumah Adat " + daerah, 170, 60);
+    
+    popMatrix();
+  }
+}
+public class PropertiAwan extends Object {
+
+  public PropertiAwan (float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFFFFFFFF);
+    ellipse(70, 140, 80, 50);
+    ellipse(105, 120, 80, 60);
+    ellipse(220, 140, 80, 50);
+    ellipse(185, 120, 80, 60);
+    ellipse(145, 110, 70, 80);
+    ellipse(115, 150, 80, 65);
+    ellipse(165, 150, 80, 65);
+    
+    popMatrix();
+  }
+}
+public class PropertiBulan extends Object {
+  
+  public PropertiBulan(float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFADAA9E);
+    fill(0xFFE3E1D8);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiMatahari extends Object {
+  
+  public PropertiMatahari(float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFEEA457);
+    fill(0xFFEECC57);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiPesawat extends Object {
+  
+  public PropertiPesawat(float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw(){
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFF94B9C4);
+    ellipse(50, 50, 80, 15);
+    fill(0xFF86A6BE);
+    stroke(0xFF86A6BE);
+    strokeWeight(8);
+    strokeJoin(ROUND);
+    triangle(50, 41, 60, 41, 55, 37);
+    triangle(50, 57, 60, 57, 55, 65);
     
     popMatrix();
   }
@@ -1925,7 +2075,7 @@ public class Scene {
       
       guru.setPosition(-400, 450);
       murid1.setPosition(-850, 510);
-      murid2.setPosition(-1050, 510);
+      murid2.setPosition(-1000, 510);
     }
   }
 }
@@ -1949,17 +2099,17 @@ public class SceneRumahAceh extends Scene {
     guru.goTo(1, 400, frameCount, 800, 450);
     guru.lookingAt(500, 900, frameCount, "kanan");
     guru.goTo(500, 900, frameCount, 2000, 450);
-
+    
     murid1.lookingAt(1, 400, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
     murid1.goTo(500, 900, frameCount, 1550, 511);
-
+    
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
-
+    murid2.goTo(500, 900, frameCount, 1400, 511);
+    
     end(900);
   }
 }
@@ -1984,14 +2134,14 @@ public class SceneRumahGadang extends Scene {
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2017,14 +2167,14 @@ public class SceneRumahJateng extends Scene {
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2051,14 +2201,14 @@ public class SceneRumahPapua extends Scene{
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2084,14 +2234,14 @@ public class SceneRumahSulsel extends Scene {
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
