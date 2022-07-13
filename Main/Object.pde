@@ -16,8 +16,16 @@ public class Object {
     this.dx = 0;
     this.dy = 0;
   }
-
-  public void goTo(float x, float y, int startFrame, int endFrame, int frameCount) {
+  
+  public void setPosition(float x, float y)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
+  }
+  
+  public void goTo(int startFrame, int endFrame, int frameCount, float x, float y) {
     if ((startFrame < frameCount) && (endFrame > frameCount)) {
       float m;
       float ix;

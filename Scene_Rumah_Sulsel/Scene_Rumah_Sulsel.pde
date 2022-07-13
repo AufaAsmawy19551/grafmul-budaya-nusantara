@@ -3,8 +3,8 @@
 int xM = 30;
 int yM = 10;
 
-Rumah rumah = new RumahSulsel();
-Properti p = new Properti();
+Rumah rumahSulsel = new RumahSulsel();
+Properti properti = new Properti();
 
 void setup(){
   size(1366, 768);
