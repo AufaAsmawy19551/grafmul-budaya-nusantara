@@ -23,7 +23,7 @@ SoundFile file2;
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(-1050, 511, 1.5f, 0xFFEB984E);
+Person murid2 = new Murid2(-1000, 511, 1.5f, 0xFFEB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -530,6 +530,7 @@ public class Background {
 public class Object {
   
   float[] position = new float[2];
+  float s;
   float dx;
   float dy;
   
@@ -538,10 +539,11 @@ public class Object {
     
   }
   
-  public Object(float x, float y) 
+  public Object(float x, float y, float s) 
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -550,6 +552,15 @@ public class Object {
   {
     this.position[0] = x;
     this.position[1] = y;
+    this.dx = 0;
+    this.dy = 0;
+  }
+
+  public void setPosition(float x, float y, float s)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+    this.s = s;
     this.dx = 0;
     this.dy = 0;
   }
@@ -584,12 +595,10 @@ public class Object {
   }
 }
 public class Person extends Object {
-  
-  float s;
+
   int warna;
   float[] eye = new float[2];
   boolean openMouth;
-  
   
   public Person()
   {
@@ -598,8 +607,7 @@ public class Person extends Object {
   
   public Person(float x, float y, float s, int warna) 
   {
-    super(x, y);
-    this.s = s;
+    super(x, y, s);
     this.warna = warna;
     this.eye[0] = 0;
     this.eye[1] = 0;
@@ -1119,10 +1127,115 @@ public class Properti {
     popMatrix();
   }
 }
+public class PropertiAwan extends Object {
 
+  public PropertiAwan (float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFFFFFFFF);
+    ellipse(70, 140, 80, 50);
+    ellipse(105, 120, 80, 60);
+    ellipse(220, 140, 80, 50);
+    ellipse(185, 120, 80, 60);
+    ellipse(145, 110, 70, 80);
+    ellipse(115, 150, 80, 65);
+    ellipse(165, 150, 80, 65);
+    
+    popMatrix();
+  }
+}
+public class PropertiBulan extends Object {
+  
+  public PropertiBulan(float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFADAA9E);
+    fill(0xFFE3E1D8);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiMatahari extends Object {
+  
+  public PropertiMatahari(float x, float y, float s) {
+    super(x, y, s);
+  }
 
+  public void draw() {
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    stroke(0xFFEEA457);
+    fill(0xFFEECC57);
+    strokeWeight(5);
+    ellipse(100, 100, 140, 140);
+    
+    popMatrix();
+  }
+}
+public class PropertiPesawat extends Object {
+  
+  public PropertiPesawat(float x, float y, float s) {
+    super(x, y, s);
+  }
+
+  public void draw(String daerah){
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    noStroke();
+    fill(0xFF94B9C4);
+    ellipse(50, 50, 80, 15);
+    fill(0xFF86A6BE);
+    stroke(0xFF86A6BE);
+    strokeWeight(8);
+    strokeJoin(ROUND);
+    triangle(50, 41, 60, 41, 55, 37);
+    triangle(50, 57, 60, 57, 55, 65);
+    
+    popMatrix();
+
+    pushMatrix();
+    
+    translate(this.position[0], this.position[1]);
+    scale(this.s);
+    
+    strokeWeight(2);
+    line(90, 50, 200, 60);
+    rect(150, 40, 400, 30);
+    triangle(150, 40, 150, 50, 145, 40);
+    triangle(150, 60, 150, 70, 145, 70);
+    triangle(550, 40, 550, 50, 555, 40);
+    triangle(550, 60, 550, 70, 555, 70);
+    
+    fill(255);
+    textSize(17);
+    text("Rumah Adat " + daerah, 170, 60);
+    
+    popMatrix();
+  }
+}
 public class Rumah {
   
   public Rumah() {
@@ -1981,7 +2094,7 @@ public class Scene {
       
       guru.setPosition(-400, 450);
       murid1.setPosition(-850, 510);
-      murid2.setPosition(-1050, 510);
+      murid2.setPosition(-1000, 510);
     }
   }
 }
@@ -2012,9 +2125,9 @@ public class SceneRumahAceh extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
     
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
     
     end(900);
   }
@@ -2045,9 +2158,9 @@ public class SceneRumahGadang extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2078,9 +2191,9 @@ public class SceneRumahJateng extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2112,9 +2225,9 @@ public class SceneRumahPapua extends Scene{
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
@@ -2145,9 +2258,9 @@ public class SceneRumahSulsel extends Scene {
     murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 511);
+    murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 511);
+    murid2.goTo(500, 900, frameCount, 1400, 511);
 
     end(900);
   }
