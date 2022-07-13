@@ -493,7 +493,13 @@ public class Object {
     this.dx = 0;
     this.dy = 0;
   }
-
+  
+  public void setPosition(float x, float y)
+  {
+    this.position[0] = x;
+    this.position[1] = y;
+  }
+  
   public void goTo(float x, float y, int startFrame, int endFrame, int frameCount) {
     if ((startFrame < frameCount) && (endFrame > frameCount)) {
       float m;
