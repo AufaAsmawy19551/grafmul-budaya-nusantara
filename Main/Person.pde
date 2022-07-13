@@ -1,12 +1,10 @@
-public class Person  {
+public class Person extends Object {
   
-  float[] position = new float[2];
   float s;
   int warna;
   float[] eye = new float[2];
   boolean openMouth;
-  float dx;
-  float dy;
+  
   
   public Person()
   {
@@ -15,15 +13,12 @@ public class Person  {
   
   public Person(float x, float y, float s, int warna) 
   {
-    this.position[0] = x;
-    this.position[1] = y;
+    super(x, y);
     this.s = s;
     this.warna = warna;
     this.eye[0] = 0;
     this.eye[1] = 0;
     this.openMouth = false;
-    this.dx = 0;
-    this.dy = 0;
   }
   
   public void draw() 
@@ -106,43 +101,16 @@ public class Person  {
     }
   }
   
-  public void goTo(float x, float y, int startFrame, int endFrame, int frameCount) {
-    if ((startFrame < frameCount) && (endFrame > frameCount)) {
-      float m;
-      float ix;
-      float iy;
-      
-      if (dx == 0) {
-        m = 1;
-        ix = 0;
-        iy = dy / (endFrame - startFrame);
-      } else{
-        m = dy / dx;
-        ix = dx / (endFrame - startFrame);
-        iy = m * ix;
-      }
-      
-      this.position[0] += ix;
-      this.position[1] += iy;
-    } else if (startFrame == frameCount) {
-      this.dx = x - this.position[0];
-      this.dy = y - this.position[1];
-    } else if (endFrame == frameCount) {
-      this.dx = 0;
-      this.dy = 0;
-      this.position[0] = x;
-      this.position[1] = y;
-    }  
-  }
-  
-  public void speak(int startFrame, int endFrame, int frameCount) {
+  public void speak(int startFrame, int endFrame, int frameCount, SoundFile file) {
     if ((startFrame < frameCount) && (endFrame > frameCount)) {
       if (frameCount % 5 == 0 && this.openMouth == false) {
         this.openMouth = true;
       } else if (frameCount % 5 == 0 && this.openMouth == true) {
         this.openMouth = false;
       }
-    } else if (endFrame == frameCount) {
+    } else if (startFrame == frameCount) {
+      file.play();
+    }else if (endFrame == frameCount) {
       this.openMouth = false;
     }
   }
@@ -216,7 +184,7 @@ public class Murid extends Person {
     quadraticVertex(160, 120, 80, 123);
     quadraticVertex(0, 120, 40, 60);
     endShape();
-
+    
     //baju putih
     beginShape();
     strokeWeight(1);
@@ -227,7 +195,7 @@ public class Murid extends Person {
     quadraticVertex(80, 120, 28, 90);
     quadraticVertex(25, 85, 40, 60);
     endShape();
-
+    
     //kerah putih
     beginShape();
     strokeWeight(1);
@@ -239,7 +207,7 @@ public class Murid extends Person {
     vertex(120, 60);
     quadraticVertex(80, 90, 40, 60);
     endShape();
-
+    
     //dasi merah
     beginShape();
     strokeWeight(1);
@@ -254,7 +222,7 @@ public class Murid extends Person {
     vertex(82, 77);
     vertex(80, 75);
     endShape();
-
+    
     //saku putih
     beginShape();
     strokeWeight(1);
@@ -305,11 +273,11 @@ public class Guru extends Person {
   {
     super(x, y, s, warna);
   }
-
+  
   public void drawClothes() 
   {
     pushMatrix();
-
+    
     //celana
     beginShape();
     strokeWeight(1);
@@ -320,7 +288,7 @@ public class Guru extends Person {
     quadraticVertex(160, 120, 80, 123);
     quadraticVertex(0, 120, 40, 60);
     endShape();
-
+    
     //baju
     beginShape();
     strokeWeight(1);
@@ -332,7 +300,7 @@ public class Guru extends Person {
     quadraticVertex(80, 120, 28, 90);
     quadraticVertex(25, 85, 40, 60);
     endShape();
-
+    
     //saku
     beginShape();
     strokeWeight(1);
@@ -344,7 +312,7 @@ public class Guru extends Person {
     vertex(95, 92);
     vertex(95, 82);
     endShape();
-
+    
     // kerudung
     beginShape();
     strokeWeight(1);
@@ -354,7 +322,7 @@ public class Guru extends Person {
     quadraticVertex(110, 90, 120, 60);
     quadraticVertex(80, 0, 40, 60);
     endShape();
-
+    
     //warna kulit
     beginShape();
     strokeWeight(1);
@@ -364,14 +332,14 @@ public class Guru extends Person {
     quadraticVertex(113, 70, 98, 47);
     quadraticVertex(80, 20, 62, 47);
     endShape();
-
+    
     //garis
     // beginShape();
     // strokeWeight(0.03);
     // vertex(80, 75);
     // vertex(80, 97);
     // endShape();
-
+    
     popMatrix();
   }
 }

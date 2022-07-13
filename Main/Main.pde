@@ -1,3 +1,6 @@
+import processing.sound.*;
+SoundFile file;
+
 // import com.hamoid.*;
 // VideoExport videoExport;
 
@@ -26,6 +29,8 @@ void setup() {
   surface.setLocation(0, 0);
   // videoExport = new VideoExport(this);
   // videoExport.startMovie();
+  file = new SoundFile(this, "/sound/yeah-boy-114748.mp3");
+  // file.play();
 }
 
 void draw() {
@@ -66,7 +71,9 @@ void draw() {
   // sceneRumahAceh.run();
   // sceneRumahJateng.run();
 
+  
   frameCount += 1;
+  
   // videoExport.saveFrame();
 }
 
@@ -77,19 +84,19 @@ void testOrang(){
 
   guru.draw();
   guru.lookingAt("kanan atas", 50, 150, frameCount);
-  guru.speak(100, 200, frameCount);
+  // guru.speak(100, 200, frameCount, file);
   guru.goTo(200, 200, 50, 100, frameCount);
   guru.goTo(200, 400, 100, 200, frameCount);
 
   murid1.draw();
   murid1.lookingAt("kanan atas", 50, 150, frameCount);
-  murid1.speak(100, 200, frameCount);
+  // murid1.speak(100, 200, frameCount, file);
   murid1.goTo(500, 200, 50, 100, frameCount);
   murid1.goTo(500, 400, 100, 200, frameCount);
 
   murid2.draw();
   murid2.lookingAt("kanan atas", 50, 150, frameCount);
-  murid2.speak(100, 200, frameCount);
+  murid2.speak(100, 150, frameCount, new SoundFile(this, "/sound/yeah-boy-114748.mp3"));
   murid2.goTo(800, 200, 50, 100, frameCount);
   murid2.goTo(800, 400, 100, 200, frameCount);
 
