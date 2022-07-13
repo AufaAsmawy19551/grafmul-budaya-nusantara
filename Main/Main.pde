@@ -2,9 +2,9 @@ import processing.sound.*;
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(1000, 450, 2, #EB984E);
-Person murid1 = new Murid1(200, 450, 2, #EB984E);
-Person murid2 = new Murid2(0, 450, 2, #EB984E);
+Person guru = new Guru(1000, 500, 2, #EB984E);
+Person murid1 = new Murid1(200, 500, 2, #EB984E);
+Person murid2 = new Murid2(0, 500, 2, #EB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -15,10 +15,17 @@ Rumah rumahJateng = new RumahJateng();
 Rumah rumahPapua = new RumahPapua();
 Rumah rumahSulsel = new RumahSulsel();
 
+Scene sceneRumahAceh = new SceneRumahAceh();
+Scene sceneRumahGadang = new SceneRumahGadang();
+Scene sceneRumahJateng = new SceneRumahJateng();
+Scene sceneRumahPapua = new SceneRumahPapua();
+Scene sceneRumahSulsel = new SceneRumahSulsel();
+
 int xM = 30;
 int yM = 10;
 
 int frameCount = 0;
+int sceneCount = 0;
 
 void setup() {
   size(1366, 768);
@@ -32,77 +39,148 @@ void setup() {
 
 void draw()
 {
-  sceneRumahPapua();
+  switch(sceneCount) {
+    case 0 :
+      sceneRumahAceh.run();
+      break;
+    case 1 :
+      sceneRumahGadang.run();
+      break;
+    case 2 :
+      sceneRumahJateng.run();
+      break;
+    case 3 :
+      sceneRumahPapua.run();
+      break;
+    case 4 :
+      sceneRumahSulsel.run();
+      break;
+  }
   
   frameCount += 1;
   // videoExport.saveFrame();
 }
 
-void sceneRumahAceh() 
-{
-  pushMatrix();
-  background.rumahAceh();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
-void sceneRumahGadang() 
-{
-  pushMatrix();
-  background.rumahGadang();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
-void sceneRumahJateng() 
-{
-  pushMatrix();
-  background.rumahJateng();
-  popMatrix();  
-  
-  guru.draw();
-  murid1.draw();
-  murid2.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
-void sceneRumahPapua() 
-{
-  pushMatrix();
-  background.rumahPapua();
-  popMatrix();  
-  
-  guru.draw();
-  murid1.draw();
-  murid2.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(800, 450, 50, 300, frameCount);
-}
 
-void sceneRumahSulsel() 
-{
-  pushMatrix();
-  background.rumahSulsel();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// void sceneRumahAceh() 
+// {
+//   pushMatrix();
+//   background.rumahAceh();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahGadang() 
+// {
+//   pushMatrix();
+//   background.rumahGadang();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahJateng() 
+// {
+//   pushMatrix();
+//   background.rumahJateng();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahPapua() 
+// {
+//   pushMatrix();
+//   background.rumahPapua();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahSulsel() 
+// {
+//   pushMatrix();
+//   background.rumahSulsel();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }

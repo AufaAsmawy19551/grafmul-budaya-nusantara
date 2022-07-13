@@ -21,9 +21,9 @@ public class Main extends PApplet {
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(1000, 450, 2, 0xFFEB984E);
-Person murid1 = new Murid1(200, 450, 2, 0xFFEB984E);
-Person murid2 = new Murid2(0, 450, 2, 0xFFEB984E);
+Person guru = new Guru(1000, 500, 2, 0xFFEB984E);
+Person murid1 = new Murid1(200, 500, 2, 0xFFEB984E);
+Person murid2 = new Murid2(0, 500, 2, 0xFFEB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -34,10 +34,17 @@ Rumah rumahJateng = new RumahJateng();
 Rumah rumahPapua = new RumahPapua();
 Rumah rumahSulsel = new RumahSulsel();
 
+Scene sceneRumahAceh = new SceneRumahAceh();
+Scene sceneRumahGadang = new SceneRumahGadang();
+Scene sceneRumahJateng = new SceneRumahJateng();
+Scene sceneRumahPapua = new SceneRumahPapua();
+Scene sceneRumahSulsel = new SceneRumahSulsel();
+
 int xM = 30;
 int yM = 10;
 
 int frameCount = 0;
+int sceneCount = 0;
 
  public void setup() {
   /* size commented out by preprocessor */;
@@ -51,80 +58,151 @@ int frameCount = 0;
 
  public void draw()
 {
-  sceneRumahPapua();
+  switch(sceneCount) {
+    case 0 :
+      sceneRumahAceh.run();
+      break;
+    case 1 :
+      sceneRumahGadang.run();
+      break;
+    case 2 :
+      sceneRumahJateng.run();
+      break;
+    case 3 :
+      sceneRumahPapua.run();
+      break;
+    case 4 :
+      sceneRumahSulsel.run();
+      break;
+  }
   
   frameCount += 1;
   // videoExport.saveFrame();
 }
 
- public void sceneRumahAceh() 
-{
-  pushMatrix();
-  background.rumahAceh();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
- public void sceneRumahGadang() 
-{
-  pushMatrix();
-  background.rumahGadang();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
- public void sceneRumahJateng() 
-{
-  pushMatrix();
-  background.rumahJateng();
-  popMatrix();  
-  
-  guru.draw();
-  murid1.draw();
-  murid2.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
 
- public void sceneRumahPapua() 
-{
-  pushMatrix();
-  background.rumahPapua();
-  popMatrix();  
-  
-  guru.draw();
-  murid1.draw();
-  murid2.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(800, 450, 50, 300, frameCount);
-}
 
- public void sceneRumahSulsel() 
-{
-  pushMatrix();
-  background.rumahSulsel();
-  popMatrix();  
-  
-  murid1.draw();
 
-  murid1.speak(50, 100, frameCount, file1);
-  murid1.speak(150, 200, frameCount, file2);
-  murid1.goTo(900, 500, 50, 300, frameCount);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// void sceneRumahAceh() 
+// {
+//   pushMatrix();
+//   background.rumahAceh();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahGadang() 
+// {
+//   pushMatrix();
+//   background.rumahGadang();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahJateng() 
+// {
+//   pushMatrix();
+//   background.rumahJateng();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahPapua() 
+// {
+//   pushMatrix();
+//   background.rumahPapua();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
+
+// void sceneRumahSulsel() 
+// {
+//   pushMatrix();
+//   background.rumahSulsel();
+//   popMatrix();  
+
+//   guru.draw();
+//   murid1.draw();
+//   murid2.draw();
+
+//   murid1.speak(50, 100, frameCount, file1);
+//   murid1.speak(150, 200, frameCount, file2);
+//   murid1.lookingAt("kanan", 50, 300, frameCount);
+//   murid1.goTo(800, 500, 50, 300, frameCount);
+// }
 public class Background {
   
   public Background() {
@@ -1778,6 +1856,163 @@ public class RumahSulsel extends Rumah {
     ellipse(855, 668, 10,15);
     
     popMatrix();
+  }
+}
+public class Scene {
+  
+  boolean played;
+  
+  public Scene() {
+    played = false;
+  }
+  
+  public void run()
+  {
+    
+  }
+  
+  public void end(int frameEnd)
+  {
+    if (frameCount > frameEnd) {
+      this.played = true;
+      frameCount = 0;
+      sceneCount += 1;
+      guru = new Guru(1000, 500, 2, 0xFFEB984E);
+      murid1 = new Murid1(200, 500, 2, 0xFFEB984E);
+      murid2 = new Murid2(0, 500, 2, 0xFFEB984E);
+    }
+  }
+}
+public class SceneRumahAceh extends Scene {
+  
+  boolean played;
+  
+  public SceneRumahAceh() {
+    super();
+    played = false;
+  }
+  
+   public void run() 
+  {
+    pushMatrix();
+    background.rumahAceh();
+    popMatrix();  
+    
+    guru.draw();
+    murid1.draw();
+    murid2.draw();
+    
+    murid1.speak(50, 100, frameCount, file1);
+    murid1.speak(150, 200, frameCount, file2);
+    murid1.lookingAt("kanan", 50, 300, frameCount);
+    murid1.goTo(800, 500, 50, 300, frameCount);
+    
+    end(300);
+  }
+}
+public class SceneRumahGadang extends Scene {
+  
+  boolean played;
+  
+  public SceneRumahGadang() {
+    super();
+    played = false;
+  }
+   public void run() 
+  {
+    pushMatrix();
+    background.rumahGadang();
+    popMatrix();  
+    
+    guru.draw();
+    murid1.draw();
+    murid2.draw();
+    
+    murid1.speak(50, 100, frameCount, file1);
+    murid1.speak(150, 200, frameCount, file2);
+    murid1.lookingAt("kanan", 50, 300, frameCount);
+    murid1.goTo(800, 500, 50, 300, frameCount);
+    
+    end(300);  
+  }
+}
+public class SceneRumahJateng extends Scene {
+  
+  boolean played;
+  
+  public SceneRumahJateng() {
+    super();
+    played = false;
+  }
+   public void run() 
+  {
+    pushMatrix();
+    background.rumahJateng();
+    popMatrix();  
+    
+    guru.draw();
+    murid1.draw();
+    murid2.draw();
+    
+    murid1.speak(50, 100, frameCount, file1);
+    murid1.speak(150, 200, frameCount, file2);
+    murid1.lookingAt("kanan", 50, 300, frameCount);
+    murid1.goTo(800, 500, 50, 300, frameCount);
+    
+    end(300);
+  }
+}
+public class SceneRumahPapua extends Scene{
+  
+  boolean played;
+  
+  public SceneRumahPapua() {
+    super();
+    played = false;
+  }
+  
+   public void run() 
+  {
+    pushMatrix();
+    background.rumahPapua();
+    popMatrix();  
+    
+    guru.draw();
+    murid1.draw();
+    murid2.draw();
+    
+    murid1.speak(50, 100, frameCount, file1);
+    murid1.speak(150, 200, frameCount, file2);
+    murid1.lookingAt("kanan", 50, 300, frameCount);
+    murid1.goTo(800, 500, 50, 300, frameCount);
+    
+    end(300);
+  }
+}
+public class SceneRumahSulsel extends Scene {
+  
+  boolean played;
+  
+  public SceneRumahSulsel() {
+    super();
+    played = false;
+  }
+   public void run() 
+  {
+    pushMatrix();
+    background.rumahSulsel();
+    popMatrix();  
+    
+    guru.draw();
+    murid1.draw();
+    murid2.draw();
+    
+    murid1.speak(50, 100, frameCount, file1);
+    murid1.speak(150, 200, frameCount, file2);
+    murid1.lookingAt("kanan", 50, 300, frameCount);
+    murid1.goTo(800, 500, 50, 300, frameCount);
+    
+    end(300);
   }
 }
 
