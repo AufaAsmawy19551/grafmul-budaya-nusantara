@@ -21,9 +21,9 @@ public class Main extends PApplet {
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(-400, 450, 2.5f, 0xFFFFD9B3);
-Person murid1 = new Murid1(-850, 500, 2, 0xFFE6B88A);
-Person murid2 = new Murid2(-1050, 500, 2, 0xFFEB984E);
+Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
+Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
+Person murid2 = new Murid2(-1050, 511, 1.5f, 0xFFEB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
@@ -273,7 +273,47 @@ public class Background {
   public void rumahGadang() 
   {
     pushMatrix();
+    background(0xFF022847);
+    properti.tanah(0, -95, 0.8f);
+    rumahGadang.draw( - 80, 180, 0, 0.5f);
+    rumahGadang.draw(350, 180, 0, 0.6f);
+    properti.bulan(xM, yM, 0.7f);
+    properti.bintang(100, -50, 1);
+    properti.bintang(100, -50, 0.6f);
+    properti.bintang(150, -50, 0.5f);
+    properti.bintang(1000, -20, 1);
+    properti.bintang(900, -20, 0.8f);
+    properti.bintang(1000, -20, 0.5f);
+    properti.bintang(1100, -20, 0.6f);
+    properti.bintang(1130, -25, 0.5f);
+    properti.bintang(1200, -20, 0.7f);
+    properti.bintang(1280, -20, 0.6f);
+    properti.awan(70, 20, 0.7f, 200);
+    properti.awan( - 70, 40, 0.7f, 200);
+    properti.pohon( - 120, 210, 0.8f);
+    properti.pohon(10, 300, 0.6f);
+    properti.pohon(110, 385, 0.4f);
+    properti.semak(100, 500, 0.5f);
+    properti.semak(220, 515, 0.4f);
+    properti.semak(600, 560, 0.5f);
+    properti.semak(680, 580, 0.4f);
+    properti.semak(1160, 550, 0.7f);
+    properti.semak(1120, 580, 0.4f);
+    properti.lampu(350, 520, 0.3f);
+    properti.lampu(430, 520, 0.3f);
     
+    properti.lampu(860, 570, 0.4f);
+    properti.lampu(960, 570, 0.4f);
+    
+    //pesawat
+    fill(0xFF94B9C4);
+    ellipse(50, 50, 80, 15);
+    fill(0xFF86A6BE);
+    stroke(0xFF86A6BE);
+    strokeWeight(8);
+    strokeJoin(ROUND);
+    triangle(50, 41, 60, 41, 55, 37);
+    triangle(50, 57, 60, 57, 55, 65);
     popMatrix();
   }
   
@@ -1884,8 +1924,8 @@ public class Scene {
       sceneCount += 1;
       
       guru.setPosition(-400, 450);
-      murid1.setPosition(-850, 500);
-      murid2.setPosition(-1050, 500);
+      murid1.setPosition(-850, 510);
+      murid2.setPosition(-1050, 510);
     }
   }
 }
@@ -1911,14 +1951,14 @@ public class SceneRumahAceh extends Scene {
     guru.goTo(500, 900, frameCount, 2000, 450);
 
     murid1.lookingAt(1, 400, frameCount, "kanan");
-    murid1.goTo(1, 400, frameCount, 350, 500);
+    murid1.goTo(1, 400, frameCount, 350, 511);
     murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 500);
+    murid1.goTo(500, 900, frameCount, 1550, 511);
 
     murid2.lookingAt(1, 400, frameCount, "kanan");
-    murid2.goTo(1, 400, frameCount, 150, 500);
+    murid2.goTo(1, 400, frameCount, 150, 511);
     murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1350, 500);
+    murid2.goTo(500, 900, frameCount, 1350, 511);
 
     end(900);
   }
@@ -2058,7 +2098,7 @@ public class SceneRumahSulsel extends Scene {
 }
 
 
-  public void settings() { size(1366, 768); }
+  public void settings() { size(1366, 720); }
 
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Main" };

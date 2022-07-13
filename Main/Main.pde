@@ -2,9 +2,9 @@ import processing.sound.*;
 SoundFile file1;
 SoundFile file2;
 
-Person guru = new Guru(-400, 450, 2.5, #FFD9B3);
-Person murid1 = new Murid1(-850, 500, 2, #E6B88A);
-Person murid2 = new Murid2(-1050, 500, 2, #EB984E);
+Person guru = new Guru(-400, 450, 2, #FFD9B3);
+Person murid1 = new Murid1(-850, 511, 1.5, #E6B88A);
+Person murid2 = new Murid2(-1050, 511, 1.5, #EB984E);
 
 Properti properti = new Properti();
 Background background = new Background();
