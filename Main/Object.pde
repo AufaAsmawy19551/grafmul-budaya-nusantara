@@ -23,7 +23,7 @@ public class Object {
     this.position[1] = y;
   }
   
-  public void goTo(float x, float y, int startFrame, int endFrame, int frameCount) {
+  public void goTo(int startFrame, int endFrame, int frameCount, float x, float y) {
     if ((startFrame < frameCount) && (endFrame > frameCount)) {
       float m;
       float ix;

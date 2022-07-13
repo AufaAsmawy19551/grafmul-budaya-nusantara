@@ -500,7 +500,7 @@ public class Object {
     this.position[1] = y;
   }
   
-  public void goTo(float x, float y, int startFrame, int endFrame, int frameCount) {
+  public void goTo(int startFrame, int endFrame, int frameCount, float x, float y) {
     if ((startFrame < frameCount) && (endFrame > frameCount)) {
       float m;
       float ix;
@@ -652,7 +652,7 @@ public class Person extends Object {
     }
   }
   
-  public void lookingAt(String arah, int startFrame, int endFrame, int frameCount)  
+  public void lookingAt(int startFrame, int endFrame, int frameCount, String arah)  
   {
     if ((startFrame <= frameCount) && (endFrame > frameCount)) {
       if (arah == "atas") {
@@ -1866,10 +1866,8 @@ public class RumahSulsel extends Rumah {
 }
 public class Scene {
   
-  boolean played;
-  
   public Scene() {
-    played = false;
+
   }
   
   public void run()
@@ -1880,7 +1878,6 @@ public class Scene {
   public void end(int frameEnd)
   {
     if (frameCount > frameEnd) {
-      this.played = true;
       frameCount = 0;
       sceneCount += 1;
       guru = new Guru(1000, 450, 2.5f, 0xFFFFD9B3);
@@ -1891,11 +1888,8 @@ public class Scene {
 }
 public class SceneRumahAceh extends Scene {
   
-  boolean played;
-  
   public SceneRumahAceh() {
     super();
-    played = false;
   }
   
    public void run() 
@@ -1910,19 +1904,16 @@ public class SceneRumahAceh extends Scene {
     
     murid1.speak(50, 100, frameCount, file1);
     murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt("kanan", 50, 300, frameCount);
-    murid1.goTo(800, 500, 50, 300, frameCount);
+    murid1.lookingAt(50, 300, frameCount, "kanan");
+    murid1.goTo(50, 300, frameCount, 800, 500);
     
     end(300);
   }
 }
 public class SceneRumahGadang extends Scene {
   
-  boolean played;
-  
   public SceneRumahGadang() {
     super();
-    played = false;
   }
    public void run() 
   {
@@ -1936,19 +1927,16 @@ public class SceneRumahGadang extends Scene {
     
     murid1.speak(50, 100, frameCount, file1);
     murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt("kanan", 50, 300, frameCount);
-    murid1.goTo(800, 500, 50, 300, frameCount);
+    murid1.lookingAt(50, 300, frameCount, "kanan");
+    murid1.goTo(50, 300, frameCount, 800, 500);
     
     end(300);  
   }
 }
 public class SceneRumahJateng extends Scene {
   
-  boolean played;
-  
   public SceneRumahJateng() {
     super();
-    played = false;
   }
    public void run() 
   {
@@ -1962,19 +1950,16 @@ public class SceneRumahJateng extends Scene {
     
     murid1.speak(50, 100, frameCount, file1);
     murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt("kanan", 50, 300, frameCount);
-    murid1.goTo(800, 500, 50, 300, frameCount);
+    murid1.lookingAt(50, 300, frameCount, "kanan");
+    murid1.goTo(50, 300, frameCount, 800, 500);
     
     end(300);
   }
 }
 public class SceneRumahPapua extends Scene{
   
-  boolean played;
-  
   public SceneRumahPapua() {
     super();
-    played = false;
   }
   
    public void run() 
@@ -1989,19 +1974,16 @@ public class SceneRumahPapua extends Scene{
     
     murid1.speak(50, 100, frameCount, file1);
     murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt("kanan", 50, 300, frameCount);
-    murid1.goTo(800, 500, 50, 300, frameCount);
+    murid1.lookingAt(50, 300, frameCount, "kanan");
+    murid1.goTo(50, 300, frameCount, 800, 500);
     
     end(300);
   }
 }
 public class SceneRumahSulsel extends Scene {
   
-  boolean played;
-  
   public SceneRumahSulsel() {
     super();
-    played = false;
   }
    public void run() 
   {
@@ -2015,8 +1997,8 @@ public class SceneRumahSulsel extends Scene {
     
     murid1.speak(50, 100, frameCount, file1);
     murid1.speak(150, 200, frameCount, file2);
-    murid1.lookingAt("kanan", 50, 300, frameCount);
-    murid1.goTo(800, 500, 50, 300, frameCount);
+    murid1.lookingAt(50, 300, frameCount, "kanan");
+    murid1.goTo(50, 300, frameCount, 800, 500);
     
     end(300);
   }

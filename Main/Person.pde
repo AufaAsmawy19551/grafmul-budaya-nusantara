@@ -121,7 +121,7 @@ public class Person extends Object {
     }
   }
   
-  public void lookingAt(String arah, int startFrame, int endFrame, int frameCount)  
+  public void lookingAt(int startFrame, int endFrame, int frameCount, String arah)  
   {
     if ((startFrame <= frameCount) && (endFrame > frameCount)) {
       if (arah == "atas") {

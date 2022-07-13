@@ -1,9 +1,7 @@
 public class Scene {
   
-  boolean played;
-  
   public Scene() {
-    played = false;
+
   }
   
   public void run()
@@ -14,7 +12,6 @@ public class Scene {
   public void end(int frameEnd)
   {
     if (frameCount > frameEnd) {
-      this.played = true;
       frameCount = 0;
       sceneCount += 1;
       guru = new Guru(1000, 450, 2.5, #FFD9B3);
