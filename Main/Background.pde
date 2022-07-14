@@ -9,6 +9,29 @@ public class Background {
     pushMatrix();
     background(#a5e1ea);
     
+    matahari.draw();
+    awan1.draw(#ffffff);
+    awan2.draw(#ffffff);
+    awan3.draw(#ffffff);
+    awan4.draw(#ffffff);
+    awan5.draw(#ffffff);
+    awan6.draw(#ffffff);
+    awan7.draw(#ffffff);
+    awan8.draw(#ffffff);
+    pesawat.draw("Krong Bade Aceh");
+    
+    matahari.setPosition(30, 10, 0.7);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    
     // properti.matahari(xM, yM, 0.7);
     // properti.awan(70, 20, 0.7, 240);
     // properti.awan( -70, 40, 0.7, 240);
@@ -68,58 +91,8 @@ public class Background {
   public void rumahGadang() 
   {
     pushMatrix();
-      background(#022847);
-      properti.tanah(0, -95, 0.8);
-      // properti.bulan(xM, yM, 0.7);
-      properti.bintang(100, -50, 1);
-      properti.bintang(100, -50, 0.6);
-      properti.bintang(150, -50, 0.5);
-      properti.bintang(1000, -20, 1);
-      properti.bintang(900, -20, 0.8);
-      properti.bintang(1000, -20, 0.5);
-      properti.bintang(1100, -20, 0.6);
-      properti.bintang(1130, -25, 0.5);
-      properti.bintang(1200, -20, 0.7);
-      properti.bintang(1280, -20, 0.6);
-      // properti.awan(70, 20, 0.7, 200);
-      // properti.awan(-70, 40, 0.7, 200);
-
-      //pesawat
-      // fill(#94b9c4);
-      // ellipse(50, 50, 80, 15);
-      // fill(#86a6be);
-      // stroke(#86a6be);
-      // strokeWeight(8);
-      // strokeJoin(ROUND);
-      // triangle(50, 41, 60, 41, 55, 37);
-      // triangle(50, 57, 60, 57, 55, 65);
-
-      rumahGadang.draw(-320, -160, 0, 1);
-
-      properti.pohon(-120, 210, 0.8);
-      properti.pohon(10, 300, 0.6);
-      properti.pohon(110, 385, 0.4);
-      properti.pohon(1150, 230, 0.8);
-      properti.semak(100, 510, 0.5);
-      properti.semak(220, 525, 0.4);
-      
-      properti.semak(1100, 480, 0.7);
-      properti.semak(1060, 500, 0.4);
-
-      properti.lampu(550, 520, 0.5);
-      properti.lampu(710, 520, 0.5);
-
-    popMatrix();
-  }
-  
-  public void rumahJateng() 
-  {
-    pushMatrix();
     background(#022847);
-    properti.tanah(0, -95, 0.8);
-    rumahJateng.draw( -80, 200, 0, 0.5);
-    rumahJateng.draw(50, 50, 0, 0.8);
-    // properti.bulan(xM, yM, 0.7);
+    
     properti.bintang(100, -50, 1);
     properti.bintang(100, -50, 0.6);
     properti.bintang(150, -50, 0.5);
@@ -130,6 +103,104 @@ public class Background {
     properti.bintang(1130, -25, 0.5);
     properti.bintang(1200, -20, 0.7);
     properti.bintang(1280, -20, 0.6);
+    
+    bulan.draw();
+    awan1.draw(200);
+    awan2.draw(200);
+    awan3.draw(200);
+    awan4.draw(200);
+    awan5.draw(200);
+    awan6.draw(200);
+    awan7.draw(200);
+    awan8.draw(200);
+    pesawat.draw("Gadang Sumatra Barat");
+    
+    bulan.setPosition(30, 10, 0.7);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    properti.tanah(0, -95, 0.8);
+    // properti.bulan(xM, yM, 0.7);
+    // properti.awan(70, 20, 0.7, 200);
+    // properti.awan(-70, 40, 0.7, 200);
+    
+    //pesawat
+    // fill(#94b9c4);
+    // ellipse(50, 50, 80, 15);
+    // fill(#86a6be);
+    // stroke(#86a6be);
+    // strokeWeight(8);
+    // strokeJoin(ROUND);
+    // triangle(50, 41, 60, 41, 55, 37);
+    // triangle(50, 57, 60, 57, 55, 65);
+    
+    rumahGadang.draw( -320, -160, 0, 1);
+    
+    properti.pohon( -120, 210, 0.8);
+    properti.pohon(10, 300, 0.6);
+    properti.pohon(110, 385, 0.4);
+    properti.pohon(1150, 230, 0.8);
+    properti.semak(100, 510, 0.5);
+    properti.semak(220, 525, 0.4);
+    
+    properti.semak(1100, 480, 0.7);
+    properti.semak(1060, 500, 0.4);
+    
+    properti.lampu(550, 520, 0.5);
+    properti.lampu(710, 520, 0.5);
+    
+    popMatrix();
+  }
+  
+  public void rumahJateng() 
+  {
+    pushMatrix();
+    background(#022847);
+    
+    properti.bintang(100, -50, 1);
+    properti.bintang(100, -50, 0.6);
+    properti.bintang(150, -50, 0.5);
+    properti.bintang(1000, -20, 1);
+    properti.bintang(900, -20, 0.8);
+    properti.bintang(1000, -20, 0.5);
+    properti.bintang(1100, -20, 0.6);
+    properti.bintang(1130, -25, 0.5);
+    properti.bintang(1200, -20, 0.7);
+    properti.bintang(1280, -20, 0.6);
+    
+    bulan.draw();
+    awan1.draw(200);
+    awan2.draw(200);
+    awan3.draw(200);
+    awan4.draw(200);
+    awan5.draw(200);
+    awan6.draw(200);
+    awan7.draw(200);
+    awan8.draw(200);
+    pesawat.draw("Joglo Jawa Tengah");
+    
+    bulan.setPosition(30, 10, 0.7);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    properti.tanah(0, -95, 0.8);
+    rumahJateng.draw( -80, 200, 0, 0.5);
+    rumahJateng.draw(50, 50, 0, 0.8);
+    // properti.bulan(xM, yM, 0.7);
     // properti.awan(70, 20, 0.7, 200);
     // properti.awan( -70, 40, 0.7, 200);
     properti.pohon( -120, 210, 0.8);
@@ -153,14 +224,37 @@ public class Background {
     // strokeJoin(ROUND);
     // triangle(50, 41, 60, 41, 55, 37);
     // triangle(50, 57, 60, 57, 55, 65);
-
+    
     popMatrix();
   }
   
   public void rumahPapua() 
   {
     pushMatrix();
-    background(#a5e1ea);
+    background(#fcbc4e);
+    
+    matahari.draw();
+    awan1.draw(#ffffff);
+    awan2.draw(#ffffff);
+    awan3.draw(#ffffff);
+    awan4.draw(#ffffff);
+    awan5.draw(#ffffff);
+    awan6.draw(#ffffff);
+    awan7.draw(#ffffff);
+    awan8.draw(#ffffff);
+    pesawat.draw("Honai Papua");
+    
+    matahari.setPosition(1166, 10, 0.7);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
     properti.tanah(0, -180, 0.9);
     
     // properti.matahari(xM, yM, 0.7);
@@ -239,7 +333,7 @@ public class Background {
     // strokeJoin(ROUND);
     // triangle(50, 41, 60, 41, 55, 37);
     // triangle(50, 57, 60, 57, 55, 65);
-
+    
     popMatrix();
   }
   
@@ -247,6 +341,28 @@ public class Background {
   {
     pushMatrix();
     background(#a5e1ea);
+    
+    matahari.draw();
+    awan1.draw(#ffffff);
+    awan2.draw(#ffffff);
+    awan3.draw(#ffffff);
+    awan4.draw(#ffffff);
+    awan5.draw(#ffffff);
+    awan6.draw(#ffffff);
+    awan7.draw(#ffffff);
+    awan8.draw(#ffffff);
+    pesawat.draw("Tongkonan Sulawesi Selatan");
+    
+    matahari.setPosition(683, 10, 0.7);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
     
     //gunung
     fill(#597e7f);
@@ -265,7 +381,7 @@ public class Background {
     // properti.awan( - 70, 40, 0.7, 240);
     // properti.awan(800, 30, 0.7, 240);
     // properti.awan(950, 0, 0.7, 240);
-    properti.pohon( - 120, 210, 0.8);
+    properti.pohon( -120, 210, 0.8);
     properti.pohon(10, 300, 0.6);
     properti.pohon(110, 385, 0.4);
     properti.semak(1100, 540, 0.5);

@@ -25,8 +25,20 @@ Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
 Person murid2 = new Murid2(-1000, 511, 1.5f, 0xFFEB984E);
 
-Properti properti = new Properti();
 Background background = new Background();
+
+Properti properti = new Properti();
+PropertiBulan bulan = new PropertiBulan(30, 10, 0.7f);
+PropertiMatahari matahari = new PropertiMatahari(30, 10, 0.7f); 
+PropertiAwan awan1 = new PropertiAwan(-200, 0, 1);
+PropertiAwan awan2 = new PropertiAwan(600, -50, 1);
+PropertiAwan awan3 = new PropertiAwan(200, -35, 0.6f);
+PropertiAwan awan4 = new PropertiAwan(450, 100, 0.6f);
+PropertiAwan awan5 = new PropertiAwan(1100, 150, 0.6f);
+PropertiAwan awan6 = new PropertiAwan(400, 200, 0.3f);
+PropertiAwan awan7 = new PropertiAwan(800, 150, 0.3f);
+PropertiAwan awan8 = new PropertiAwan(1000, 0, 0.3f);
+PropertiPesawat pesawat = new PropertiPesawat(1366, 0, 1);
 
 Rumah rumahAceh = new RumahAceh();
 Rumah rumahGadang = new RumahGadang();
@@ -39,9 +51,6 @@ Scene sceneRumahGadang = new SceneRumahGadang();
 Scene sceneRumahJateng = new SceneRumahJateng();
 Scene sceneRumahPapua = new SceneRumahPapua();
 Scene sceneRumahSulsel = new SceneRumahSulsel();
-
-int xM = 30;
-int yM = 10;
 
 int frameCount = 0;
 int sceneCount = 0;
@@ -58,23 +67,26 @@ int sceneCount = 0;
 
  public void draw()
 {
-  switch(sceneCount) {
-    case 0 :
-      sceneRumahAceh.run();
-      break;
-    case 1 :
-      sceneRumahGadang.run();
-      break;
-    case 2 :
-      sceneRumahJateng.run();
-      break;
-    case 3 :
+  // switch(sceneCount) {
+  //   case 0 :
+  //     sceneRumahAceh.run();
+  //     break;
+  //   case 1 :
+  //     sceneRumahSulsel.run();
+  //     break;
+  //   case 2 :
+  //     sceneRumahPapua.run();
+  //     break;
+  //   case 3 :
+  //     sceneRumahGadang.run();
+  //     break;
+  //   case 4 :
+  //     sceneRumahJateng.run();
+  //     break;
+  // }
+
       sceneRumahPapua.run();
-      break;
-    case 4 :
-      sceneRumahSulsel.run();
-      break;
-  }
+
 
   frameCount += 1;
   // videoExport.saveFrame();
@@ -214,6 +226,29 @@ public class Background {
     pushMatrix();
     background(0xFFA5E1EA);
     
+    matahari.draw();
+    awan1.draw(0xFFFFFFFF);
+    awan2.draw(0xFFFFFFFF);
+    awan3.draw(0xFFFFFFFF);
+    awan4.draw(0xFFFFFFFF);
+    awan5.draw(0xFFFFFFFF);
+    awan6.draw(0xFFFFFFFF);
+    awan7.draw(0xFFFFFFFF);
+    awan8.draw(0xFFFFFFFF);
+    pesawat.draw("Krong Bade Aceh");
+    
+    matahari.setPosition(30, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    
     // properti.matahari(xM, yM, 0.7);
     // properti.awan(70, 20, 0.7, 240);
     // properti.awan( -70, 40, 0.7, 240);
@@ -273,58 +308,8 @@ public class Background {
   public void rumahGadang() 
   {
     pushMatrix();
-      background(0xFF022847);
-      properti.tanah(0, -95, 0.8f);
-      // properti.bulan(xM, yM, 0.7);
-      properti.bintang(100, -50, 1);
-      properti.bintang(100, -50, 0.6f);
-      properti.bintang(150, -50, 0.5f);
-      properti.bintang(1000, -20, 1);
-      properti.bintang(900, -20, 0.8f);
-      properti.bintang(1000, -20, 0.5f);
-      properti.bintang(1100, -20, 0.6f);
-      properti.bintang(1130, -25, 0.5f);
-      properti.bintang(1200, -20, 0.7f);
-      properti.bintang(1280, -20, 0.6f);
-      // properti.awan(70, 20, 0.7, 200);
-      // properti.awan(-70, 40, 0.7, 200);
-
-      //pesawat
-      // fill(#94b9c4);
-      // ellipse(50, 50, 80, 15);
-      // fill(#86a6be);
-      // stroke(#86a6be);
-      // strokeWeight(8);
-      // strokeJoin(ROUND);
-      // triangle(50, 41, 60, 41, 55, 37);
-      // triangle(50, 57, 60, 57, 55, 65);
-
-      rumahGadang.draw(-320, -160, 0, 1);
-
-      properti.pohon(-120, 210, 0.8f);
-      properti.pohon(10, 300, 0.6f);
-      properti.pohon(110, 385, 0.4f);
-      properti.pohon(1150, 230, 0.8f);
-      properti.semak(100, 510, 0.5f);
-      properti.semak(220, 525, 0.4f);
-      
-      properti.semak(1100, 480, 0.7f);
-      properti.semak(1060, 500, 0.4f);
-
-      properti.lampu(550, 520, 0.5f);
-      properti.lampu(710, 520, 0.5f);
-
-    popMatrix();
-  }
-  
-  public void rumahJateng() 
-  {
-    pushMatrix();
     background(0xFF022847);
-    properti.tanah(0, -95, 0.8f);
-    rumahJateng.draw( -80, 200, 0, 0.5f);
-    rumahJateng.draw(50, 50, 0, 0.8f);
-    // properti.bulan(xM, yM, 0.7);
+    
     properti.bintang(100, -50, 1);
     properti.bintang(100, -50, 0.6f);
     properti.bintang(150, -50, 0.5f);
@@ -335,6 +320,104 @@ public class Background {
     properti.bintang(1130, -25, 0.5f);
     properti.bintang(1200, -20, 0.7f);
     properti.bintang(1280, -20, 0.6f);
+    
+    bulan.draw();
+    awan1.draw(200);
+    awan2.draw(200);
+    awan3.draw(200);
+    awan4.draw(200);
+    awan5.draw(200);
+    awan6.draw(200);
+    awan7.draw(200);
+    awan8.draw(200);
+    pesawat.draw("Gadang Sumatra Barat");
+    
+    bulan.setPosition(30, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    properti.tanah(0, -95, 0.8f);
+    // properti.bulan(xM, yM, 0.7);
+    // properti.awan(70, 20, 0.7, 200);
+    // properti.awan(-70, 40, 0.7, 200);
+    
+    //pesawat
+    // fill(#94b9c4);
+    // ellipse(50, 50, 80, 15);
+    // fill(#86a6be);
+    // stroke(#86a6be);
+    // strokeWeight(8);
+    // strokeJoin(ROUND);
+    // triangle(50, 41, 60, 41, 55, 37);
+    // triangle(50, 57, 60, 57, 55, 65);
+    
+    rumahGadang.draw( -320, -160, 0, 1);
+    
+    properti.pohon( -120, 210, 0.8f);
+    properti.pohon(10, 300, 0.6f);
+    properti.pohon(110, 385, 0.4f);
+    properti.pohon(1150, 230, 0.8f);
+    properti.semak(100, 510, 0.5f);
+    properti.semak(220, 525, 0.4f);
+    
+    properti.semak(1100, 480, 0.7f);
+    properti.semak(1060, 500, 0.4f);
+    
+    properti.lampu(550, 520, 0.5f);
+    properti.lampu(710, 520, 0.5f);
+    
+    popMatrix();
+  }
+  
+  public void rumahJateng() 
+  {
+    pushMatrix();
+    background(0xFF022847);
+    
+    properti.bintang(100, -50, 1);
+    properti.bintang(100, -50, 0.6f);
+    properti.bintang(150, -50, 0.5f);
+    properti.bintang(1000, -20, 1);
+    properti.bintang(900, -20, 0.8f);
+    properti.bintang(1000, -20, 0.5f);
+    properti.bintang(1100, -20, 0.6f);
+    properti.bintang(1130, -25, 0.5f);
+    properti.bintang(1200, -20, 0.7f);
+    properti.bintang(1280, -20, 0.6f);
+    
+    bulan.draw();
+    awan1.draw(200);
+    awan2.draw(200);
+    awan3.draw(200);
+    awan4.draw(200);
+    awan5.draw(200);
+    awan6.draw(200);
+    awan7.draw(200);
+    awan8.draw(200);
+    pesawat.draw("Joglo Jawa Tengah");
+    
+    bulan.setPosition(30, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
+    properti.tanah(0, -95, 0.8f);
+    rumahJateng.draw( -80, 200, 0, 0.5f);
+    rumahJateng.draw(50, 50, 0, 0.8f);
+    // properti.bulan(xM, yM, 0.7);
     // properti.awan(70, 20, 0.7, 200);
     // properti.awan( -70, 40, 0.7, 200);
     properti.pohon( -120, 210, 0.8f);
@@ -358,14 +441,37 @@ public class Background {
     // strokeJoin(ROUND);
     // triangle(50, 41, 60, 41, 55, 37);
     // triangle(50, 57, 60, 57, 55, 65);
-
+    
     popMatrix();
   }
   
   public void rumahPapua() 
   {
     pushMatrix();
-    background(0xFFA5E1EA);
+    background(0xFFFCBC4E);
+    
+    matahari.draw();
+    awan1.draw(0xFFFFFFFF);
+    awan2.draw(0xFFFFFFFF);
+    awan3.draw(0xFFFFFFFF);
+    awan4.draw(0xFFFFFFFF);
+    awan5.draw(0xFFFFFFFF);
+    awan6.draw(0xFFFFFFFF);
+    awan7.draw(0xFFFFFFFF);
+    awan8.draw(0xFFFFFFFF);
+    pesawat.draw("Honai Papua");
+    
+    matahari.setPosition(1166, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
+    
     properti.tanah(0, -180, 0.9f);
     
     // properti.matahari(xM, yM, 0.7);
@@ -409,31 +515,31 @@ public class Background {
     ellipse(320, 620, 60, 80);
     
     //jalan 
-    fill(38, 38, 37);
-    stroke(0xFFFFFFFF);
-    strokeWeight(2);
-    rect(0, 670, 1366, 300);
+    // fill(38, 38, 37);
+    // stroke(#ffffff);
+    // strokeWeight(2);
+    // rect(0, 670, 1366, 300);
     
     properti.lampu(560, 520, 0.5f);
     properti.lampu(750, 520, 0.5f);
     
     //garis jalan
-    fill(0xFFFFFFFF);
-    noStroke();
-    rect(0, 715, 50, 10);
-    rect(100, 715, 50, 10);
-    rect(200, 715, 50, 10);
-    rect(300, 715, 50, 10);
-    rect(400, 715, 50, 10);
-    rect(500, 715, 50, 10);
-    rect(600, 715, 50, 10);
-    rect(700, 715, 50, 10);
-    rect(800, 715, 50, 10);
-    rect(900, 715, 50, 10);
-    rect(1000, 715, 50, 10);
-    rect(1100, 715, 50, 10);
-    rect(1200, 715, 50, 10);
-    rect(1300, 715, 50, 10);
+    // fill(#ffffff);
+    // noStroke();
+    // rect(0, 715, 50, 10);
+    // rect(100, 715, 50, 10);
+    // rect(200, 715, 50, 10);
+    // rect(300, 715, 50, 10);
+    // rect(400, 715, 50, 10);
+    // rect(500, 715, 50, 10);
+    // rect(600, 715, 50, 10);
+    // rect(700, 715, 50, 10);
+    // rect(800, 715, 50, 10);
+    // rect(900, 715, 50, 10);
+    // rect(1000, 715, 50, 10);
+    // rect(1100, 715, 50, 10);
+    // rect(1200, 715, 50, 10);
+    // rect(1300, 715, 50, 10);
     
     //pesawat
     // fill(#94b9c4);
@@ -444,7 +550,7 @@ public class Background {
     // strokeJoin(ROUND);
     // triangle(50, 41, 60, 41, 55, 37);
     // triangle(50, 57, 60, 57, 55, 65);
-
+    
     popMatrix();
   }
   
@@ -452,6 +558,28 @@ public class Background {
   {
     pushMatrix();
     background(0xFFA5E1EA);
+    
+    matahari.draw();
+    awan1.draw(0xFFFFFFFF);
+    awan2.draw(0xFFFFFFFF);
+    awan3.draw(0xFFFFFFFF);
+    awan4.draw(0xFFFFFFFF);
+    awan5.draw(0xFFFFFFFF);
+    awan6.draw(0xFFFFFFFF);
+    awan7.draw(0xFFFFFFFF);
+    awan8.draw(0xFFFFFFFF);
+    pesawat.draw("Tongkonan Sulawesi Selatan");
+    
+    matahari.setPosition(683, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -500, 0);
     
     //gunung
     fill(0xFF597E7F);
@@ -470,7 +598,7 @@ public class Background {
     // properti.awan( - 70, 40, 0.7, 240);
     // properti.awan(800, 30, 0.7, 240);
     // properti.awan(950, 0, 0.7, 240);
-    properti.pohon( - 120, 210, 0.8f);
+    properti.pohon( -120, 210, 0.8f);
     properti.pohon(10, 300, 0.6f);
     properti.pohon(110, 385, 0.4f);
     properti.semak(1100, 540, 0.5f);
@@ -2081,9 +2209,19 @@ public class Scene {
       frameCount = 0;
       sceneCount += 1;
       
-      guru.setPosition(-400, 450);
-      murid1.setPosition(-850, 510);
-      murid2.setPosition(-1000, 510);
+      guru.setPosition( - 400, 450);
+      murid1.setPosition( - 850, 510);
+      murid2.setPosition( - 1000, 510);
+      
+      awan1.setPosition( - 200, 0, 1);
+      awan2.setPosition(600, -50, 1);
+      awan3.setPosition(200, -35, 0.6f);
+      awan4.setPosition(450, 100, 0.6f);
+      awan5.setPosition(1100, 150, 0.6f);
+      awan6.setPosition(400, 200, 0.3f);
+      awan7.setPosition(800, 150, 0.3f);
+      awan8.setPosition(1000, 0, 0.3f);
+      pesawat.setPosition(1366, 0, 1);
     }
   }
 }
