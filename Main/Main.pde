@@ -39,7 +39,7 @@ int sceneCount = 0;
 void setup() {
   size(1366, 768);
   frameRate(30);
-  surface.setTitle("test");
+  surface.setTitle("Schooltouring by SNI");
   surface.setResizable(true);
   surface.setLocation(0, 0);
   file1 = new SoundFile(this, "/sound/yeah-boy-114748.mp3");

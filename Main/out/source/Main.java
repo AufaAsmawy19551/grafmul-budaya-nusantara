@@ -58,7 +58,7 @@ int sceneCount = 0;
  public void setup() {
   /* size commented out by preprocessor */;
   frameRate(30);
-  surface.setTitle("test");
+  surface.setTitle("Schooltouring by SNI");
   surface.setResizable(true);
   surface.setLocation(0, 0);
   file1 = new SoundFile(this, "/sound/yeah-boy-114748.mp3");
@@ -67,24 +67,25 @@ int sceneCount = 0;
 
  public void draw()
 {
+  // sceneRumahPapua.run();
+
+  switch(sceneCount) {
+    case 0 :
+      sceneRumahAceh.run();
+      break;
+    case 1 :
+      sceneRumahSulsel.run();
+      break;
+    case 2 :
       sceneRumahPapua.run();
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahJateng.run();
-  //     break;
-  // }
+      break;
+    case 3 :
+      sceneRumahGadang.run();
+      break;
+    case 4 :
+      sceneRumahJateng.run();
+      break;
+  }
 
   frameCount += 1;
   // videoExport.saveFrame();
