@@ -1,5 +1,11 @@
 import processing.sound.*;
-SoundFile file1;
+SoundFile backsound;
+SoundFile s1g_rumah_adat_apa;
+SoundFile s1g_rumah_aceh;
+SoundFile s1m1_nggak_tahu_bu_guru;
+SoundFile s1m1_wah_unik;
+SoundFile s1m2_nggak_tahu_bu_guru;
+SoundFile s1g;
 SoundFile file2;
 
 Person guru = new Guru(-400, 450, 2, #FFD9B3);
@@ -42,8 +48,14 @@ void setup() {
   surface.setTitle("Schooltouring by SNI");
   surface.setResizable(true);
   surface.setLocation(0, 0);
-  file1 = new SoundFile(this, "/sound/yeah-boy-114748.mp3");
-  file2 = new SoundFile(this, "/sound/yeah-boy-114748.mp3");
+  backsound = new SoundFile(this, "/sound/backsound.mp3");
+  backsound.amp(0.3);
+  backsound.loop();
+  s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
+  s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
+  s1m1_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m1_nggak_tahu_bu_guru.mp3");
+  s1m1_wah_unik = new SoundFile(this, "/sound/s1m1_wah_unik.mp3");
+  s1m2_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m2_nggak_tahu_bu_guru.mp3");
 }
 
 void draw()
