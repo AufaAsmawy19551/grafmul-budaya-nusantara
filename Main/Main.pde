@@ -48,6 +48,8 @@ void setup() {
 
 void draw()
 {
+  // sceneRumahPapua.run();
+
   switch(sceneCount) {
     case 0 :
       sceneRumahAceh.run();

@@ -67,6 +67,7 @@ int sceneCount = 0;
 
  public void draw()
 {
+      sceneRumahPapua.run();
   // switch(sceneCount) {
   //   case 0 :
   //     sceneRumahAceh.run();
@@ -84,9 +85,6 @@ int sceneCount = 0;
   //     sceneRumahJateng.run();
   //     break;
   // }
-
-      sceneRumahPapua.run();
-
 
   frameCount += 1;
   // videoExport.saveFrame();
@@ -226,7 +224,7 @@ public class Background {
     pushMatrix();
     background(0xFFA5E1EA);
     
-    matahari.draw();
+    matahari.draw(0xFFEECC57);
     awan1.draw(0xFFFFFFFF);
     awan2.draw(0xFFFFFFFF);
     awan3.draw(0xFFFFFFFF);
@@ -246,7 +244,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     
     // properti.matahari(xM, yM, 0.7);
@@ -341,7 +339,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -95, 0.8f);
     // properti.bulan(xM, yM, 0.7);
@@ -412,7 +410,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -95, 0.8f);
     rumahJateng.draw( -80, 200, 0, 0.5f);
@@ -450,7 +448,7 @@ public class Background {
     pushMatrix();
     background(0xFFFCBC4E);
     
-    matahari.draw();
+    matahari.draw(0xFFE08941);
     awan1.draw(0xFFFFFFFF);
     awan2.draw(0xFFFFFFFF);
     awan3.draw(0xFFFFFFFF);
@@ -470,7 +468,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -180, 0.9f);
     
@@ -559,7 +557,7 @@ public class Background {
     pushMatrix();
     background(0xFFA5E1EA);
     
-    matahari.draw();
+    matahari.draw(0xFFEECC57);
     awan1.draw(0xFFFFFFFF);
     awan2.draw(0xFFFFFFFF);
     awan3.draw(0xFFFFFFFF);
@@ -579,7 +577,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     //gunung
     fill(0xFF597E7F);
@@ -1295,14 +1293,14 @@ public class PropertiMatahari extends Object {
     super(x, y, s);
   }
 
-  public void draw() {
+  public void draw(int warna) {
     pushMatrix();
     
     translate(this.position[0], this.position[1]);
     scale(this.s);
     
     stroke(0xFFEEA457);
-    fill(0xFFEECC57);
+    fill(warna);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
     

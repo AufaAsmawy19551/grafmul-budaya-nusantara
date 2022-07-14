@@ -4,14 +4,14 @@ public class PropertiMatahari extends Object {
     super(x, y, s);
   }
 
-  public void draw() {
+  public void draw(int warna) {
     pushMatrix();
     
     translate(this.position[0], this.position[1]);
     scale(this.s);
     
     stroke(#eea457);
-    fill(#eecc57);
+    fill(warna);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
     
