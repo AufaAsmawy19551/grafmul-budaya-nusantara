@@ -9,7 +9,7 @@ public class Background {
     pushMatrix();
     background(#a5e1ea);
     
-    matahari.draw();
+    matahari.draw(#eecc57);
     awan1.draw(#ffffff);
     awan2.draw(#ffffff);
     awan3.draw(#ffffff);
@@ -29,7 +29,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     
     // properti.matahari(xM, yM, 0.7);
@@ -124,7 +124,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -95, 0.8);
     // properti.bulan(xM, yM, 0.7);
@@ -195,7 +195,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -95, 0.8);
     rumahJateng.draw( -80, 200, 0, 0.5);
@@ -233,7 +233,7 @@ public class Background {
     pushMatrix();
     background(#fcbc4e);
     
-    matahari.draw();
+    matahari.draw(#e08941);
     awan1.draw(#ffffff);
     awan2.draw(#ffffff);
     awan3.draw(#ffffff);
@@ -253,7 +253,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     properti.tanah(0, -180, 0.9);
     
@@ -342,7 +342,7 @@ public class Background {
     pushMatrix();
     background(#a5e1ea);
     
-    matahari.draw();
+    matahari.draw(#eecc57);
     awan1.draw(#ffffff);
     awan2.draw(#ffffff);
     awan3.draw(#ffffff);
@@ -362,7 +362,7 @@ public class Background {
     awan6.goTo(1, 6000, frameCount, 1700, 200);
     awan7.goTo(1, 6000, frameCount, 2100, 150);
     awan8.goTo(1, 6000, frameCount, 2300, 0);
-    pesawat.goTo(1, 800, frameCount, -500, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
     
     //gunung
     fill(#597e7f);
