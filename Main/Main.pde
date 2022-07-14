@@ -6,8 +6,20 @@ Person guru = new Guru(-400, 450, 2, #FFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5, #E6B88A);
 Person murid2 = new Murid2(-1000, 511, 1.5, #EB984E);
 
-Properti properti = new Properti();
 Background background = new Background();
+
+Properti properti = new Properti();
+PropertiBulan bulan = new PropertiBulan(30, 10, 0.7);
+PropertiMatahari matahari = new PropertiMatahari(30, 10, 0.7); 
+PropertiAwan awan1 = new PropertiAwan(-200, 0, 1);
+PropertiAwan awan2 = new PropertiAwan(600, -50, 1);
+PropertiAwan awan3 = new PropertiAwan(200, -35, 0.6);
+PropertiAwan awan4 = new PropertiAwan(450, 100, 0.6);
+PropertiAwan awan5 = new PropertiAwan(1100, 150, 0.6);
+PropertiAwan awan6 = new PropertiAwan(400, 200, 0.3);
+PropertiAwan awan7 = new PropertiAwan(800, 150, 0.3);
+PropertiAwan awan8 = new PropertiAwan(1000, 0, 0.3);
+PropertiPesawat pesawat = new PropertiPesawat(1366, 0, 1);
 
 Rumah rumahAceh = new RumahAceh();
 Rumah rumahGadang = new RumahGadang();
@@ -20,9 +32,6 @@ Scene sceneRumahGadang = new SceneRumahGadang();
 Scene sceneRumahJateng = new SceneRumahJateng();
 Scene sceneRumahPapua = new SceneRumahPapua();
 Scene sceneRumahSulsel = new SceneRumahSulsel();
-
-int xM = 30;
-int yM = 10;
 
 int frameCount = 0;
 int sceneCount = 0;
@@ -44,16 +53,16 @@ void draw()
       sceneRumahAceh.run();
       break;
     case 1 :
-      sceneRumahGadang.run();
+      sceneRumahSulsel.run();
       break;
     case 2 :
-      sceneRumahJateng.run();
-      break;
-    case 3 :
       sceneRumahPapua.run();
       break;
+    case 3 :
+      sceneRumahGadang.run();
+      break;
     case 4 :
-      sceneRumahSulsel.run();
+      sceneRumahJateng.run();
       break;
   }
 
