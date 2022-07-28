@@ -11,7 +11,7 @@ public class PropertiBulan extends Object {
     scale(this.s);
     
     stroke(#adaa9e);
-    fill(#e3e1d8);
+    fill(#f1d7b2);
     strokeWeight(5);
     ellipse(100, 100, 140, 140);
     
