@@ -1,14 +1,15 @@
 import processing.sound.*;
 SoundFile backsound;
+
 // scene rumah aceh
-// SoundFile s1g_rumah_adat_apa;
-// SoundFile s1g_rumah_aceh;
-// SoundFile s1g_iyaa_dibuat_kolong;
-// SoundFile s1g_oke_kita_lanjut;
-// SoundFile s1m1_nggak_tahu_bu_guru;
-// SoundFile s1m1_wah_unik;
-// SoundFile s1m2_nggak_tahu_bu_guru;
-// SoundFile s1m2_ayo_lanjut_bu_guru;
+SoundFile s1g_rumah_adat_apa;
+SoundFile s1g_rumah_aceh;
+SoundFile s1g_iyaa_dibuat_kolong;
+SoundFile s1g_oke_kita_lanjut;
+SoundFile s1m1_nggak_tahu_bu_guru;
+SoundFile s1m1_wah_unik;
+SoundFile s1m2_nggak_tahu_bu_guru;
+SoundFile s1m2_ayo_lanjut_bu_guru;
 
 // scene rumah sulsel
 
@@ -57,14 +58,14 @@ void setup() {
   // backsound.loop();
 
   // scene rumah aceh
-  // s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
-  // s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
-  // s1g_iyaa_dibuat_kolong = new SoundFile(this, "/sound/s1g_iyaa_dibuat_kolong.mp3");
-  // s1g_oke_kita_lanjut = new SoundFile(this, "/sound/s1g_oke_kita_lanjut.mp3");
-  // s1m1_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m1_nggak_tahu_bu_guru.mp3");
-  // s1m1_wah_unik = new SoundFile(this, "/sound/s1m1_wah_unik.mp3");
-  // s1m2_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m2_nggak_tahu_bu_guru.mp3");
-  // s1m2_ayo_lanjut_bu_guru = new SoundFile(this, "/sound/s1m2_ayo_lanjut_bu_guru.mp3");
+  s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
+  s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
+  s1g_iyaa_dibuat_kolong = new SoundFile(this, "/sound/s1g_iyaa_dibuat_kolong.mp3");
+  s1g_oke_kita_lanjut = new SoundFile(this, "/sound/s1g_oke_kita_lanjut.mp3");
+  s1m1_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m1_nggak_tahu_bu_guru.mp3");
+  s1m1_wah_unik = new SoundFile(this, "/sound/s1m1_wah_unik.mp3");
+  s1m2_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m2_nggak_tahu_bu_guru.mp3");
+  s1m2_ayo_lanjut_bu_guru = new SoundFile(this, "/sound/s1m2_ayo_lanjut_bu_guru.mp3");
 
   // scene rumah sulsel
 
@@ -77,8 +78,6 @@ void draw()
   // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
-
-
 
   // switch(sceneCount) {
   //   case 0 :
