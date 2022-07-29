@@ -425,5 +425,13 @@ public class Background {
     ellipse(735, 626, 20, 15);
     popMatrix();
   }
+
+  public void opening() {
+
+  }
+
+  public void closing() {
+
+  }
 }
 
