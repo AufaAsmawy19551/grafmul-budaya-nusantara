@@ -38,7 +38,6 @@ public class SceneRumahJateng extends Scene {
     murid1.lookingAt(820, 910, frameCount, "kanan");
     murid1.lookingAt(910, 1000, frameCount, "kanan");
 
-
     murid1.lookingAt(1000, 1400, frameCount, "kanan");
     murid1.goTo(1000, 1400, frameCount, 1550, 511);
 

@@ -564,7 +564,6 @@ public class Background {
     properti.lampu(900, 500, 0.5);
     properti.lampu(1200, 500, 0.5);
     popMatrix();
-
   }
 }
 

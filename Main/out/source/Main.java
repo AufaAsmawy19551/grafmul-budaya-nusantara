@@ -138,7 +138,7 @@ int sceneCount = 0;
 
   // backsound
   backsound = new SoundFile(this, "/sound/backsound.mp3");
-  backsound.amp(0.2f);
+  backsound.amp(0.1f);
   backsound.loop();
 }
 
