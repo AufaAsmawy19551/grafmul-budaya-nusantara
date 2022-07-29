@@ -50,6 +50,12 @@ SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
 
 // scene rumah jateng
+SoundFile s5g_oke_kita_sampai;
+SoundFile s5g_ini_adalah_rumah_adat_joglo;
+SoundFile s5g_nah_sudah_malam;
+SoundFile s5m1_rumah_apa_pren;
+SoundFile s5m1_aku_harus_jadi_sultan;
+SoundFile s5m2_aku_tidak_tahu;
 
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
@@ -125,8 +131,14 @@ int sceneCount = 0;
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
 
-
   // scene rumah jateng
+  s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
+  s5g_ini_adalah_rumah_adat_joglo = new SoundFile(this, "/sound/s5g_ini_adalah_rumah_adat_joglo.mp3");
+  s5g_nah_sudah_malam = new SoundFile(this, "/sound/s5g_nah_sudah_malam.mp3");
+  s5m1_rumah_apa_pren = new SoundFile(this, "/sound/s5m1_rumah_apa_pren.mp3");
+  s5m1_aku_harus_jadi_sultan = new SoundFile(this, "/sound/s5m1_aku_harus_jadi_sultan.mp3");
+  s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
+
 }
 
  public void draw()
@@ -134,8 +146,8 @@ int sceneCount = 0;
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  sceneRumahGadang.run();
-  // sceneRumahJateng.run();
+  // sceneRumahGadang.run();
+  sceneRumahJateng.run();
 
   // switch(sceneCount) {
   //   case 0 :
@@ -2424,22 +2436,47 @@ public class SceneRumahJateng extends Scene {
     murid2.draw();
     murid1.draw();
     
+    // guru
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
-    guru.lookingAt(500, 900, frameCount, "kanan");
-    guru.goTo(500, 900, frameCount, 2000, 450);
+    guru.speak(150, 250, frameCount, s5g_oke_kita_sampai);
+    guru.lookingAt(400, 430, frameCount, "kiri");
+    guru.speak(430, 770, frameCount, s5g_ini_adalah_rumah_adat_joglo);
+    guru.lookingAt(430, 770, frameCount, "kiri");
+    guru.speak(910, 1000, frameCount, s5g_nah_sudah_malam);
+    guru.lookingAt(910, 960, frameCount, "kiri atas");
+    guru.lookingAt(960, 1000, frameCount, "kiri");
 
-    murid1.lookingAt(1, 400, frameCount, "kanan");
+    guru.lookingAt(1000, 1400, frameCount, "kanan");
+    guru.goTo(1000, 1400, frameCount, 2000, 450);
+
+    // murid 1
+    murid1.lookingAt(1, 230, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 511);
-    murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 511);
+    murid1.speak(250, 320, frameCount, s5m1_rumah_apa_pren);
+    murid1.lookingAt(250, 320, frameCount, "kiri");
+    murid1.lookingAt(320, 770, frameCount, "kanan");
+    murid1.speak(770, 910, frameCount, s5m1_aku_harus_jadi_sultan);
+    murid1.lookingAt(770, 820, frameCount, "kanan atas");
+    murid1.lookingAt(820, 910, frameCount, "kanan");
+    murid1.lookingAt(910, 1000, frameCount, "kanan");
 
-    murid2.lookingAt(1, 400, frameCount, "kanan");
+
+    murid1.lookingAt(1000, 1400, frameCount, "kanan");
+    murid1.goTo(1000, 1400, frameCount, 1550, 511);
+
+    // murid 2
+    murid2.lookingAt(1, 320, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 200, 511);
-    murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1400, 511);
+    murid2.speak(310, 430, frameCount, s5m2_aku_tidak_tahu);
+    murid2.lookingAt(320, 430, frameCount, "kanan");
+    murid2.lookingAt(430, 750, frameCount, "kanan");
+    murid2.lookingAt(750, 1000, frameCount, "kanan");
 
-    end(900);
+    murid2.lookingAt(1000, 1400, frameCount, "kanan");
+    murid2.goTo(1000, 1400, frameCount, 1400, 511);
+
+    end(1400);
   }
 }
 public class SceneRumahPapua extends Scene{

@@ -31,6 +31,12 @@ SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
 
 // scene rumah jateng
+SoundFile s5g_oke_kita_sampai;
+SoundFile s5g_ini_adalah_rumah_adat_joglo;
+SoundFile s5g_nah_sudah_malam;
+SoundFile s5m1_rumah_apa_pren;
+SoundFile s5m1_aku_harus_jadi_sultan;
+SoundFile s5m2_aku_tidak_tahu;
 
 
 Person guru = new Guru(-400, 450, 2, #FFD9B3);
@@ -106,8 +112,14 @@ void setup() {
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
 
-
   // scene rumah jateng
+  s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
+  s5g_ini_adalah_rumah_adat_joglo = new SoundFile(this, "/sound/s5g_ini_adalah_rumah_adat_joglo.mp3");
+  s5g_nah_sudah_malam = new SoundFile(this, "/sound/s5g_nah_sudah_malam.mp3");
+  s5m1_rumah_apa_pren = new SoundFile(this, "/sound/s5m1_rumah_apa_pren.mp3");
+  s5m1_aku_harus_jadi_sultan = new SoundFile(this, "/sound/s5m1_aku_harus_jadi_sultan.mp3");
+  s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
+
 }
 
 void draw()
@@ -115,8 +127,8 @@ void draw()
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  sceneRumahGadang.run();
-  // sceneRumahJateng.run();
+  // sceneRumahGadang.run();
+  sceneRumahJateng.run();
 
   // switch(sceneCount) {
   //   case 0 :
