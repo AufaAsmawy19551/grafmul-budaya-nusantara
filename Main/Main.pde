@@ -126,9 +126,9 @@ void draw()
 {
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
-  // sceneRumahPapua.run();
+  sceneRumahPapua.run();
   // sceneRumahGadang.run();
-  sceneRumahJateng.run();
+  // sceneRumahJateng.run();
 
   // switch(sceneCount) {
   //   case 0 :
