@@ -79,10 +79,7 @@ void setup() {
   surface.setTitle("Schooltouring by SNI");
   surface.setResizable(true);
   surface.setLocation(0, 0);
-  // backsound = new SoundFile(this, "/sound/backsound.mp3");
-  // backsound.amp(0.3);
-  // backsound.loop();
-
+  
   // scene rumah aceh
   s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
   s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
@@ -120,33 +117,37 @@ void setup() {
   s5m1_aku_harus_jadi_sultan = new SoundFile(this, "/sound/s5m1_aku_harus_jadi_sultan.mp3");
   s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
 
+  // backsound
+  backsound = new SoundFile(this, "/sound/backsound.mp3");
+  backsound.amp(0.1);
+  backsound.loop();
 }
 
 void draw()
 {
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
-  sceneRumahPapua.run();
+  // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
 
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahJateng.run();
-  //     break;
-  // }
+  switch(sceneCount) {
+    case 0 :
+      sceneRumahAceh.run();
+      break;
+    case 1 :
+      sceneRumahSulsel.run();
+      break;
+    case 2 :
+      sceneRumahPapua.run();
+      break;
+    case 3 :
+      sceneRumahGadang.run();
+      break;
+    case 4 :
+      sceneRumahJateng.run();
+      break;
+  }
 
   frameCount += 1;
   // videoExport.saveFrame();
