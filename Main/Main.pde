@@ -12,13 +12,22 @@ SoundFile s1m2_nggak_tahu_bu_guru;
 SoundFile s1m2_ayo_lanjut_bu_guru;
 
 // scene rumah sulsel
-
 SoundFile s2g_rumah_adat_tongkonan;
 SoundFile s2g_menurut_legenda;
 SoundFile s2g_yuk_kita_lanjut;
 SoundFile s2m1_kenapa_atapnya;
 SoundFile s2m1_seperti_itu;
 SoundFile s2m2_rumah_apa;
+
+// scene rumah papua
+SoundFile s3g_ya_benar;
+SoundFile s3m1_aku_tahu;
+SoundFile s3m2_wah_rumahnya_lucu;
+
+// scene rumah gadang
+
+// scene rumah jateng
+
 
 Person guru = new Guru(-400, 450, 2, #FFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5, #E6B88A);
@@ -82,13 +91,21 @@ void setup() {
   s2m1_seperti_itu = new SoundFile(this, "/sound/s2m1_seperti_itu.mp3");
   s2m2_rumah_apa = new SoundFile(this, "/sound/s2m2_rumah_apa.mp3");
 
+  // scene rumah papua
+  s3g_ya_benar = new SoundFile(this, "/sound/s3g_ya_benar.mp3");
+  s3m1_aku_tahu = new SoundFile(this, "/sound/s3m1_aku_tahu.mp3");
+  s3m2_wah_rumahnya_lucu = new SoundFile(this, "/sound/s3m2_wah_rumahnya_lucu.mp3");
+
+  // scene rumah gadang
+
+  // scene rumah jateng
 }
 
 void draw()
 {
   // sceneRumahAceh.run();
-  sceneRumahSulsel.run();
-  // sceneRumahPapua.run();
+  // sceneRumahSulsel.run();
+  sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
 
