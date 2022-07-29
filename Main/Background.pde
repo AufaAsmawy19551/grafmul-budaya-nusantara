@@ -426,7 +426,7 @@ public class Background {
     popMatrix();
   }
 
-  void Opening(){
+  public void opening(){
     pushMatrix();
     background(#a5e1ea);
     
@@ -503,7 +503,7 @@ public class Background {
     popMatrix();
   }
 
-  void Closing(){
+  public void closing(){
     pushMatrix();
     background(#022847);
     

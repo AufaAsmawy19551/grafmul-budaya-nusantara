@@ -64,11 +64,13 @@ Rumah rumahJateng = new RumahJateng();
 Rumah rumahPapua = new RumahPapua();
 Rumah rumahSulsel = new RumahSulsel();
 
+Scene sceneOpening = new SceneOpening();
 Scene sceneRumahAceh = new SceneRumahAceh();
 Scene sceneRumahGadang = new SceneRumahGadang();
 Scene sceneRumahJateng = new SceneRumahJateng();
 Scene sceneRumahPapua = new SceneRumahPapua();
 Scene sceneRumahSulsel = new SceneRumahSulsel();
+Scene sceneClosing = new SceneClosing();
 
 int frameCount = 0;
 int sceneCount = 0;
@@ -125,29 +127,37 @@ void setup() {
 
 void draw()
 {
+  sceneOpening.run();
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
+  // sceneClosing.run();
 
-  switch(sceneCount) {
-    case 0 :
-      sceneRumahAceh.run();
-      break;
-    case 1 :
-      sceneRumahSulsel.run();
-      break;
-    case 2 :
-      sceneRumahPapua.run();
-      break;
-    case 3 :
-      sceneRumahGadang.run();
-      break;
-    case 4 :
-      sceneRumahJateng.run();
-      break;
-  }
+  // switch(sceneCount) {
+  //   case 0 :
+  //     sceneOpening.run();
+  //     break;
+  //   case 1 :
+  //     sceneRumahAceh.run();
+  //     break;
+  //   case 2 :
+  //     sceneRumahSulsel.run();
+  //     break;
+  //   case 3 :
+  //     sceneRumahPapua.run();
+  //     break;
+  //   case 4 :
+  //     sceneRumahGadang.run();
+  //     break;
+  //   case 5 :
+  //     sceneRumahJateng.run();
+  //     break;
+  //   case 6 :
+  //     sceneClosing.run();
+  //     break;
+  // }
 
   frameCount += 1;
   // videoExport.saveFrame();

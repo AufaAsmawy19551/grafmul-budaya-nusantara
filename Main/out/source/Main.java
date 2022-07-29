@@ -83,11 +83,13 @@ Rumah rumahJateng = new RumahJateng();
 Rumah rumahPapua = new RumahPapua();
 Rumah rumahSulsel = new RumahSulsel();
 
+Scene sceneOpening = new SceneOpening();
 Scene sceneRumahAceh = new SceneRumahAceh();
 Scene sceneRumahGadang = new SceneRumahGadang();
 Scene sceneRumahJateng = new SceneRumahJateng();
 Scene sceneRumahPapua = new SceneRumahPapua();
 Scene sceneRumahSulsel = new SceneRumahSulsel();
+Scene sceneClosing = new SceneClosing();
 
 int frameCount = 0;
 int sceneCount = 0;
@@ -152,19 +154,25 @@ int sceneCount = 0;
 
   switch(sceneCount) {
     case 0 :
-      sceneRumahAceh.run();
+      sceneOpening.run();
       break;
     case 1 :
-      sceneRumahSulsel.run();
+      sceneRumahAceh.run();
       break;
     case 2 :
-      sceneRumahPapua.run();
+      sceneRumahSulsel.run();
       break;
     case 3 :
-      sceneRumahGadang.run();
+      sceneRumahPapua.run();
       break;
     case 4 :
+      sceneRumahGadang.run();
+      break;
+    case 5 :
       sceneRumahJateng.run();
+      break;
+    case 6 :
+      sceneClosing.run();
       break;
   }
 
@@ -720,6 +728,146 @@ public class Background {
     ellipse(780, 608, 20, 15);
     ellipse(756, 616, 20, 15);
     ellipse(735, 626, 20, 15);
+    popMatrix();
+  }
+
+  public void opening(){
+    pushMatrix();
+    background(0xFFA5E1EA);
+    
+    matahari.draw(0xFFEECC57);
+    awan1.draw(0xFFFFFFFF);
+    awan2.draw(0xFFFFFFFF);
+    awan3.draw(0xFFFFFFFF);
+    awan4.draw(0xFFFFFFFF);
+    awan5.draw(0xFFFFFFFF);
+    awan6.draw(0xFFFFFFFF);
+    awan7.draw(0xFFFFFFFF);
+    awan8.draw(0xFFFFFFFF);
+    
+    matahari.setPosition(30, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
+    
+    //gunung
+    fill(0xFF597E7F);
+    stroke(0xFF597E7F);
+    strokeWeight(50);
+    strokeJoin(ROUND);
+    triangle(1150, 200, 600, 700, 1500, 700);
+    
+    noStroke();
+    properti.tanah(0, -95, 0.8f);
+    properti.pohon( -120, 210, 0.8f);
+    properti.pohon(10, 300, 0.6f);
+    properti.pohon(110, 385, 0.4f);
+    properti.pohon(1100, 90, 1.1f);
+    properti.semak(1100, 540, 0.5f);
+    properti.semak(1020, 555, 0.4f);
+    properti.semak(1180, 470, 0.7f);
+    
+    //batu
+    fill(0xFFDFDCDA);
+    stroke(0xFFC7C3C0);
+    strokeWeight(2);
+    ellipse(290, 580, 20, 15);
+    ellipse(250, 600, 20, 15);
+    ellipse(240, 600, 20, 15);
+    ellipse(400, 614, 20, 15);
+    ellipse(450, 600, 20, 15);
+    ellipse(500, 620, 20, 15);
+    ellipse(450, 608, 20, 15);
+    ellipse(600, 621, 20, 15);
+    
+    ellipse(650, 590, 20, 15);
+    ellipse(700, 598, 20, 15);
+    ellipse(680, 606, 20, 15);
+    ellipse(740, 616, 20, 15);
+    ellipse(730, 600, 20, 15);
+    ellipse(780, 608, 20, 15);
+    ellipse(690, 616, 20, 15);
+    ellipse(735, 626, 20, 15);
+
+    properti.pohon(360, 430, 0.3f);  
+    properti.pohon(450, 350, 0.5f);  
+    properti.pohon(300, 180, 0.9f);
+    properti.semak(380, 520, 0.5f);
+    properti.semak(320, 530, 0.4f);
+    properti.semak(430, 470, 0.7f);
+
+    properti.pohon(800, 430, 0.3f);  
+    properti.pohon(680, 300, 0.6f);  
+    properti.pohon(720, 180, 0.9f);  
+    popMatrix();
+  }
+
+  public void closing(){
+    pushMatrix();
+    background(0xFF022847);
+    
+    properti.bintang(100, -50, 1);
+    properti.bintang(100, -50, 0.6f);
+    properti.bintang(150, -50, 0.5f);
+    properti.bintang(1000, -20, 1);
+    properti.bintang(900, -20, 0.8f);
+    properti.bintang(1000, -20, 0.5f);
+    properti.bintang(1100, -20, 0.6f);
+    properti.bintang(1130, -25, 0.5f);
+    properti.bintang(1200, -20, 0.7f);
+    properti.bintang(1280, -20, 0.6f);
+    
+    bulan.draw();
+    awan1.draw(200);
+    awan2.draw(200);
+    awan3.draw(200);
+    awan4.draw(200);
+    awan5.draw(200);
+    awan6.draw(200);
+    awan7.draw(200);
+    awan8.draw(200);
+    
+    bulan.setPosition(30, 10, 0.7f);
+    awan1.goTo(1, 2000, frameCount, 1500, 0);
+    awan2.goTo(1, 2000, frameCount, 2300, -50);
+    awan3.goTo(1, 4000, frameCount, -1100, -35);
+    awan4.goTo(1, 4000, frameCount, -850, 100);
+    awan5.goTo(1, 4000, frameCount, -200, 150);
+    awan6.goTo(1, 6000, frameCount, 1700, 200);
+    awan7.goTo(1, 6000, frameCount, 2100, 150);
+    awan8.goTo(1, 6000, frameCount, 2300, 0);
+    pesawat.goTo(1, 800, frameCount, -600, 0);
+    
+    properti.tanah(0, -95, 0.8f);
+
+    properti.pohon( -120, 210, 0.8f);
+    properti.pohon(10, 300, 0.6f);
+    properti.pohon(110, 385, 0.4f);
+    properti.pohon(300, 385, 0.4f);
+    properti.pohon(350, 385, 0.4f);
+    properti.pohon(400, 300, 0.6f);
+    properti.pohon(500, 180, 0.9f);
+    properti.pohon(650, 300, 0.6f);
+    properti.pohon(730, 300, 0.6f);
+    properti.pohon(850, 385, 0.4f);
+    properti.pohon(950, 385, 0.4f);
+    properti.semak(300, 500, 0.5f);
+    properti.semak(420, 515, 0.4f);
+    properti.semak(1100, 540, 0.5f);
+    properti.semak(1020, 555, 0.4f);
+    properti.semak(1180, 400, 0.7f);
+    properti.semak(1120, 480, 0.3f);
+    properti.lampu(0, 500, 0.5f);
+    properti.lampu(300, 500, 0.5f);
+    properti.lampu(600, 500, 0.5f);
+    properti.lampu(900, 500, 0.5f);
+    properti.lampu(1200, 500, 0.5f);
     popMatrix();
   }
 }
@@ -2305,6 +2453,46 @@ public class Scene {
     }
   }
 }
+public class SceneClosing extends Scene {
+
+  public SceneClosing () 
+  {
+    super();
+  }
+
+   public void run()
+  {
+    pushMatrix();
+    background.closing();
+    popMatrix();  
+    
+    guru.draw();
+    murid2.draw();
+    murid1.draw();
+
+    end(1000);
+  }
+}
+public class SceneOpening extends Scene {
+
+  public SceneOpening () 
+  {
+    super();  
+  }
+
+   public void run()
+  {
+    pushMatrix();
+    background.opening();
+    popMatrix();  
+    
+    guru.draw();
+    murid2.draw();
+    murid1.draw();
+
+    end(1000);
+  }
+}
 public class SceneRumahAceh extends Scene {
   
   public SceneRumahAceh() {
@@ -2455,7 +2643,6 @@ public class SceneRumahJateng extends Scene {
     murid1.lookingAt(770, 820, frameCount, "kanan atas");
     murid1.lookingAt(820, 910, frameCount, "kanan");
     murid1.lookingAt(910, 1000, frameCount, "kanan");
-
 
     murid1.lookingAt(1000, 1400, frameCount, "kanan");
     murid1.goTo(1000, 1400, frameCount, 1550, 511);
