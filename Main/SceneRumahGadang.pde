@@ -13,21 +13,34 @@ public class SceneRumahGadang extends Scene {
     murid2.draw();
     murid1.draw();
     
+    // guru
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
-    guru.lookingAt(500, 900, frameCount, "kanan");
-    guru.goTo(500, 900, frameCount, 2000, 450);
+    guru.speak(370, 950, frameCount, s4g_keren_yaa);
 
-    murid1.lookingAt(1, 400, frameCount, "kanan");
+    guru.lookingAt(950, 1350, frameCount, "kanan");
+    guru.goTo(950, 1350, frameCount, 2000, 450);
+
+    // murid 1
+    murid1.lookingAt(1, 300, frameCount, "kanan");
     murid1.goTo(1, 400, frameCount, 350, 511);
-    murid1.lookingAt(500, 900, frameCount, "kanan");
-    murid1.goTo(500, 900, frameCount, 1550, 511);
+    murid1.speak(300, 370, frameCount, s4m1_wah_keren);
+    murid1.lookingAt(300, 350, frameCount, "kanan atas");
+    murid1.lookingAt(350, 400, frameCount, "kanan");
 
-    murid2.lookingAt(1, 400, frameCount, "kanan");
+    murid1.lookingAt(950, 1350, frameCount, "kanan");
+    murid1.goTo(950, 1350, frameCount, 1550, 511);
+
+    // murid 2
+    murid2.lookingAt(1, 300, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 200, 511);
-    murid2.lookingAt(500, 900, frameCount, "kanan");
-    murid2.goTo(500, 900, frameCount, 1400, 511);
+    murid2.speak(300, 370, frameCount, s4m2_wah_keren);
+    murid2.lookingAt(300, 350, frameCount, "kanan atas");
+    murid2.lookingAt(350, 400, frameCount, "kanan");
 
-    end(900);
+    murid2.lookingAt(950, 1350, frameCount, "kanan");
+    murid2.goTo(950, 1350, frameCount, 1400, 511);
+
+    end(1350);
   }
 }

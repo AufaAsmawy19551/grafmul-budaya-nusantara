@@ -25,6 +25,10 @@ SoundFile s3m1_aku_tahu;
 SoundFile s3m2_wah_rumahnya_lucu;
 
 // scene rumah gadang
+SoundFile s4g_keren_yaa;
+SoundFile s4m1_wah_keren;
+SoundFile s4m2_wah_keren;
+SoundFile s4m2_rumah_apa_ini;
 
 // scene rumah jateng
 
@@ -97,6 +101,11 @@ void setup() {
   s3m2_wah_rumahnya_lucu = new SoundFile(this, "/sound/s3m2_wah_rumahnya_lucu.mp3");
 
   // scene rumah gadang
+  s4g_keren_yaa = new SoundFile(this, "/sound/s4g_keren_yaa.mp3");
+  s4m1_wah_keren = new SoundFile(this, "/sound/s4m1_wah_keren.mp3");
+  s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
+  s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
+
 
   // scene rumah jateng
 }
@@ -105,8 +114,8 @@ void draw()
 {
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
-  sceneRumahPapua.run();
-  // sceneRumahGadang.run();
+  // sceneRumahPapua.run();
+  sceneRumahGadang.run();
   // sceneRumahJateng.run();
 
   // switch(sceneCount) {
