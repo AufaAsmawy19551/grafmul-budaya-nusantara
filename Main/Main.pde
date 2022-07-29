@@ -31,6 +31,12 @@ SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
 
 // scene rumah jateng
+SoundFile s5g_oke_kita_sampai;
+SoundFile s5g_ini_adalah_rumah_adat_joglo;
+SoundFile s5g_nah_sudah_malam;
+SoundFile s5m1_rumah_apa_pren;
+SoundFile s5m1_aku_harus_jadi_sultan;
+SoundFile s5m2_aku_tidak_tahu;
 
 
 Person guru = new Guru(-400, 450, 2, #FFD9B3);
@@ -73,10 +79,7 @@ void setup() {
   surface.setTitle("Schooltouring by SNI");
   surface.setResizable(true);
   surface.setLocation(0, 0);
-  // backsound = new SoundFile(this, "/sound/backsound.mp3");
-  // backsound.amp(0.3);
-  // backsound.loop();
-
+  
   // scene rumah aceh
   s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
   s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
@@ -106,8 +109,18 @@ void setup() {
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
 
-
   // scene rumah jateng
+  s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
+  s5g_ini_adalah_rumah_adat_joglo = new SoundFile(this, "/sound/s5g_ini_adalah_rumah_adat_joglo.mp3");
+  s5g_nah_sudah_malam = new SoundFile(this, "/sound/s5g_nah_sudah_malam.mp3");
+  s5m1_rumah_apa_pren = new SoundFile(this, "/sound/s5m1_rumah_apa_pren.mp3");
+  s5m1_aku_harus_jadi_sultan = new SoundFile(this, "/sound/s5m1_aku_harus_jadi_sultan.mp3");
+  s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
+
+  // backsound
+  backsound = new SoundFile(this, "/sound/backsound.mp3");
+  backsound.amp(0.1);
+  backsound.loop();
 }
 
 void draw()
@@ -115,26 +128,26 @@ void draw()
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  sceneRumahGadang.run();
+  // sceneRumahGadang.run();
   // sceneRumahJateng.run();
 
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahJateng.run();
-  //     break;
-  // }
+  switch(sceneCount) {
+    case 0 :
+      sceneRumahAceh.run();
+      break;
+    case 1 :
+      sceneRumahSulsel.run();
+      break;
+    case 2 :
+      sceneRumahPapua.run();
+      break;
+    case 3 :
+      sceneRumahGadang.run();
+      break;
+    case 4 :
+      sceneRumahJateng.run();
+      break;
+  }
 
   frameCount += 1;
   // videoExport.saveFrame();
