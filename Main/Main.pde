@@ -47,9 +47,11 @@ SoundFile s4g_nah_anak_selamat_datang;
 SoundFile s4g_keren_yaa;
 SoundFile s4g_yuk_kita_lanjut;
 SoundFile s4m1_wah_keren;
+SoundFile s4m1_woya_jangan;
 SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
 SoundFile s4m2_ayoo_ayooo;
+SoundFile s4m2_coba_gempa;
 
 // scene rumah jateng
 SoundFile s5g_oke_kita_sampai;
@@ -69,7 +71,6 @@ SoundFile scm1_oh_iya;
 SoundFile scm2_habis_ini_kita_mau_kemana;
 SoundFile scm2_iya_bu_guru;
 SoundFile scm2_jangan_lupa_like_komen;
-
 
 Person guru = new Guru(800, 450, 2, #FFD9B3);
 Person murid1 = new Murid1(-250, 511, 1.5, #E6B88A);
@@ -160,9 +161,11 @@ void setup() {
   s4g_keren_yaa = new SoundFile(this, "/sound/s4g_keren_yaa.mp3");
   s4g_yuk_kita_lanjut = new SoundFile(this, "/sound/s4g_yuk_kita_lanjut.mp3");
   s4m1_wah_keren = new SoundFile(this, "/sound/s4m1_wah_keren.mp3");
+  s4m1_woya_jangan = new SoundFile(this, "/sound/s4m1_woya_jangan.mp3");
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
   s4m2_ayoo_ayooo = new SoundFile(this, "/sound/s4m2_ayoo_ayooo.mp3");
+  s4m2_coba_gempa = new SoundFile(this, "/sound/s4m2_coba_gempa.mp3");
 
   // scene rumah jateng
   s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
@@ -191,11 +194,11 @@ void setup() {
 
 void draw()
 {
-  sceneOpening.run();
+  // sceneOpening.run();
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  // sceneRumahGadang.run();
+  sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
 

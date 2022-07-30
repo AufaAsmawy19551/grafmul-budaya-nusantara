@@ -66,9 +66,11 @@ SoundFile s4g_nah_anak_selamat_datang;
 SoundFile s4g_keren_yaa;
 SoundFile s4g_yuk_kita_lanjut;
 SoundFile s4m1_wah_keren;
+SoundFile s4m1_woya_jangan;
 SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
 SoundFile s4m2_ayoo_ayooo;
+SoundFile s4m2_coba_gempa;
 
 // scene rumah jateng
 SoundFile s5g_oke_kita_sampai;
@@ -88,7 +90,6 @@ SoundFile scm1_oh_iya;
 SoundFile scm2_habis_ini_kita_mau_kemana;
 SoundFile scm2_iya_bu_guru;
 SoundFile scm2_jangan_lupa_like_komen;
-
 
 Person guru = new Guru(800, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-250, 511, 1.5f, 0xFFE6B88A);
@@ -179,9 +180,11 @@ int sceneCount = 0;
   s4g_keren_yaa = new SoundFile(this, "/sound/s4g_keren_yaa.mp3");
   s4g_yuk_kita_lanjut = new SoundFile(this, "/sound/s4g_yuk_kita_lanjut.mp3");
   s4m1_wah_keren = new SoundFile(this, "/sound/s4m1_wah_keren.mp3");
+  s4m1_woya_jangan = new SoundFile(this, "/sound/s4m1_woya_jangan.mp3");
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
   s4m2_ayoo_ayooo = new SoundFile(this, "/sound/s4m2_ayoo_ayooo.mp3");
+  s4m2_coba_gempa = new SoundFile(this, "/sound/s4m2_coba_gempa.mp3");
 
   // scene rumah jateng
   s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
@@ -210,11 +213,11 @@ int sceneCount = 0;
 
  public void draw()
 {
-  sceneOpening.run();
+  // sceneOpening.run();
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  // sceneRumahGadang.run();
+  sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
 
@@ -2709,15 +2712,16 @@ public class SceneRumahGadang extends Scene {
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
     guru.speak(170, 300, frameCount, s4g_nah_anak_selamat_datang);
-    guru.speak(450, 1030, frameCount, s4g_keren_yaa);
+    guru.speak(450, 1000, frameCount, s4g_keren_yaa);
     guru.lookingAt(400, 450, frameCount, "kiri atas");
     guru.lookingAt(450, 800, frameCount, "kiri");
     guru.lookingAt(800, 850, frameCount, "kiri atas");
-    guru.lookingAt(850, 1030, frameCount, "kiri");
-    guru.speak(1040, 1100, frameCount, s4g_yuk_kita_lanjut);
+    guru.lookingAt(850, 1000, frameCount, "kiri");
+    guru.speak(1120, 1180, frameCount, s4g_yuk_kita_lanjut);
+    guru.lookingAt(1000, 1180, frameCount, "kiri");
 
-    guru.lookingAt(1030, 1430, frameCount, "kanan");
-    guru.goTo(1030, 1430, frameCount, 2000, 450);
+    guru.lookingAt(1180, 1580, frameCount, "kanan");
+    guru.goTo(1180, 1580, frameCount, 2000, 450);
 
     // murid 1
     murid1.lookingAt(1, 300, frameCount, "kanan");
@@ -2728,10 +2732,13 @@ public class SceneRumahGadang extends Scene {
     murid1.lookingAt(450, 500, frameCount, "kanan atas");
     murid1.lookingAt(500, 850, frameCount, "kanan");
     murid1.lookingAt(850, 900, frameCount, "kanan atas");
-    murid1.lookingAt(900, 1030, frameCount, "kanan");
+    murid1.lookingAt(900, 1000, frameCount, "kanan");
+    murid1.speak(1060, 1120, frameCount, s4m1_woya_jangan);
+    murid1.lookingAt(1060, 1120, frameCount, "kiri");
+    murid1.lookingAt(1120, 1180, frameCount, "kanan");
 
-    murid1.lookingAt(1030, 1430, frameCount, "kanan");
-    murid1.goTo(1030, 1430, frameCount, 1550, 511);
+    murid1.lookingAt(1180, 1580, frameCount, "kanan");
+    murid1.goTo(1180, 1580, frameCount, 1550, 511);
 
     // murid 2
     murid2.lookingAt(1, 300, frameCount, "kanan");
@@ -2741,13 +2748,15 @@ public class SceneRumahGadang extends Scene {
     murid2.lookingAt(300, 350, frameCount, "kanan atas");
     murid2.lookingAt(350, 700, frameCount, "kanan");
     murid2.lookingAt(700, 750, frameCount, "kanan atas");
-    murid2.lookingAt(750, 1030, frameCount, "kanan");
-    murid2.speak(1100, 1150, frameCount, s4m2_ayoo_ayooo);
+    murid2.lookingAt(750, 1000, frameCount, "kanan");
+    murid2.speak(1000, 1070, frameCount, s4m2_coba_gempa);
+    murid2.lookingAt(1000, 1180, frameCount, "kanan");
 
-    murid2.lookingAt(1030, 1430, frameCount, "kanan");
-    murid2.goTo(1030, 1430, frameCount, 1400, 511);
+    murid2.speak(1180, 1230, frameCount, s4m2_ayoo_ayooo);
+    murid2.lookingAt(1180, 1580, frameCount, "kanan");
+    murid2.goTo(1180, 1580, frameCount, 1400, 511);
 
-    end(1430);
+    end(1580);
   }
 }
 public class SceneRumahJateng extends Scene {
