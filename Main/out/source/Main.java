@@ -21,6 +21,13 @@ public class Main extends PApplet {
 SoundFile backsound;
 
 // scene opening
+SoundFile sog_wah_kalian_semangat;
+SoundFile sog_oke_ayo;
+SoundFile som1_mau_ke_mana;
+SoundFile som1_kita_mau_kemana_bu_guru;
+SoundFile som1_wah_udah_nggak_sabar;
+SoundFile som2_aku_tidak_tahu_pren;
+SoundFile som2_ayo_buguru_kita_berangkat;
 
 // scene rumah aceh
 SoundFile s1g_rumah_adat_apa;
@@ -83,10 +90,9 @@ SoundFile scm2_iya_bu_guru;
 SoundFile scm2_jangan_lupa_like_komen;
 
 
-
-Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
-Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(-1000, 511, 1.5f, 0xFFEB984E);
+Person guru = new Guru(800, 450, 2, 0xFFFFD9B3);
+Person murid1 = new Murid1(-250, 511, 1.5f, 0xFFE6B88A);
+Person murid2 = new Murid2(-400, 511, 1.5f, 0xFFEB984E);
 
 Background background = new Background();
 
@@ -128,6 +134,13 @@ int sceneCount = 0;
   surface.setLocation(0, 0);
   
   // scene opening
+  sog_wah_kalian_semangat = new SoundFile(this, "/sound/sog_wah_kalian_semangat.mp3");
+  sog_oke_ayo = new SoundFile(this, "/sound/sog_oke_ayo.mp3");
+  som1_mau_ke_mana = new SoundFile(this, "/sound/som1_mau_ke_mana.mp3");
+  som1_kita_mau_kemana_bu_guru = new SoundFile(this, "/sound/som1_kita_mau_kemana_bu_guru.mp3");
+  som1_wah_udah_nggak_sabar = new SoundFile(this, "/sound/som1_wah_udah_nggak_sabar.mp3");
+  som2_aku_tidak_tahu_pren = new SoundFile(this, "/sound/som2_aku_tidak_tahu_pren.mp3");
+  som2_ayo_buguru_kita_berangkat = new SoundFile(this, "/sound/som2_ayo_buguru_kita_berangkat.mp3");
 
   // scene rumah aceh
   s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
@@ -190,20 +203,20 @@ int sceneCount = 0;
   scm2_jangan_lupa_like_komen = new SoundFile(this, "/sound/scm2_jangan_lupa_like_komen.mp3");
 
   // backsound
-  backsound = new SoundFile(this, "/sound/backsound.mp3");
-  backsound.amp(0.1f);
-  backsound.loop();
+  // backsound = new SoundFile(this, "/sound/backsound.mp3");
+  // backsound.amp(0.1);
+  // backsound.loop();
 }
 
  public void draw()
 {
-  // sceneOpening.run();
+  sceneOpening.run();
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
-  sceneClosing.run();
+  // sceneClosing.run();
 
   // switch(sceneCount) {
   //   case 0 :
@@ -2579,7 +2592,45 @@ public class SceneOpening extends Scene {
     murid2.draw();
     murid1.draw();
 
-    end(1000);
+    // guru
+    guru.lookingAt(1, 300, frameCount, "kiri");
+    guru.speak(300, 755, frameCount, sog_wah_kalian_semangat);
+    guru.lookingAt(300, 760, frameCount, "kiri");
+    guru.lookingAt(760, 860, frameCount, "kiri");
+    guru.speak(940, 990, frameCount, sog_oke_ayo);
+    guru.lookingAt(940, 990, frameCount, "kiri");
+
+    guru.lookingAt(990, 1390, frameCount, "kanan");
+    guru.goTo(990, 1390, frameCount, 2000, 450);
+
+    // murid 1
+    murid1.lookingAt(1, 90, frameCount, "kanan");
+    murid1.goTo(1, 200, frameCount, 350, 511);
+    murid1.speak(90, 155, frameCount, som1_mau_ke_mana);
+    murid1.lookingAt(90, 150, frameCount, "kiri");
+    murid1.lookingAt(150, 200, frameCount, "kanan");
+    murid1.speak(200, 300, frameCount, som1_kita_mau_kemana_bu_guru);
+    murid1.lookingAt(200, 760, frameCount, "kanan");
+    murid1.speak(760, 860, frameCount, som1_wah_udah_nggak_sabar);
+    murid1.lookingAt(760, 860, frameCount, "kanan");
+    murid1.lookingAt(860, 990, frameCount, "kanan");
+
+    murid1.lookingAt(990, 1390, frameCount, "kanan");
+    murid1.goTo(990, 1390, frameCount, 1550, 511);
+
+    // murid 2
+    murid2.lookingAt(1, 200, frameCount, "kanan");
+    murid2.goTo(1, 200, frameCount, 200, 511);
+    murid2.speak(150, 200, frameCount, som2_aku_tidak_tahu_pren);
+    murid2.lookingAt(200, 860, frameCount, "kanan");
+    murid2.speak(860, 940, frameCount, som2_ayo_buguru_kita_berangkat);
+    murid2.lookingAt(860, 940, frameCount, "kanan");
+    murid2.lookingAt(940, 990, frameCount, "kanan");
+
+    murid2.lookingAt(990, 1390, frameCount, "kanan");
+    murid2.goTo(990, 1390, frameCount, 1400, 511);
+
+    end(1390);
   }
 }
 public class SceneRumahAceh extends Scene {
