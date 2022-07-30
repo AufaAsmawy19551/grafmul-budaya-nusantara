@@ -2672,7 +2672,7 @@ public class SceneRumahAceh extends Scene {
     murid1.speak(435, 555, frameCount, s1m1_wah_unik);
     murid1.lookingAt(435, 535, frameCount, "kanan atas");
     murid1.lookingAt(535, 950, frameCount, "kanan");
-    murid1.speak(1010, 1150, frameCount, s1m1_aku_tidak_sabar);
+    murid1.speak(1010, 1170, frameCount, s1m1_aku_tidak_sabar);
 
     murid1.lookingAt(950, 1350, frameCount, "kanan");
     murid1.goTo(950, 1350, frameCount, 1550, 511);
@@ -2711,7 +2711,7 @@ public class SceneRumahGadang extends Scene {
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
     guru.speak(170, 300, frameCount, s4g_nah_anak_selamat_datang);
-    guru.speak(450, 1000, frameCount, s4g_keren_yaa);
+    guru.speak(450, 1030, frameCount, s4g_keren_yaa);
     guru.lookingAt(400, 450, frameCount, "kiri atas");
     guru.lookingAt(450, 800, frameCount, "kiri");
     guru.lookingAt(800, 850, frameCount, "kiri atas");
@@ -2906,12 +2906,12 @@ public class SceneRumahSulsel extends Scene {
     guru.speak(350, 480, frameCount, s2g_rumah_adat_tongkonan);
     guru.lookingAt(350, 400, frameCount, "kiri atas");
     guru.lookingAt(400, 700, frameCount, "kiri");
-    guru.speak(640, 1100, frameCount, s2g_menurut_legenda);
+    guru.speak(640, 1130, frameCount, s2g_menurut_legenda);
     guru.lookingAt(700, 750, frameCount, "kiri atas");
     guru.lookingAt(750, 900, frameCount, "kiri");
     guru.lookingAt(900, 950, frameCount, "kiri atas");
     guru.lookingAt(950, 1100, frameCount, "kiri");
-    guru.speak(1180, 1240, frameCount, s2g_yuk_kita_lanjut);
+    guru.speak(1190, 1250, frameCount, s2g_yuk_kita_lanjut);
     guru.lookingAt(1100, 1240, frameCount, "kiri");
 
     guru.lookingAt(1240, 1640, frameCount, "kanan");
@@ -2925,7 +2925,7 @@ public class SceneRumahSulsel extends Scene {
     murid1.lookingAt(600, 800, frameCount, "kanan");
     murid1.lookingAt(800, 850, frameCount, "kanan atas");
     murid1.lookingAt(850, 1100, frameCount, "kanan");
-    murid1.speak(1100, 1180, frameCount, s2m1_seperti_itu);
+    murid1.speak(1120, 1200, frameCount, s2m1_seperti_itu);
     murid1.lookingAt(1100, 1240, frameCount, "kanan");
     murid1.speak(1300, 1400, frameCount, s2m1_rumah_tongkonan_unik);
 

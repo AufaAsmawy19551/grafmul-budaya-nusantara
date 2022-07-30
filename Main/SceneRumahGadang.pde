@@ -17,7 +17,7 @@ public class SceneRumahGadang extends Scene {
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
     guru.speak(170, 300, frameCount, s4g_nah_anak_selamat_datang);
-    guru.speak(450, 1000, frameCount, s4g_keren_yaa);
+    guru.speak(450, 1030, frameCount, s4g_keren_yaa);
     guru.lookingAt(400, 450, frameCount, "kiri atas");
     guru.lookingAt(450, 800, frameCount, "kiri");
     guru.lookingAt(800, 850, frameCount, "kiri atas");
