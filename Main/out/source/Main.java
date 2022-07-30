@@ -2786,7 +2786,7 @@ public class SceneRumahSulsel extends Scene {
     guru.speak(350, 480, frameCount, s2g_rumah_adat_tongkonan);
     guru.lookingAt(350, 400, frameCount, "kiri atas");
     guru.lookingAt(400, 700, frameCount, "kiri");
-    guru.speak(630, 1100, frameCount, s2g_menurut_legenda);
+    guru.speak(650, 1100, frameCount, s2g_menurut_legenda);
     guru.lookingAt(700, 750, frameCount, "kiri atas");
     guru.lookingAt(750, 900, frameCount, "kiri");
     guru.lookingAt(900, 950, frameCount, "kiri atas");
@@ -2794,8 +2794,8 @@ public class SceneRumahSulsel extends Scene {
     guru.speak(1180, 1240, frameCount, s2g_yuk_kita_lanjut);
     guru.lookingAt(1100, 1240, frameCount, "kiri");
 
-    guru.lookingAt(1280, 1680, frameCount, "kanan");
-    guru.goTo(1280, 1680, frameCount, 2000, 450);
+    guru.lookingAt(1240, 1640, frameCount, "kanan");
+    guru.goTo(1240, 1640, frameCount, 2000, 450);
 
     // murid 1
     murid1.lookingAt(1, 480, frameCount, "kanan");
