@@ -198,36 +198,35 @@ void draw()
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  sceneRumahGadang.run();
+  // sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
 
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneOpening.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 5 :
-  //     sceneRumahJateng.run();
-  //     break;
-  //   case 6 :
-  //     sceneClosing.run();
-  //     break;
-  // }
+  switch(sceneCount) {
+    case 0 :
+      sceneOpening.run();
+      break;
+    case 1 :
+      sceneRumahAceh.run();
+      break;
+    case 2 :
+      sceneRumahSulsel.run();
+      break;
+    case 3 :
+      sceneRumahPapua.run();
+      break;
+    case 4 :
+      sceneRumahGadang.run();
+      break;
+    case 5 :
+      sceneRumahJateng.run();
+      break;
+    case 6 :
+      sceneClosing.run();
+      break;
+  }
 
   frameCount += 1;
-  // videoExport.saveFrame();
 }
 
 

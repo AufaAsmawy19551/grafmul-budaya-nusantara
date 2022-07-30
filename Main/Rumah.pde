@@ -253,13 +253,13 @@ public class RumahGadang extends Rumah {
     quadraticVertex(445, 320, 545, 400);
     vertex(660, 545);
     quadraticVertex(520, 555, 380, 490);
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);       
     quadraticVertex(400, 330, 370, 170);   
     endShape();
     // atap kiri 2
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(460, 185);
@@ -271,7 +271,7 @@ public class RumahGadang extends Rumah {
     
     // atap kanan 1
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1640, 170);
@@ -283,7 +283,7 @@ public class RumahGadang extends Rumah {
     
     // atap kanan 2
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1557, 185);
@@ -295,7 +295,7 @@ public class RumahGadang extends Rumah {
     
     // atap tengah atas
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(575, 215);
@@ -307,7 +307,7 @@ public class RumahGadang extends Rumah {
     
     // atap tengah atas
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(760, 260);
@@ -333,7 +333,7 @@ public class RumahGadang extends Rumah {
     endShape();
     // atap segitiga depan
     beginShape();
-    stroke(#ffffff);
+    stroke(#17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1005, 287);

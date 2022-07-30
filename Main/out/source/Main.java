@@ -92,8 +92,10 @@ SoundFile scm2_iya_bu_guru;
 SoundFile scm2_jangan_lupa_like_komen;
 
 Person guru = new Guru(800, 450, 2, 0xFFFFD9B3);
-Person murid1 = new Murid1(-250, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(-400, 511, 1.5f, 0xFFEB984E);
+// Person murid1 = new Murid1(-250, 511, 1.5, #E6B88A);
+// Person murid2 = new Murid2(-400, 511, 1.5, #EB984E);
+Person murid1 = new Murid1(250, 511, 1.5f, 0xFFE6B88A);
+Person murid2 = new Murid2(400, 511, 1.5f, 0xFFEB984E);
 
 Background background = new Background();
 
@@ -217,9 +219,12 @@ int sceneCount = 0;
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
-  sceneRumahGadang.run();
+  // sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
+
+  murid1.draw();
+  murid2.draw();
 
   // switch(sceneCount) {
   //   case 0 :
@@ -246,7 +251,6 @@ int sceneCount = 0;
   // }
 
   frameCount += 1;
-  // videoExport.saveFrame();
 }
 
 
@@ -1905,13 +1909,13 @@ public class RumahGadang extends Rumah {
     quadraticVertex(445, 320, 545, 400);
     vertex(660, 545);
     quadraticVertex(520, 555, 380, 490);
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);       
     quadraticVertex(400, 330, 370, 170);   
     endShape();
     // atap kiri 2
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(460, 185);
@@ -1923,7 +1927,7 @@ public class RumahGadang extends Rumah {
     
     // atap kanan 1
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1640, 170);
@@ -1935,7 +1939,7 @@ public class RumahGadang extends Rumah {
     
     // atap kanan 2
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1557, 185);
@@ -1947,7 +1951,7 @@ public class RumahGadang extends Rumah {
     
     // atap tengah atas
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(575, 215);
@@ -1959,7 +1963,7 @@ public class RumahGadang extends Rumah {
     
     // atap tengah atas
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(760, 260);
@@ -1985,7 +1989,7 @@ public class RumahGadang extends Rumah {
     endShape();
     // atap segitiga depan
     beginShape();
-    stroke(0xFFFFFFFF);
+    stroke(0xFF17202A);
     strokeWeight(5);
     fill(77, 70, 70);
     vertex(1005, 287);
