@@ -46,6 +46,7 @@ public class SceneRumahAceh extends Scene {
     murid2.speak(815, 870, frameCount, s1m2_ayo_lanjut_bu_guru);
     murid2.lookingAt(575, 670, frameCount, "kanan atas");
     murid2.lookingAt(670, 950, frameCount, "kanan");
+    murid2.speak(950, 1000, frameCount, s1m2_okey_bu);
 
     murid2.lookingAt(950, 1350, frameCount, "kanan");
     murid2.goTo(950, 1350, frameCount, 1400, 511);

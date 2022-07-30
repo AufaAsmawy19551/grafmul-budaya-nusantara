@@ -10,19 +10,26 @@ SoundFile s1m1_nggak_tahu_bu_guru;
 SoundFile s1m1_wah_unik;
 SoundFile s1m2_nggak_tahu_bu_guru;
 SoundFile s1m2_ayo_lanjut_bu_guru;
+SoundFile s1m2_okey_bu;
 
 // scene rumah sulsel
+SoundFile s2g_nah_sekarang_kita;
 SoundFile s2g_rumah_adat_tongkonan;
 SoundFile s2g_menurut_legenda;
 SoundFile s2g_yuk_kita_lanjut;
 SoundFile s2m1_kenapa_atapnya;
 SoundFile s2m1_seperti_itu;
 SoundFile s2m2_rumah_apa;
+SoundFile s2m2_ayoo_ayooo;
 
 // scene rumah papua
+SoundFile s3g_ini_dia_rumah;
 SoundFile s3g_ya_benar;
+SoundFile s3g_oke_kita_lanjut;
 SoundFile s3m1_aku_tahu;
 SoundFile s3m2_wah_rumahnya_lucu;
+SoundFile s3m2_ooo_begitu;
+SoundFile s3m2_okey_bu;
 
 // scene rumah gadang
 SoundFile s4g_keren_yaa;
@@ -91,19 +98,26 @@ void setup() {
   s1m1_wah_unik = new SoundFile(this, "/sound/s1m1_wah_unik.mp3");
   s1m2_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m2_nggak_tahu_bu_guru.mp3");
   s1m2_ayo_lanjut_bu_guru = new SoundFile(this, "/sound/s1m2_ayo_lanjut_bu_guru.mp3");
+  s1m2_okey_bu = new SoundFile(this, "/sound/s1m2_okey_bu.mp3");
 
   // scene rumah sulsel
+  s2g_nah_sekarang_kita = new SoundFile(this, "/sound/s2g_nah_sekarang_kita.mp3");
   s2g_rumah_adat_tongkonan = new SoundFile(this, "/sound/s2g_rumah_adat_tongkonan.mp3");
   s2g_menurut_legenda = new SoundFile(this, "/sound/s2g_menurut_legenda.mp3");
   s2g_yuk_kita_lanjut = new SoundFile(this, "/sound/s2g_yuk_kita_lanjut.mp3");
   s2m1_kenapa_atapnya = new SoundFile(this, "/sound/s2m1_kenapa_atapnya.mp3");
   s2m1_seperti_itu = new SoundFile(this, "/sound/s2m1_seperti_itu.mp3");
   s2m2_rumah_apa = new SoundFile(this, "/sound/s2m2_rumah_apa.mp3");
+  s2m2_ayoo_ayooo = new SoundFile(this, "/sound/s2m2_ayoo_ayooo.mp3");
 
   // scene rumah papua
+  s3g_ini_dia_rumah = new SoundFile(this, "/sound/s3g_ini_dia_rumah.mp3");
   s3g_ya_benar = new SoundFile(this, "/sound/s3g_ya_benar.mp3");
+  s3g_oke_kita_lanjut = new SoundFile(this, "/sound/s3g_oke_kita_lanjut.mp3");
   s3m1_aku_tahu = new SoundFile(this, "/sound/s3m1_aku_tahu.mp3");
   s3m2_wah_rumahnya_lucu = new SoundFile(this, "/sound/s3m2_wah_rumahnya_lucu.mp3");
+  s3m2_ooo_begitu = new SoundFile(this, "/sound/s3m2_ooo_begitu.mp3");
+  s3m2_okey_bu = new SoundFile(this, "/sound/s3m2_okey_bu.mp3");
 
   // scene rumah gadang
   s4g_keren_yaa = new SoundFile(this, "/sound/s4g_keren_yaa.mp3");
@@ -127,10 +141,10 @@ void setup() {
 
 void draw()
 {
-  sceneOpening.run();
+  // sceneOpening.run();
   // sceneRumahAceh.run();
   // sceneRumahSulsel.run();
-  // sceneRumahPapua.run();
+  sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
