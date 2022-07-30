@@ -20,6 +20,8 @@ public class Main extends PApplet {
 
 SoundFile backsound;
 
+// scene opening
+
 // scene rumah aceh
 SoundFile s1g_rumah_adat_apa;
 SoundFile s1g_rumah_aceh;
@@ -70,6 +72,17 @@ SoundFile s5m1_aku_harus_jadi_sultan;
 SoundFile s5m2_aku_tidak_tahu;
 SoundFile s5m2_yahh_ko_sudah_malam;
 
+// scene closing
+SoundFile scg_karena_sudah_malam;
+SoundFile scg_jangan_sudah_malam;
+SoundFile scm1_yah_masih_pingin;
+SoundFile scm1_yah_yaudah;
+SoundFile scm1_oh_iya;
+SoundFile scm2_habis_ini_kita_mau_kemana;
+SoundFile scm2_iya_bu_guru;
+SoundFile scm2_jangan_lupa_like_komen;
+
+
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5f, 0xFFE6B88A);
@@ -114,6 +127,8 @@ int sceneCount = 0;
   surface.setResizable(true);
   surface.setLocation(0, 0);
   
+  // scene opening
+
   // scene rumah aceh
   s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
   s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
@@ -164,6 +179,16 @@ int sceneCount = 0;
   s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
   s5m2_yahh_ko_sudah_malam = new SoundFile(this, "/sound/s5m2_yahh_ko_sudah_malam.mp3");
 
+  // scene closing
+  scg_karena_sudah_malam = new SoundFile(this, "/sound/scg_karena_sudah_malam.mp3");
+  scg_jangan_sudah_malam = new SoundFile(this, "/sound/scg_jangan_sudah_malam.mp3");
+  scm1_yah_masih_pingin = new SoundFile(this, "/sound/scm1_yah_masih_pingin.mp3");
+  scm1_yah_yaudah = new SoundFile(this, "/sound/scm1_yah_yaudah.mp3");
+  scm1_oh_iya = new SoundFile(this, "/sound/scm1_oh_iya.mp3");
+  scm2_habis_ini_kita_mau_kemana = new SoundFile(this, "/sound/scm2_habis_ini_kita_mau_kemana.mp3");
+  scm2_iya_bu_guru = new SoundFile(this, "/sound/scm2_iya_bu_guru.mp3");
+  scm2_jangan_lupa_like_komen = new SoundFile(this, "/sound/scm2_jangan_lupa_like_komen.mp3");
+
   // backsound
   backsound = new SoundFile(this, "/sound/backsound.mp3");
   backsound.amp(0.1f);
@@ -174,11 +199,11 @@ int sceneCount = 0;
 {
   // sceneOpening.run();
   // sceneRumahAceh.run();
-  sceneRumahSulsel.run();
+  // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
-  // sceneClosing.run();
+  sceneClosing.run();
 
   // switch(sceneCount) {
   //   case 0 :
@@ -2498,7 +2523,43 @@ public class SceneClosing extends Scene {
     murid2.draw();
     murid1.draw();
 
-    end(1000);
+    // guru
+    guru.lookingAt(1, 400, frameCount, "kanan");
+    guru.goTo(1, 400, frameCount, 800, 450);
+    guru.speak(400, 500, frameCount, scg_karena_sudah_malam);
+    guru.lookingAt(400, 450, frameCount, "kiri atas");
+    guru.lookingAt(450, 660, frameCount, "kiri");
+    guru.speak(660, 880, frameCount, scg_jangan_sudah_malam);
+    guru.lookingAt(660, 800, frameCount, "kiri");
+
+    guru.lookingAt(1350, 1750, frameCount, "kanan");
+    guru.goTo(1350, 1750, frameCount, 2000, 450);
+
+    // murid 1
+    murid1.lookingAt(1, 400, frameCount, "kanan");
+    murid1.goTo(1, 400, frameCount, 350, 511);
+    murid1.speak(500, 600, frameCount, scm1_yah_masih_pingin);
+    murid1.lookingAt(400, 880, frameCount, "kanan");
+    murid1.speak(880, 1060, frameCount, scm1_yah_yaudah);
+    murid1.lookingAt(880, 930, frameCount, "kanan bawah");
+    murid1.speak(1200, 1350, frameCount, scm1_oh_iya);
+
+    murid1.lookingAt(1350, 1750, frameCount, "kanan");
+    murid1.goTo(1350, 1750, frameCount, 1550, 511);
+
+    // murid 2
+    murid2.lookingAt(1, 300, frameCount, "kanan");
+    murid2.goTo(1, 400, frameCount, 200, 511);
+    murid2.speak(300, 400, frameCount, scm2_habis_ini_kita_mau_kemana);
+    murid2.lookingAt(300, 600, frameCount, "kanan");
+    murid2.speak(600, 660, frameCount, scm2_iya_bu_guru);
+    murid2.lookingAt(600, 930, frameCount, "kanan");
+    murid2.speak(1060, 1200, frameCount, scm2_jangan_lupa_like_komen);
+
+    murid2.lookingAt(1350, 1750, frameCount, "kanan");
+    murid2.goTo(1350, 1750, frameCount, 1400, 511);
+
+    end(1750);
   }
 }
 public class SceneOpening extends Scene {
@@ -2786,7 +2847,7 @@ public class SceneRumahSulsel extends Scene {
     guru.speak(350, 480, frameCount, s2g_rumah_adat_tongkonan);
     guru.lookingAt(350, 400, frameCount, "kiri atas");
     guru.lookingAt(400, 700, frameCount, "kiri");
-    guru.speak(650, 1100, frameCount, s2g_menurut_legenda);
+    guru.speak(640, 1100, frameCount, s2g_menurut_legenda);
     guru.lookingAt(700, 750, frameCount, "kiri atas");
     guru.lookingAt(750, 900, frameCount, "kiri");
     guru.lookingAt(900, 950, frameCount, "kiri atas");

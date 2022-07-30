@@ -1,6 +1,8 @@
 import processing.sound.*;
 SoundFile backsound;
 
+// scene opening
+
 // scene rumah aceh
 SoundFile s1g_rumah_adat_apa;
 SoundFile s1g_rumah_aceh;
@@ -51,6 +53,17 @@ SoundFile s5m1_aku_harus_jadi_sultan;
 SoundFile s5m2_aku_tidak_tahu;
 SoundFile s5m2_yahh_ko_sudah_malam;
 
+// scene closing
+SoundFile scg_karena_sudah_malam;
+SoundFile scg_jangan_sudah_malam;
+SoundFile scm1_yah_masih_pingin;
+SoundFile scm1_yah_yaudah;
+SoundFile scm1_oh_iya;
+SoundFile scm2_habis_ini_kita_mau_kemana;
+SoundFile scm2_iya_bu_guru;
+SoundFile scm2_jangan_lupa_like_komen;
+
+
 
 Person guru = new Guru(-400, 450, 2, #FFD9B3);
 Person murid1 = new Murid1(-850, 511, 1.5, #E6B88A);
@@ -95,6 +108,8 @@ void setup() {
   surface.setResizable(true);
   surface.setLocation(0, 0);
   
+  // scene opening
+
   // scene rumah aceh
   s1g_rumah_adat_apa = new SoundFile(this, "/sound/s1g_rumah_adat_apa.mp3");
   s1g_rumah_aceh = new SoundFile(this, "/sound/s1g_rumah_aceh.mp3");
@@ -145,6 +160,16 @@ void setup() {
   s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
   s5m2_yahh_ko_sudah_malam = new SoundFile(this, "/sound/s5m2_yahh_ko_sudah_malam.mp3");
 
+  // scene closing
+  scg_karena_sudah_malam = new SoundFile(this, "/sound/scg_karena_sudah_malam.mp3");
+  scg_jangan_sudah_malam = new SoundFile(this, "/sound/scg_jangan_sudah_malam.mp3");
+  scm1_yah_masih_pingin = new SoundFile(this, "/sound/scm1_yah_masih_pingin.mp3");
+  scm1_yah_yaudah = new SoundFile(this, "/sound/scm1_yah_yaudah.mp3");
+  scm1_oh_iya = new SoundFile(this, "/sound/scm1_oh_iya.mp3");
+  scm2_habis_ini_kita_mau_kemana = new SoundFile(this, "/sound/scm2_habis_ini_kita_mau_kemana.mp3");
+  scm2_iya_bu_guru = new SoundFile(this, "/sound/scm2_iya_bu_guru.mp3");
+  scm2_jangan_lupa_like_komen = new SoundFile(this, "/sound/scm2_jangan_lupa_like_komen.mp3");
+
   // backsound
   backsound = new SoundFile(this, "/sound/backsound.mp3");
   backsound.amp(0.1);
@@ -155,11 +180,11 @@ void draw()
 {
   // sceneOpening.run();
   // sceneRumahAceh.run();
-  sceneRumahSulsel.run();
+  // sceneRumahSulsel.run();
   // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
-  // sceneClosing.run();
+  sceneClosing.run();
 
   // switch(sceneCount) {
   //   case 0 :
