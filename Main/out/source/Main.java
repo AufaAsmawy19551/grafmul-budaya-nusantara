@@ -92,10 +92,8 @@ SoundFile scm2_iya_bu_guru;
 SoundFile scm2_jangan_lupa_like_komen;
 
 Person guru = new Guru(800, 450, 2, 0xFFFFD9B3);
-// Person murid1 = new Murid1(-250, 511, 1.5, #E6B88A);
-// Person murid2 = new Murid2(-400, 511, 1.5, #EB984E);
-Person murid1 = new Murid1(250, 511, 1.5f, 0xFFE6B88A);
-Person murid2 = new Murid2(400, 511, 1.5f, 0xFFEB984E);
+Person murid1 = new Murid1(-250, 511, 1.5f, 0xFFE6B88A);
+Person murid2 = new Murid2(-400, 511, 1.5f, 0xFFEB984E);
 
 Background background = new Background();
 
@@ -208,9 +206,9 @@ int sceneCount = 0;
   scm2_jangan_lupa_like_komen = new SoundFile(this, "/sound/scm2_jangan_lupa_like_komen.mp3");
 
   // backsound
-  // backsound = new SoundFile(this, "/sound/backsound.mp3");
-  // backsound.amp(0.1);
-  // backsound.loop();
+  backsound = new SoundFile(this, "/sound/backsound.mp3");
+  backsound.amp(0.1f);
+  backsound.loop();
 }
 
  public void draw()
@@ -223,32 +221,29 @@ int sceneCount = 0;
   // sceneRumahJateng.run();
   // sceneClosing.run();
 
-  murid1.draw();
-  murid2.draw();
-
-  // switch(sceneCount) {
-  //   case 0 :
-  //     sceneOpening.run();
-  //     break;
-  //   case 1 :
-  //     sceneRumahAceh.run();
-  //     break;
-  //   case 2 :
-  //     sceneRumahSulsel.run();
-  //     break;
-  //   case 3 :
-  //     sceneRumahPapua.run();
-  //     break;
-  //   case 4 :
-  //     sceneRumahGadang.run();
-  //     break;
-  //   case 5 :
-  //     sceneRumahJateng.run();
-  //     break;
-  //   case 6 :
-  //     sceneClosing.run();
-  //     break;
-  // }
+  switch(sceneCount) {
+    case 0 :
+      sceneOpening.run();
+      break;
+    case 1 :
+      sceneRumahAceh.run();
+      break;
+    case 2 :
+      sceneRumahSulsel.run();
+      break;
+    case 3 :
+      sceneRumahPapua.run();
+      break;
+    case 4 :
+      sceneRumahGadang.run();
+      break;
+    case 5 :
+      sceneRumahJateng.run();
+      break;
+    case 6 :
+      sceneClosing.run();
+      break;
+  }
 
   frameCount += 1;
 }

@@ -187,9 +187,9 @@ void setup() {
   scm2_jangan_lupa_like_komen = new SoundFile(this, "/sound/scm2_jangan_lupa_like_komen.mp3");
 
   // backsound
-  // backsound = new SoundFile(this, "/sound/backsound.mp3");
-  // backsound.amp(0.1);
-  // backsound.loop();
+  backsound = new SoundFile(this, "/sound/backsound.mp3");
+  backsound.amp(0.1);
+  backsound.loop();
 }
 
 void draw()
