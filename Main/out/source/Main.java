@@ -27,6 +27,7 @@ SoundFile s1g_iyaa_dibuat_kolong;
 SoundFile s1g_oke_kita_lanjut;
 SoundFile s1m1_nggak_tahu_bu_guru;
 SoundFile s1m1_wah_unik;
+SoundFile s1m1_aku_tidak_sabar;
 SoundFile s1m2_nggak_tahu_bu_guru;
 SoundFile s1m2_ayo_lanjut_bu_guru;
 SoundFile s1m2_okey_bu;
@@ -38,6 +39,7 @@ SoundFile s2g_menurut_legenda;
 SoundFile s2g_yuk_kita_lanjut;
 SoundFile s2m1_kenapa_atapnya;
 SoundFile s2m1_seperti_itu;
+SoundFile s2m1_rumah_tongkonan_unik;
 SoundFile s2m2_rumah_apa;
 SoundFile s2m2_ayoo_ayooo;
 
@@ -51,10 +53,13 @@ SoundFile s3m2_ooo_begitu;
 SoundFile s3m2_okey_bu;
 
 // scene rumah gadang
+SoundFile s4g_nah_anak_selamat_datang;
 SoundFile s4g_keren_yaa;
+SoundFile s4g_yuk_kita_lanjut;
 SoundFile s4m1_wah_keren;
 SoundFile s4m2_wah_keren;
 SoundFile s4m2_rumah_apa_ini;
+SoundFile s4m2_ayoo_ayooo;
 
 // scene rumah jateng
 SoundFile s5g_oke_kita_sampai;
@@ -63,6 +68,7 @@ SoundFile s5g_nah_sudah_malam;
 SoundFile s5m1_rumah_apa_pren;
 SoundFile s5m1_aku_harus_jadi_sultan;
 SoundFile s5m2_aku_tidak_tahu;
+SoundFile s5m2_yahh_ko_sudah_malam;
 
 
 Person guru = new Guru(-400, 450, 2, 0xFFFFD9B3);
@@ -115,6 +121,7 @@ int sceneCount = 0;
   s1g_oke_kita_lanjut = new SoundFile(this, "/sound/s1g_oke_kita_lanjut.mp3");
   s1m1_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m1_nggak_tahu_bu_guru.mp3");
   s1m1_wah_unik = new SoundFile(this, "/sound/s1m1_wah_unik.mp3");
+  s1m1_aku_tidak_sabar = new SoundFile(this, "/sound/s1m1_aku_tidak_sabar.mp3");
   s1m2_nggak_tahu_bu_guru = new SoundFile(this, "/sound/s1m2_nggak_tahu_bu_guru.mp3");
   s1m2_ayo_lanjut_bu_guru = new SoundFile(this, "/sound/s1m2_ayo_lanjut_bu_guru.mp3");
   s1m2_okey_bu = new SoundFile(this, "/sound/s1m2_okey_bu.mp3");
@@ -126,6 +133,7 @@ int sceneCount = 0;
   s2g_yuk_kita_lanjut = new SoundFile(this, "/sound/s2g_yuk_kita_lanjut.mp3");
   s2m1_kenapa_atapnya = new SoundFile(this, "/sound/s2m1_kenapa_atapnya.mp3");
   s2m1_seperti_itu = new SoundFile(this, "/sound/s2m1_seperti_itu.mp3");
+  s2m1_rumah_tongkonan_unik = new SoundFile(this, "/sound/s2m1_rumah_tongkonan_unik.mp3");
   s2m2_rumah_apa = new SoundFile(this, "/sound/s2m2_rumah_apa.mp3");
   s2m2_ayoo_ayooo = new SoundFile(this, "/sound/s2m2_ayoo_ayooo.mp3");
 
@@ -139,10 +147,13 @@ int sceneCount = 0;
   s3m2_okey_bu = new SoundFile(this, "/sound/s3m2_okey_bu.mp3");
 
   // scene rumah gadang
+  s4g_nah_anak_selamat_datang = new SoundFile(this, "/sound/s4g_nah_anak_selamat_datang.mp3");
   s4g_keren_yaa = new SoundFile(this, "/sound/s4g_keren_yaa.mp3");
+  s4g_yuk_kita_lanjut = new SoundFile(this, "/sound/s4g_yuk_kita_lanjut.mp3");
   s4m1_wah_keren = new SoundFile(this, "/sound/s4m1_wah_keren.mp3");
   s4m2_wah_keren = new SoundFile(this, "/sound/s4m2_wah_keren.mp3");
   s4m2_rumah_apa_ini = new SoundFile(this, "/sound/s4m2_rumah_apa_ini.mp3");
+  s4m2_ayoo_ayooo = new SoundFile(this, "/sound/s4m2_ayoo_ayooo.mp3");
 
   // scene rumah jateng
   s5g_oke_kita_sampai = new SoundFile(this, "/sound/s5g_oke_kita_sampai.mp3");
@@ -151,6 +162,7 @@ int sceneCount = 0;
   s5m1_rumah_apa_pren = new SoundFile(this, "/sound/s5m1_rumah_apa_pren.mp3");
   s5m1_aku_harus_jadi_sultan = new SoundFile(this, "/sound/s5m1_aku_harus_jadi_sultan.mp3");
   s5m2_aku_tidak_tahu = new SoundFile(this, "/sound/s5m2_aku_tidak_tahu.mp3");
+  s5m2_yahh_ko_sudah_malam = new SoundFile(this, "/sound/s5m2_yahh_ko_sudah_malam.mp3");
 
   // backsound
   backsound = new SoundFile(this, "/sound/backsound.mp3");
@@ -162,8 +174,8 @@ int sceneCount = 0;
 {
   // sceneOpening.run();
   // sceneRumahAceh.run();
-  // sceneRumahSulsel.run();
-  sceneRumahPapua.run();
+  sceneRumahSulsel.run();
+  // sceneRumahPapua.run();
   // sceneRumahGadang.run();
   // sceneRumahJateng.run();
   // sceneClosing.run();
@@ -2546,6 +2558,7 @@ public class SceneRumahAceh extends Scene {
     murid1.speak(435, 555, frameCount, s1m1_wah_unik);
     murid1.lookingAt(435, 535, frameCount, "kanan atas");
     murid1.lookingAt(535, 950, frameCount, "kanan");
+    murid1.speak(1010, 1150, frameCount, s1m1_aku_tidak_sabar);
 
     murid1.lookingAt(950, 1350, frameCount, "kanan");
     murid1.goTo(950, 1350, frameCount, 1550, 511);
@@ -2583,14 +2596,16 @@ public class SceneRumahGadang extends Scene {
     // guru
     guru.lookingAt(1, 400, frameCount, "kanan");
     guru.goTo(1, 400, frameCount, 800, 450);
-    guru.speak(370, 950, frameCount, s4g_keren_yaa);
+    guru.speak(170, 300, frameCount, s4g_nah_anak_selamat_datang);
+    guru.speak(450, 1030, frameCount, s4g_keren_yaa);
     guru.lookingAt(400, 450, frameCount, "kiri atas");
     guru.lookingAt(450, 800, frameCount, "kiri");
     guru.lookingAt(800, 850, frameCount, "kiri atas");
-    guru.lookingAt(850, 950, frameCount, "kiri");
+    guru.lookingAt(850, 1030, frameCount, "kiri");
+    guru.speak(1040, 1100, frameCount, s4g_yuk_kita_lanjut);
 
-    guru.lookingAt(950, 1350, frameCount, "kanan");
-    guru.goTo(950, 1350, frameCount, 2000, 450);
+    guru.lookingAt(1030, 1430, frameCount, "kanan");
+    guru.goTo(1030, 1430, frameCount, 2000, 450);
 
     // murid 1
     murid1.lookingAt(1, 300, frameCount, "kanan");
@@ -2601,24 +2616,26 @@ public class SceneRumahGadang extends Scene {
     murid1.lookingAt(450, 500, frameCount, "kanan atas");
     murid1.lookingAt(500, 850, frameCount, "kanan");
     murid1.lookingAt(850, 900, frameCount, "kanan atas");
-    murid1.lookingAt(900, 950, frameCount, "kanan");
+    murid1.lookingAt(900, 1030, frameCount, "kanan");
 
-    murid1.lookingAt(950, 1350, frameCount, "kanan");
-    murid1.goTo(950, 1350, frameCount, 1550, 511);
+    murid1.lookingAt(1030, 1430, frameCount, "kanan");
+    murid1.goTo(1030, 1430, frameCount, 1550, 511);
 
     // murid 2
     murid2.lookingAt(1, 300, frameCount, "kanan");
     murid2.goTo(1, 400, frameCount, 200, 511);
     murid2.speak(300, 370, frameCount, s4m2_wah_keren);
+    murid2.speak(380, 450, frameCount, s4m2_rumah_apa_ini);
     murid2.lookingAt(300, 350, frameCount, "kanan atas");
     murid2.lookingAt(350, 700, frameCount, "kanan");
     murid2.lookingAt(700, 750, frameCount, "kanan atas");
-    murid2.lookingAt(750, 950, frameCount, "kanan");
+    murid2.lookingAt(750, 1030, frameCount, "kanan");
+    murid2.speak(1100, 1150, frameCount, s4m2_ayoo_ayooo);
 
-    murid2.lookingAt(950, 1350, frameCount, "kanan");
-    murid2.goTo(950, 1350, frameCount, 1400, 511);
+    murid2.lookingAt(1030, 1430, frameCount, "kanan");
+    murid2.goTo(1030, 1430, frameCount, 1400, 511);
 
-    end(1350);
+    end(1430);
   }
 }
 public class SceneRumahJateng extends Scene {
@@ -2673,6 +2690,7 @@ public class SceneRumahJateng extends Scene {
     murid2.lookingAt(670, 720, frameCount, "kanan atas");
     murid2.lookingAt(720, 770, frameCount, "kanan atas");
     murid2.lookingAt(770, 1000, frameCount, "kanan");
+    murid2.speak(1000, 1100, frameCount, s5m2_yahh_ko_sudah_malam);
 
     murid2.lookingAt(1000, 1400, frameCount, "kanan");
     murid2.goTo(1000, 1400, frameCount, 1400, 511);
@@ -2768,13 +2786,13 @@ public class SceneRumahSulsel extends Scene {
     guru.speak(350, 480, frameCount, s2g_rumah_adat_tongkonan);
     guru.lookingAt(350, 400, frameCount, "kiri atas");
     guru.lookingAt(400, 700, frameCount, "kiri");
-    guru.speak(630, 1130, frameCount, s2g_menurut_legenda);
+    guru.speak(630, 1100, frameCount, s2g_menurut_legenda);
     guru.lookingAt(700, 750, frameCount, "kiri atas");
     guru.lookingAt(750, 900, frameCount, "kiri");
     guru.lookingAt(900, 950, frameCount, "kiri atas");
-    guru.lookingAt(950, 1130, frameCount, "kiri");
-    guru.speak(1220, 1280, frameCount, s2g_yuk_kita_lanjut);
-    guru.lookingAt(1130, 1280, frameCount, "kiri");
+    guru.lookingAt(950, 1100, frameCount, "kiri");
+    guru.speak(1180, 1240, frameCount, s2g_yuk_kita_lanjut);
+    guru.lookingAt(1100, 1240, frameCount, "kiri");
 
     guru.lookingAt(1280, 1680, frameCount, "kanan");
     guru.goTo(1280, 1680, frameCount, 2000, 450);
@@ -2786,12 +2804,13 @@ public class SceneRumahSulsel extends Scene {
     murid1.lookingAt(480, 600, frameCount, "kanan atas");
     murid1.lookingAt(600, 800, frameCount, "kanan");
     murid1.lookingAt(800, 850, frameCount, "kanan atas");
-    murid1.lookingAt(850, 1130, frameCount, "kanan");
-    murid1.speak(1150, 1220, frameCount, s2m1_seperti_itu);
-    murid1.lookingAt(1130, 1280, frameCount, "kanan");
+    murid1.lookingAt(850, 1100, frameCount, "kanan");
+    murid1.speak(1100, 1180, frameCount, s2m1_seperti_itu);
+    murid1.lookingAt(1100, 1240, frameCount, "kanan");
+    murid1.speak(1300, 1400, frameCount, s2m1_rumah_tongkonan_unik);
 
-    murid1.lookingAt(1280, 1680, frameCount, "kanan");
-    murid1.goTo(1280, 1680, frameCount, 1550, 511);
+    murid1.lookingAt(1240, 1640, frameCount, "kanan");
+    murid1.goTo(1240, 1640, frameCount, 1550, 511);
 
     // murid 2
     murid2.lookingAt(1, 300, frameCount, "kanan");
@@ -2802,13 +2821,13 @@ public class SceneRumahSulsel extends Scene {
     murid2.lookingAt(550, 600, frameCount, "kanan atas");
     murid2.lookingAt(600, 900, frameCount, "kanan");
     murid2.lookingAt(900, 950, frameCount, "kanan atas");
-    murid2.lookingAt(950, 1280, frameCount, "kanan");
-    murid2.speak(1280, 1330, frameCount, s2m2_ayoo_ayooo);
+    murid2.lookingAt(950, 1240, frameCount, "kanan");
+    murid2.speak(1240, 1290, frameCount, s2m2_ayoo_ayooo);
 
-    murid2.lookingAt(1280, 1680, frameCount, "kanan");
-    murid2.goTo(1280, 1680, frameCount, 1400, 511);
+    murid2.lookingAt(1240, 1640, frameCount, "kanan");
+    murid2.goTo(1240, 1640, frameCount, 1400, 511);
 
-    end(1680);
+    end(1640);
   }
 }
 

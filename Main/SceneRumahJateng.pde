@@ -50,6 +50,7 @@ public class SceneRumahJateng extends Scene {
     murid2.lookingAt(670, 720, frameCount, "kanan atas");
     murid2.lookingAt(720, 770, frameCount, "kanan atas");
     murid2.lookingAt(770, 1000, frameCount, "kanan");
+    murid2.speak(1000, 1100, frameCount, s5m2_yahh_ko_sudah_malam);
 
     murid2.lookingAt(1000, 1400, frameCount, "kanan");
     murid2.goTo(1000, 1400, frameCount, 1400, 511);
